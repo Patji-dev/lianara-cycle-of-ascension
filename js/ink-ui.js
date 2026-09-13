@@ -35,7 +35,7 @@ function initializeInkUI() {
     byId('inkPauseSlot').append(byId('pauseButton'));
     panel.querySelector('.ink-realm-copy').append(byId('cultivationBreakthrough'));
     const guide = panel.querySelector('details');
-    guide.append(panel.querySelector('.cultivation-actions'), byId('cultivationNextEffects'), byId('cultivationRecord'));
+    guide.append(panel.querySelector('.cultivation-actions'), panel.querySelector('.cultivation-auto-major'), byId('cultivationNextEffects'), byId('cultivationRecord'));
     byId('cultivationRate').classList.add('ink-sr-only');
     // Keep the native progress and effects elements for accessibility and existing renderers.
     byId('cultivationProgress').classList.add('ink-sr-only');

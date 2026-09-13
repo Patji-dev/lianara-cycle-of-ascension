@@ -82,6 +82,8 @@ async function main() {
         assert.deepEqual(errors,[]);
         console.log('PASS rendered cultivation interface');
         const automatic=await pageFor('fork');
+        assert.equal(await automatic.locator('#cultivationAutoMajorThreshold').isVisible(),false);
+        await automatic.locator('#cultivationPanel summary').click();
         await automatic.locator('#cultivationAutoMajor').check();
         await automatic.locator('#cultivationAutoMajorThreshold').fill('96');
         assert.equal(await automatic.locator('#cultivationAutoMajorValue').textContent(),'96%');
