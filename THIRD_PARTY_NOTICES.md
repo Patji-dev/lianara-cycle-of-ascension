@@ -1,5 +1,7 @@
 # Credits and third-party notices
 
+Original additions owned by Patji-dev are covered by the root LICENSE. That notice preserves the separate terms and rights described below.
+
 ## Progress Knight lineage
 
 Progress Knight by Ihtasham42: https://github.com/ihtasham42/progress-knight — original code under the Unlicense (licenses/Progress-Knight-Unlicense.txt).

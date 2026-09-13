@@ -12,8 +12,8 @@ const server = http.createServer((req, res) => {
         const relative = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html';
         if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405).end(); return; }
         const file = path.resolve(root, relative);
-        if (!file.startsWith(root + path.sep) || !(relative === 'index.html' || relative === 'changelog.txt'
-            || /^(js|css|img|design)\//.test(relative))) { res.writeHead(404).end(); return; }
+        if (!file.startsWith(root + path.sep) || !(relative === 'index.html' || relative === 'changelog.txt' || relative === 'LICENSE' || relative === 'THIRD_PARTY_NOTICES.md'
+            || /^(js|css|img|design|licenses)\//.test(relative))) { res.writeHead(404).end(); return; }
         const contents = fs.readFileSync(file);
         res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
         res.end(req.method === 'HEAD' ? undefined : contents);

@@ -1,6 +1,6 @@
 {
   "name": "lianara-cycle-of-ascension",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "private": true,
   "description": "Lianara: Cycle of Ascension — a cultivation idle browser game",
   "scripts": {
@@ -13,5 +13,6 @@
   },
   "devDependencies": {
     "playwright": "1.62.1"
-  }
+  },
+  "license": "SEE LICENSE IN LICENSE"
 }

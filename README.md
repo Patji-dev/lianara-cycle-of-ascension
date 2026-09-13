@@ -27,3 +27,7 @@ Pushes to `main` run regression tests, build the playable files into `_site`, an
 - [Progress Knight Quest](https://github.com/indomit/progress_knight_2) — indomit and contributors.
 
 The project owner has obtained written permission from both fork authors. Those permissions do not establish a blanket open-source license for the combined project. The original Progress Knight uses the Unlicense. See [third-party notices](THIRD_PARTY_NOTICES.md); in-game attribution is under Settings → Credits.
+
+## License
+
+Rights to Patji-dev's original additions are reserved. You may play the authorized published game; no general modification, redistribution or rehosting license is granted for those additions. See [LICENSE](LICENSE). Upstream and third-party material retains its existing terms, as detailed in [third-party notices](THIRD_PARTY_NOTICES.md).
