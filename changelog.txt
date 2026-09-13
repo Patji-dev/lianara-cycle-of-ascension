@@ -1,48 +1,17 @@
 version 3.0.0 / 13.09.2026
-Lianara: Cycle of Ascension
-
-Cultivation and progression
-* Reworked Progress Knight Quest into a cultivation and martial-arts themed browser game, with renamed duties, techniques, dwellings, treasures, currencies, prestige layers and descriptions.
-* Added a separate Qi cultivation system with 40 major realms and 190 minor stages beyond Mortal. Minor-stage counts vary from three to seven, with distinct names throughout the ladder.
-* Qi cultivation scales with Inner Harmony (formerly Happiness) and receives no reincarnation record multiplier.
-* Added automatic minor advancement and manual major breakthroughs. Qi caps while awaiting advancement; duties, techniques and aging continue.
-* Cultivation stages grant Technique XP bonuses. Later major realms extend lifespan; minor stages and the first entry into Qi Gathering do not.
-* Added scattered realm requirements to Martial Hall and Spirit Arts Hall duties alongside their existing prerequisites.
-* Reincarnation and higher resets clear current Qi and realm while retaining an informational highest-realm record.
-* Renamed the demonic layer to Demonic Energy, Demonic Arts and Demonic Talents, with matching names and descriptions.
-* Demonic Energy raises major-breakthrough failure risk logarithmically. At 100 Energy, risk also grows with the destination major realm. Combined risk is capped below guaranteed failure.
-* Added Heart Demon Suppression at 100 Demonic Energy to reduce breakthrough risk through training. Failed attempts consume prepared Qi but preserve the realm; minor advancements remain guaranteed.
-* Added breakthrough previews showing success chance, Qi cost and the next realm's benefits, plus feedback after failure.
-* Tuned the first reincarnation unlock to approximately one hour of active play. Pacing comparisons favor two early reincarnations before the first demonic reset, without a reset-count gate.
-* Preserved the inherited duty and housing economy as the baseline, including all 27 residences and 24 miscellaneous items. Later realm thresholds remain provisional.
-
-Presentation and usability
-* Added the Ink & Jade interface with cultivation-themed navigation, a mountain scroll, a Qi seal and integrated breakthrough controls.
-* Added Parchment, Dark Jade and Color Blind Friendly themes. Parchment is the default for new games; existing theme preferences are preserved.
-* Added an original mountain painting, brush-stroke progress bars and a distinct Chinese ink-wash painting for each residence.
-* Dark Jade reuses the paintings with CSS filters for a jade-toned night appearance.
-* Added Your Sanctuary with the selected residence's painting, description, effects and upkeep, plus a shortcut to residence management.
-* Moved cultivation's Technique XP bonus beneath Inner Harmony in the sidebar and removed duplicate metrics from the cultivation scroll.
-* Removed repetitive next-effect hints for duties and dwellings, while retaining them for techniques and treasures.
-* Added expandable training details, responsive layouts, keyboard navigation, visible focus and reduced-motion support.
-* Wide layout now fills the screen. Added support for larger text and theme changes without reloading the game.
-* Added Settings > Credits with GitHub links to Progress Knight, Progress Knight 2.0 and Progress Knight Quest; removed the footer attribution.
-
-Saves and reliability
-* Added isolated, versioned Lianara saves, export/import, backups and validation, including large-number support. Original Progress Knight saves are kept separate.
-* Added migration for saves created before Heart Demon Suppression and safeguards against invalid imports overwriting valid progress.
-* Preserved offline simulation, pause behavior and all five reset layers, with Qi respecting lifespan limits.
-* Fixed an inherited level-up loop-cap edge case that could leave negative XP and invalidate late-game saves.
-
-Development and distribution
-* Made the browser game the main project and removed the old Godot prototype from the active repository.
-* Published the web game on GitHub Pages, with automatic testing and deployment from main and a build containing only playable files and notices.
-* Added shared realm data and configurable tuning, with validation and a generated browser bundle.
-* Added a headless exact-tick balance runner with resumable checkpoints, deterministic breakthrough rolls, selectable reset policies and synthetic late-game presets.
-* Added full-ladder threshold sweeps, searchable reports, timelines, reset timestamps and first-demonic-reset pacing comparisons.
-* Added regression coverage for inherited balance, cultivation, saves, reset layers, offline behavior, all realm states, responsive themes and headless simulation parity.
-* Added dependency lockfiles, upstream credits and bundled third-party license notices.
-* Added a rights notice for original Lianara contributions, permitting play of the authorized published game while preserving upstream and third-party terms.
+* Renamed the game to Lianara: Cycle of Ascension with a cultivation and martial arts theme
+* Added Qi cultivation with 40 major realms and 190 minor stages
+* Added major breakthroughs, realm bonuses and realm requirements for duties
+* Added Demonic Energy breakthrough risk and Heart Demon Suppression
+* Adjusted early reincarnation and demonic reset pacing
+* Added Parchment and Dark Jade themes, mountain paintings and brush-stroke progress bars
+* Added residence paintings and Your Sanctuary
+* Improved mobile, Wide layout, accessibility and training details
+* Simplified cultivation stats and item tooltips
+* Improved save handling and fixed late-game XP issues
+* Added Credits and license information in Settings
+* Added fast balance simulation tools
+* Published the web game on GitHub Pages
 
 version 2.5.0 / 01.08.2024
 * Improved display on mobile devices
