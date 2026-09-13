@@ -35,7 +35,7 @@ const CULTIVATION_BASE_RATE = CULTIVATION_TUNING.baseQiRate; // Qi per game day,
 const CULTIVATION_STAGES = createCultivationStages(CULTIVATION_CATALOGUE, CULTIVATION_TUNING);
 
 function newCultivationState() {
-    return { stage: 0, qi: 0, highestStage: 0, autoMinor: true };
+    return { stage: 0, qi: 0, highestStage: 0, autoMinor: true, autoMajor: false, autoMajorThreshold: 95 };
 }
 
 function resetCultivation() {
@@ -45,6 +45,8 @@ function resetCultivation() {
     if (previous) {
         gameData.cultivation.highestStage = previous.highestStage;
         gameData.cultivation.autoMinor = previous.autoMinor;
+        gameData.cultivation.autoMajor = previous.autoMajor ?? false;
+        gameData.cultivation.autoMajorThreshold = previous.autoMajorThreshold ?? 95;
     }
 }
 
@@ -62,7 +64,14 @@ function advanceCultivation(state, qiGain) {
         const gained = Math.min(needed, remaining);
         state.qi += gained;
         remaining -= gained;
-        if (state.qi < stage.cost || stage.major || !state.autoMinor) return;
+        if (state.qi < stage.cost) return;
+        if (stage.major) {
+            if (!state.autoMajor || (1 - getMajorBreakthroughFailureChance(state)) * 100 < (state.autoMajorThreshold ?? 95)) return;
+            if (!attemptCultivationBreakthrough(state)) return;
+            if (!(remaining > 0)) return;
+            continue;
+        }
+        if (!state.autoMinor) return;
         state.qi = 0;
         state.stage++;
         state.highestStage = Math.max(state.highestStage, state.stage);
@@ -77,14 +86,14 @@ function updateCultivation() {
 }
 
 let cultivationAttemptMessage = "";
-function getMajorBreakthroughFailureChance() {
+function getMajorBreakthroughFailureChance(state = gameData.cultivation) {
     const energy = Math.max(0, gameData.evil);
     const pressure = Math.log10(1 + energy);
     const baseRisk = pressure === Infinity ? 0.95 : 0.95 * pressure / (pressure + 10);
     const art = gameData.taskData["Heart Demon Suppression"];
     const stability = energy >= 100 && art ? art.getEffect() : 1;
     // Count the major realm being entered: Qi Gathering is 1, Foundation is 2, etc.
-    const target = CULTIVATION_STAGES[(gameData.cultivation?.stage || 0) + 1];
+    const target = CULTIVATION_STAGES[(state?.stage || 0) + 1];
     const realmRisk = energy >= 100 && target ? 0.05 * (target.realmIndex + 1) : 0;
     return Math.min(0.95, baseRisk + realmRisk) / Math.max(1, stability);
 }
@@ -96,20 +105,38 @@ function breakthroughCultivation() {
     const state = gameData.cultivation;
     const stage = CULTIVATION_STAGES[state.stage];
     if (!stage.cost || state.qi < stage.cost) return false;
-    const failed = stage.major && Math.random() < getMajorBreakthroughFailureChance();
+    const succeeded = attemptCultivationBreakthrough(state);
+    renderCultivation();
+    saveGameData();
+    return succeeded;
+}
+
+function attemptCultivationBreakthrough(state) {
+    const stage = CULTIVATION_STAGES[state.stage];
+    const failed = stage.major && Math.random() < getMajorBreakthroughFailureChance(state);
     state.qi = 0;
     if (failed) {
         cultivationAttemptMessage = "Your inner demons disrupted the breakthrough. Prepared Qi was consumed; your realm is unchanged.";
-        renderCultivation();
-        saveGameData();
         return false;
     }
     cultivationAttemptMessage = "";
     state.stage++;
     state.highestStage = Math.max(state.highestStage, state.stage);
+    return true;
+}
+
+function setCultivationAutoMajor(enabled) {
+    gameData.cultivation.autoMajor = enabled;
     renderCultivation();
     saveGameData();
-    return true;
+}
+
+function setCultivationAutoMajorThreshold(value) {
+    const threshold = Number(value);
+    if (!Number.isFinite(threshold)) return;
+    gameData.cultivation.autoMajorThreshold = Math.max(0, Math.min(100, Math.round(threshold)));
+    renderCultivation();
+    saveGameData();
 }
 
 function setCultivationAutoMinor(enabled) {
@@ -151,4 +178,11 @@ function renderCultivation() {
     document.getElementById("cultivationRecord").textContent = "Highest realm: "
         + CULTIVATION_STAGES[state.highestStage].name;
     document.getElementById("cultivationAutoMinor").checked = state.autoMinor;
+    document.getElementById("cultivationAutoMajor").checked = state.autoMajor ?? false;
+    const threshold = state.autoMajorThreshold ?? 95;
+    document.getElementById("cultivationAutoMajorThreshold").value = threshold;
+    document.getElementById("cultivationAutoMajorValue").textContent = threshold + "%";
+    document.getElementById("cultivationAutoMajorStatus").textContent = !state.autoMajor
+        ? "Choose your moment. Enable automatic breakthroughs to follow this threshold."
+        : "Automatically attempt with full Qi and at least " + threshold + "% success chance. Failure consumes prepared Qi.";
 }

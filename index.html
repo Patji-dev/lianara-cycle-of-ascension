@@ -41,10 +41,17 @@
                     <label><input id="cultivationAutoMinor" type="checkbox" checked onchange="setCultivationAutoMinor(this.checked)"> Automatically advance minor stages</label>
                 </div>
                 <p id="cultivationStatus" aria-live="polite"></p>
+                <div class="cultivation-auto-major">
+                    <label class="cultivation-auto-toggle"><input id="cultivationAutoMajor" type="checkbox" onchange="setCultivationAutoMajor(this.checked)"> Automatic major breakthroughs</label>
+                    <div class="cultivation-threshold-heading"><label for="cultivationAutoMajorThreshold">Required certainty</label><output id="cultivationAutoMajorValue" for="cultivationAutoMajorThreshold">95%</output></div>
+                    <input id="cultivationAutoMajorThreshold" type="range" min="0" max="100" step="1" value="95" aria-describedby="cultivationAutoMajorStatus" oninput="setCultivationAutoMajorThreshold(this.value)">
+                    <div class="cultivation-threshold-scale" aria-hidden="true"><span>Embrace risk · 0%</span><span>Perfect certainty · 100%</span></div>
+                    <p id="cultivationAutoMajorStatus"></p>
+                </div>
                 <small id="cultivationRecord"></small>
                 <details><summary>Cultivation and reincarnation</summary>
                     <p>Inner Harmony helps you gather Qi. Reincarnation resets your Qi and realm, while duty and technique records carry forward.</p>
-                    <p>Minor stages can advance automatically. Major breakthroughs await your choice.</p>
+                    <p>Minor stages can advance automatically. Enable automatic major breakthroughs to attempt them when your chosen success threshold is met, including during offline cultivation.</p>
                 </details>
             </section>
 			<div id="row" class="row">

@@ -81,6 +81,39 @@ async function main() {
 
         assert.deepEqual(errors,[]);
         console.log('PASS rendered cultivation interface');
+        const automatic=await pageFor('fork');
+        await automatic.locator('#cultivationAutoMajor').check();
+        await automatic.locator('#cultivationAutoMajorThreshold').fill('96');
+        assert.equal(await automatic.locator('#cultivationAutoMajorValue').textContent(),'96%');
+        await automatic.reload();
+        await automatic.waitForFunction(()=>typeof gameloop!=='undefined');
+        assert.equal(await automatic.locator('#cultivationAutoMajor').isChecked(),true);
+        assert.equal(await automatic.locator('#cultivationAutoMajorThreshold').inputValue(),'96');
+        const autoResults=await automatic.evaluate(()=>{
+            const risk=getMajorBreakthroughFailureChance,random=Math.random,simulate=canSimulate;
+            const results={};
+            const ready=()=>{gameData.cultivation={...newCultivationState(),autoMajor:true,qi:CULTIVATION_STAGES[0].cost};};
+            try {
+                getMajorBreakthroughFailureChance=()=>0.06;Math.random=()=>0.99;
+                ready();advanceCultivation(gameData.cultivation,1);results.below=gameData.cultivation.stage;
+                getMajorBreakthroughFailureChance=()=>0.05;
+                advanceCultivation(gameData.cultivation,1);results.equal=gameData.cultivation.stage;
+                ready();gameData.cultivation.autoMajor=false;advanceCultivation(gameData.cultivation,1);results.disabled=gameData.cultivation.stage;
+                ready();gameData.cultivation.qi=0;advanceCultivation(gameData.cultivation,1);results.unprepared=gameData.cultivation.stage;
+                ready();Math.random=()=>0;advanceCultivation(gameData.cultivation,Infinity);results.failed={stage:gameData.cultivation.stage,qi:gameData.cultivation.qi};
+                ready();canSimulate=()=>false;updateCultivation();results.paused=gameData.cultivation.stage;
+                canSimulate=()=>true;Math.random=()=>0.99;in_offline_progress=true;updateCultivation();results.offline=gameData.cultivation.stage;in_offline_progress=false;
+                ready();getMajorBreakthroughFailureChance=()=>0;advanceCultivation(gameData.cultivation,Infinity);results.final=gameData.cultivation.stage===CULTIVATION_STAGES.length-1;
+                setCultivationAutoMajorThreshold(97);resetCultivation();results.reset={enabled:gameData.cultivation.autoMajor,threshold:gameData.cultivation.autoMajorThreshold};
+                const legacy=forkParse(encodeForkSave());delete legacy.state.cultivation.autoMajor;delete legacy.state.cultivation.autoMajorThreshold;
+                const migrated=decodeForkSave(forkStringify(legacy)).cultivation;results.legacy={enabled:migrated.autoMajor,threshold:migrated.autoMajorThreshold};
+                legacy.state.cultivation.autoMajorThreshold=101;
+                try {decodeForkSave(forkStringify(legacy));results.invalid=false;}catch {results.invalid=true;}
+                return results;
+            } finally {getMajorBreakthroughFailureChance=risk;Math.random=random;canSimulate=simulate;in_offline_progress=false;}
+        });
+        assert.deepEqual(autoResults,{below:0,equal:1,disabled:0,unprepared:0,failed:{stage:0,qi:0},paused:0,offline:1,final:true,reset:{enabled:true,threshold:97},legacy:{enabled:false,threshold:95},invalid:true});
+        console.log('PASS automatic major threshold, failure, pause, offline, finite ladder, persistence and legacy migration');
         const qiResults=await fork.evaluate(()=>{
             const baseHappiness=getHappiness;
             const baseCanSimulate=canSimulate;
@@ -216,12 +249,12 @@ async function main() {
                 gameData.coins=1e10;gameData.evil=1e8;gameData.essence=1e65;
                 gameData.dark_matter=1e10;gameData.dark_orbs=100;
                 for(const task of Object.values(gameData.taskData)) {task.level=20;task.maxLevel=50;}
-                if(gameData.cultivation)gameData.cultivation={stage:4,qi:123,highestStage:6,autoMinor:false};
+                if(gameData.cultivation)gameData.cultivation={...newCultivationState(),stage:4,qi:123,highestStage:6,autoMinor:false};
                 gameData.requirements['Rebirth button '+layer].completed=true;
                 window[['','rebirthOne','rebirthTwo','rebirthThree','rebirthFour','rebirthFive'][layer]]();
             },layer);
             assert.equal(await pages[1].evaluate(fullState),await pages[0].evaluate(fullState),'reset layer '+layer);
-            assert.deepEqual(await pages[1].evaluate(()=>gameData.cultivation),{stage:0,qi:0,highestStage:6,autoMinor:false});
+            assert.deepEqual(await pages[1].evaluate(()=>gameData.cultivation),{stage:0,qi:0,highestStage:6,autoMinor:false,autoMajor:false,autoMajorThreshold:95});
             for(const page of pages)await page.context().close();
         }
         console.log('PASS all five reset layers retain upstream state and reset Qi without a record boost');
@@ -254,12 +287,12 @@ async function main() {
             gameData.evil=Infinity;art.level=0;const infinity=getMajorBreakthroughFailureChance();
             gameData.evil=100;gameData.paused=false;
             const random=Math.random;Math.random=()=>0;
-            gameData.cultivation={stage:3,qi:CULTIVATION_STAGES[3].cost,highestStage:3,autoMinor:true};
+            gameData.cultivation={...newCultivationState(),stage:3,qi:CULTIVATION_STAGES[3].cost,highestStage:3,autoMinor:true};
             const failed=breakthroughCultivation();const failureState={...gameData.cultivation};
             const message=document.getElementById('cultivationStatus').textContent;
             gameData.cultivation.qi=CULTIVATION_STAGES[3].cost;Math.random=()=>0.999;
             const success=breakthroughCultivation();
-            gameData.cultivation={stage:1,qi:CULTIVATION_STAGES[1].cost,highestStage:4,autoMinor:false};Math.random=()=>0;
+            gameData.cultivation={...newCultivationState(),stage:1,qi:CULTIVATION_STAGES[1].cost,highestStage:4,autoMinor:false};Math.random=()=>0;
             const minor=breakthroughCultivation();Math.random=random;
             const legacy=forkParse(encodeForkSave());delete legacy.state.taskData['Heart Demon Suppression'];delete legacy.state.requirements['Heart Demon Suppression'];
             const migrated=decodeForkSave(forkStringify(legacy));
@@ -302,7 +335,7 @@ async function main() {
             gameData.currentMisc=[gameData.itemData.Book];
             gameData.itemData.Book.unlocked=true;
             gameData.taskData.Beggar.xpBigInt=10n**350n;
-            gameData.cultivation={stage:2,qi:111,highestStage:5,autoMinor:false};
+            gameData.cultivation={...newCultivationState(),stage:2,qi:111,highestStage:5,autoMinor:false};
             gameData.paused=true; update(false);
             localStorage.setItem('gameDataSave','original-progress-knight-save');
             localStorage.setItem('unrelated','keep-me');
@@ -400,7 +433,7 @@ async function main() {
         const presentation=await pageFor('fork');
         await presentation.evaluate(()=>{
             for(const task of Object.values(gameData.taskData))task.level=300;
-            gameData.cultivation={stage:3,qi:8640,highestStage:3,autoMinor:true};
+            gameData.cultivation={...newCultivationState(),stage:3,qi:8640,highestStage:3,autoMinor:true};
             gameData.currentProperty=gameData.itemData['Wooden Hut'];
             gameData.coins=1e7;gameData.days=48*365;gameData.paused=true;
             setTab('skills');updateUI();
@@ -473,7 +506,7 @@ async function main() {
         assert.equal(await exactRunner.evaluate(()=>encodeForkSave()),await exactReference.evaluate(()=>encodeForkSave()),'No-render simulation matches the real update loop');
         await exactRunner.evaluate(()=>{
             for(let i=0;i<CULTIVATION_STAGES.length;i++){
-                gameData.cultivation={stage:i,qi:0,highestStage:i,autoMinor:true};
+                gameData.cultivation={...newCultivationState(),stage:i,qi:0,highestStage:i,autoMinor:true};
                 applyForkState(decodeForkSave(encodeForkSave()));
                 if(gameData.cultivation.stage!==i)throw Error('Late-realm save failed');
             }

@@ -2,6 +2,7 @@ version 3.0.0 / 13.09.2026
 * Renamed the game to Lianara: Cycle of Ascension with a cultivation and martial arts theme
 * Added Qi cultivation with 40 major realms and 190 minor stages
 * Added major breakthroughs, realm bonuses and realm requirements for duties
+* Added automatic major breakthroughs with an adjustable success-chance threshold
 * Added Demonic Energy breakthrough risk and Heart Demon Suppression
 * Adjusted early reincarnation and demonic reset pacing
 * Added Parchment and Dark Jade themes, mountain paintings and brush-stroke progress bars

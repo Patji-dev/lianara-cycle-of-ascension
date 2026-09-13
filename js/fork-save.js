@@ -85,6 +85,10 @@ function decodeForkSave(text) {
         state.taskData["Heart Demon Suppression"] = forkClone(forkSaveTemplate.taskData["Heart Demon Suppression"]);
     if (state?.requirements && !Object.hasOwn(state.requirements, "Heart Demon Suppression"))
         state.requirements["Heart Demon Suppression"] = false;
+    if (state?.cultivation && typeof state.cultivation === "object") {
+        if (!Object.hasOwn(state.cultivation, "autoMajor")) state.cultivation.autoMajor = false;
+        if (!Object.hasOwn(state.cultivation, "autoMajorThreshold")) state.cultivation.autoMajorThreshold = 95;
+    }
     validateForkShape(state, forkSaveTemplate);
     if (!Object.hasOwn(jobBaseData, state.currentJob) || !itemCategories.Properties.includes(state.currentProperty)
         || state.currentMisc.some(name => !itemCategories.Misc.includes(name))
@@ -97,7 +101,8 @@ function decodeForkSave(text) {
     const c = state.cultivation;
     if (!Number.isInteger(c.stage) || c.stage < 0 || c.stage >= CULTIVATION_STAGES.length
         || !Number.isInteger(c.highestStage) || c.highestStage < c.stage || c.highestStage >= CULTIVATION_STAGES.length
-        || !Number.isFinite(c.qi) || c.qi < 0 || c.qi > CULTIVATION_STAGES[c.stage].cost)
+        || !Number.isFinite(c.qi) || c.qi < 0 || c.qi > CULTIVATION_STAGES[c.stage].cost
+        || !Number.isInteger(c.autoMajorThreshold) || c.autoMajorThreshold < 0 || c.autoMajorThreshold > 100)
         throw new Error("Invalid cultivation state.");
     if (!Number.isFinite(state.days) || state.days < 0 || !Number.isFinite(state.save_date_time) || state.save_date_time < 0)
         throw new Error("Invalid game clock.");
