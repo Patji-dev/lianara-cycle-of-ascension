@@ -238,7 +238,8 @@ function setCustomEffects() {
         if (gameData.requirements["Rise of Great Heroes"].isCompleted()) {
             var countHeroes = 0
             for (const taskName in gameData.taskData) {
-                if (gameData.taskData[taskName].isHero)
+                // Preserve the original prestige multiplier; this art affects breakthroughs only.
+                if (taskName !== "Heart Demon Suppression" && gameData.taskData[taskName].isHero)
                     countHeroes++
             }
             mult = 1 + 6 * countHeroes / 74
@@ -673,6 +674,8 @@ function setTheme(index, reload=false) {
 
     body.classList.remove("dark")
     body.classList.remove("colorblind")
+    body.classList.toggle("parchment", index == 0)
+    body.classList.toggle("ink", index == 1)
 
 
     if (index == 0) {
@@ -692,7 +695,7 @@ function setTheme(index, reload=false) {
 
     if (reload) {
         saveGameData()
-        location.reload()
+        // Theme tokens update immediately; keep the current view and simulation.
     }
 }
 
@@ -946,6 +949,7 @@ function rebirthReset(set_tab_to_jobs = true) {
             setTab("jobs")
     }
 
+    resetCultivation()
     gameData.coins = 0
     gameData.days = 365 * 14
     gameData.realtime = 0
@@ -1000,11 +1004,11 @@ function getLifespan() {
     const lifespan = baseLifespan * immortality.getEffect() * superImmortality.getEffect() * abyss.getEffect()
         * cosmicLongevity.getEffect() * higherDimensions.getEffect() * lifeIsValueable * speedSpeedSpeed
 
-    if (gameData.active_challenge == "legends_never_die" || gameData.active_challenge == "the_darkest_time") return Math.pow(lifespan, 0.72) + 365 * 25
+    if (gameData.active_challenge == "legends_never_die" || gameData.active_challenge == "the_darkest_time") return (Math.pow(lifespan, 0.72) + 365 * 25) * getCultivationLifespanMultiplier()
 
     if (gameData.rebirthFiveCount > 0) return Infinity
 
-    return lifespan
+    return lifespan * getCultivationLifespanMultiplier()
 }
 
 function isAlive() {
@@ -1177,113 +1181,6 @@ function replaceSaveDict(dict, saveDict) {
     }
 }
 
-function saveGameData() {
-    gameData.save_date_time = Date.now()
-    localStorage.setItem("gameDataSave", JSON.stringify(gameData))
-}
-
-function peekSettingFromSave(setting) {
-    try {
-        const save = localStorage.getItem("gameDataSave")
-        if (save == null)
-            return gameData.settings[setting]
-        const gameDataSave = JSON.parse(save)
-        if (gameDataSave.settings == undefined || gameDataSave.settings[setting] == undefined)
-            return gameData.settings[setting]
-        return gameDataSave.settings[setting]
-    } catch (error) {
-        console.error(error)
-        console.log(localStorage.getItem("gameDataSave"))
-        alert("It looks like you tried to load a corrupted save... If this issue persists, feel free to contact the developers!")
-    }
-}
-
-function loadGameData() {
-    try {
-        const gameDataSave = JSON.parse(localStorage.getItem("gameDataSave"))
-
-        if (gameDataSave !== null) {
-            // When the game contains completedTimes, add 1 Dark Matter and remove the instance.
-            if ("completedTimes" in gameDataSave && gameDataSave["completedTimes"] > 0) {
-                delete gameDataSave["completedTimes"]
-                gameDataSave.dark_matter += 1
-                console.log("Gave 1 free Dark Matter")
-            }
-
-            // remove milestoneData from gameData
-            if ("milestoneData" in gameDataSave) {
-                delete gameDataSave["milestoneData"]                
-            }
-
-            replaceSaveDict(gameData, gameDataSave)
-            replaceSaveDict(gameData.requirements, gameDataSave.requirements)
-            replaceSaveDict(gameData.taskData, gameDataSave.taskData)
-            replaceSaveDict(gameData.itemData, gameDataSave.itemData)
-            replaceSaveDict(gameData.settings, gameDataSave.settings)
-            replaceSaveDict(gameData.stats, gameDataSave.stats)
-            replaceSaveDict(gameData.challenges, gameDataSave.challenges)
-            replaceSaveDict(gameData.dark_matter_shop, gameDataSave.dark_matter_shop)
-            replaceSaveDict(gameData.metaverse, gameDataSave.metaverse)
-            replaceSaveDict(gameData.perks, gameDataSave.perks)
-            gameData = gameDataSave
-
-            if (gameData.coins == null)
-                gameData.coins = 0
-
-            if (gameData.essence == null)
-                gameData.essence = 0
-
-            if (gameData.days == null)
-                gameData.days = 365 * 14
-
-            if (gameData.evil == null)
-                gameData.evil = 0
-
-            if (gameData.dark_matter == null || isNaN(gameData.dark_matter))
-                gameData.dark_matter = 0
-
-            if (gameData.dark_orbs == null || isNaN(gameData.dark_matter) || isNaN(gameData.dark_orbs))
-                gameData.dark_orbs = 0
-
-            if (gameData.hypercubes == null || isNaN(gameData.hypercubes))
-                gameData.hypercubes = 0
-
-            if (gameData.perks_points == null || isNaN(gameData.perks_points))
-                gameData.perks_points = 0
-
-            if (gameData.settings.theme == null) {
-                gameData.settings.theme = 1
-            }
-
-            if (gameData.rebirthOneTime == null || gameData.rebirthOneTime === 0) {
-                gameData.rebirthOneTime = gameData.realtime
-            }
-
-            if (gameData.rebirthTwoTime == null || gameData.rebirthTwoTime === 0) {
-                gameData.rebirthTwoTime = gameData.realtime
-            }
-
-            if (gameData.rebirthThreeTime == null || gameData.rebirthThreeTime === 0) {
-                gameData.rebirthThreeTime = gameData.realtime
-            }
-
-            if (gameData.rebirthFourTime == null || gameData.rebirthFourTime === 0) {
-                gameData.rebirthFourTime = gameData.realtime
-            }
-
-            // Remove invalid active misc items
-            gameData.currentMisc = gameData.currentMisc.filter((element) => element instanceof Item)
-            
-        }
-    } catch (error) {
-        console.error(error)
-        console.log(localStorage.getItem("gameDataSave"))
-        alert("It looks like you tried to load a corrupted save... If this issue persists, feel free to contact the developers!")
-    }
-
-    assignMethods()
-}
-
 var intervalID = 0;
 var totalTimes = 0;
 var executedTimes = 0;
@@ -1354,6 +1251,7 @@ function update(needUpdateUI = true) {
         }
     }
     increaseCoins()
+    updateCultivation()
 
     gameData.evil_perks_points += applySpeed(getEvilPerksGeneration())
     gameData.dark_orbs += applySpeed(getDarkOrbGeneration())
@@ -1443,47 +1341,6 @@ function updateStats() {
         gameData.stats.maxEssenceReached = gameData.essence
 }
 
-function resetGameData() {
-    clearInterval(saveloop)
-    clearInterval(gameloop)
-    if (!confirm('Are you sure you want to reset the game?')) {
-        gameloop = setInterval(update, 1000 / updateSpeed)
-        saveloop = setInterval(saveGameData, 3000)
-        return
-    }
-    localStorage.clear()
-    location.reload()
-}
-
-function importGameData() {
-    try {
-        const importExportBox = document.getElementById("importExportBox")
-        if (importExportBox.value == "") {
-            alert("It looks like you tried to load an empty save... Paste save data into the box, then click \"Import Save\" again.")
-            return
-        }
-        const data = JSON.parse(window.atob(importExportBox.value))
-        clearInterval(gameloop)
-        gameData = data
-        saveGameData()
-        location.reload()
-    } catch (error) {
-        alert("It looks like you tried to load a corrupted save... If this issue persists, feel free to contact the developers!")
-    }
-}
-
-function exportGameData() {
-    const importExportBox = document.getElementById("importExportBox")
-    const saveString = window.btoa(JSON.stringify(gameData))
-    importExportBox.value = saveString
-    copyTextToClipboard(saveString)
-    setTimeout(() => {
-        if (importExportBox.value == saveString) {
-            importExportBox.value = ""
-        }
-    }, 15 * 1000)
-}
-
 function copyTextToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         const tooltip = document.getElementById("exportTooltip");
@@ -1546,9 +1403,14 @@ for (const key in gameData.requirements) {
     tempData["requirements"][key] = requirement
 }
 
+initializeForkSave()
+installCultivationJobGates()
 loadGameData()
 
+Object.assign(tooltips, CULTIVATION_TOOLTIP_OVERRIDES)
 initializeUI()
+initializeCultivationTheme()
+initializeInkUI()
 
 
 setCustomEffects()

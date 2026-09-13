@@ -36,6 +36,8 @@ function updateUI() {
 
     // Always render the sidebar.
     renderSideBar()
+    renderCultivation()
+    renderInkUI()
 
     // Always render all the requirements.
     renderRequirements()
@@ -89,7 +91,7 @@ function renderSideBar() {
     const quickTaskDisplayElement = document.getElementById("quickTaskDisplay")
 
     const progressBar = quickTaskDisplayElement.getElementsByClassName("job")[0]
-    progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + task.name + " lvl " + formatLevel(task.level)
+    progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + displayName(task.name) + " lvl " + formatLevel(task.level)
     const progressFill = progressBar.getElementsByClassName("progressFill")[0]
     renderProgressBar(task, progressFill, progressBar)   
 
@@ -270,7 +272,7 @@ function renderJobs() {
         gameData.rebirthOneCount > 0 ? maxLevel.classList.remove("hidden") : maxLevel.classList.add("hidden")
 
         const progressBar = task.querySelector(".progressBar", row)
-        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + task.name
+        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + displayName(task.name)
         const progressFill = task.querySelector(".progressFill", row)
         renderProgressBar(task, progressFill, progressBar)
 
@@ -309,7 +311,7 @@ function renderSkills() {
         gameData.rebirthOneCount > 0 ? maxLevel.classList.remove("hidden") : maxLevel.classList.add("hidden")
 
         const progressBar = task.querySelector(".progressBar", row)
-        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + task.name
+        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + displayName(task.name)
         const progressFill = task.querySelector(".progressFill", row)
         renderProgressBar(task, progressFill, progressBar)
 
@@ -339,7 +341,11 @@ function renderShop() {
             ? itemCategories["Properties"].includes(item.name) ? headerRowColors["Properties_Auto"] : headerRowColors["Misc_Auto"]
             : itemCategories["Properties"].includes(item.name) ? headerRowColors["Properties"] : headerRowColors["Misc"]
 
-        active.style.backgroundColor = gameData.currentMisc.includes(item) || item == gameData.currentProperty ? color : "white"
+        const equipped = gameData.currentMisc.includes(item) || item == gameData.currentProperty
+        row.classList.toggle("ink-equipped", equipped)
+        button.setAttribute("aria-pressed", String(equipped))
+        active.textContent = equipped ? "✓" : "—"
+        active.style.backgroundColor = equipped ? color : "white"
         row.querySelector(".effect").textContent = item.getEffectDescription()
         formatCoins(item.getExpense(), row.querySelector(".expense"))
     }
@@ -869,7 +875,7 @@ function createHeaderRow(templates, categoryType, categoryName) {
 
 function createRow(templates, name, categoryName, categoryType) {
     const row = templates.row.content.firstElementChild.cloneNode(true)
-    row.getElementsByClassName("name")[0].textContent = name
+    row.getElementsByClassName("name")[0].textContent = displayName(name)
     row.getElementsByClassName("tooltipText")[0].textContent = tooltips[name]
     row.id = "row" + removeSpaces(removeStrangeCharacters(name))
 
@@ -968,7 +974,7 @@ function updateRequiredRows(data, categoryType) {
             let effectText = ""
             if (data == gameData.taskData) {
                 const task = gameData.taskData[nextEntity.name]
-                effectElement.classList.remove("hiddenTask")
+                if (task instanceof Skill) effectElement.classList.remove("hiddenTask")
                 effectValueElement.textContent = task.unlocked ? (task.baseData.description != null ? task.baseData.description : "Income") : "Unknown"
 
                 if (requirementObject instanceof EvilRequirement) {
@@ -994,9 +1000,12 @@ function updateRequiredRows(data, categoryType) {
                     for (const requirement of requirements) {
                         const task = gameData.taskData[requirement.task]
                         if (task.level >= requirement.requirement) continue
-                        finalText += " " + requirement.task + " " + formatLevel(task.level) + "/" + formatLevel(requirement.requirement) + ","
+                        finalText += " " + displayName(requirement.task) + " " + formatLevel(task.level) + "/" + formatLevel(requirement.requirement) + ","
                     }
                     finalText = finalText.substring(0, finalText.length - 1)
+                    const realmStage = getCultivationJobStage(nextEntity.name)
+                    if (realmStage > (gameData.cultivation?.stage || 0))
+                        finalText += (finalText ? "; " : "") + "Realm: " + CULTIVATION_STAGES[realmStage].name
                     levelElement.textContent = finalText
                 }
             }
@@ -1006,7 +1015,7 @@ function updateRequiredRows(data, categoryType) {
 
                 const item = gameData.itemData[nextEntity.name]
                 
-                effectElement.classList.remove("hiddenTask")
+                if (!itemCategories.Properties.includes(item.name)) effectElement.classList.remove("hiddenTask")
                 effectValueElement.textContent = item.unlocked ? (item.baseData.description != null ? item.baseData.description : "Happiness") : "Unknown"
             }
             else if (data == milestoneData) {
@@ -1058,9 +1067,9 @@ function getHeroicRequiredTooltip(task) {
                 if (reqvalue <= 20)
                     continue
                 else
-                    prevReq = " Great " + requirement.task + " " + (task_check.isHero ? task_check.level : 0) + "/" + reqvalue + "<br>"
+                    prevReq = " Great " + displayName(requirement.task) + " " + (task_check.isHero ? task_check.level : 0) + "/" + reqvalue + "<br>"
             } else {
-                reqlist += " Great " + requirement.task + " " + (task_check.isHero ? task_check.level : 0) + "/" + reqvalue + "<br>"
+                reqlist += " Great " + displayName(requirement.task) + " " + (task_check.isHero ? task_check.level : 0) + "/" + reqvalue + "<br>"
             }
         }
     }
@@ -1103,7 +1112,7 @@ function onResize(width) {
         document.getElementById("info").classList.remove("hidden")
         document.getElementById("infoTabButton").classList.remove("hidden")
         document.getElementById("info").appendChild(document.getElementById("infoPage"))
-        qb.hidden = true
+        qb.hidden = false
         
     }
 }
@@ -1197,19 +1206,20 @@ function setLayout(id) {
         document.getElementById("maincolumnMetaverse").classList.add("settings-main-column")     
     }
 
+    document.body.dataset.layout = id
     selectElementInGroup("Layout", id == 0 ? 1 : 0)
 }
 
 function setFontSize(id) {
     const fontSizes = {
-        0: "xx-small",
-        1: "x-small",
-        2: "small",
-        3: "medium",
-        4: "large",
-        5: "x-large",
-        6: "xx-large",
-        7: "xxx-large",
+        0: "16px",
+        1: "17px",
+        2: "18px",
+        3: "20px",
+        4: "22px",
+        5: "24px",
+        6: "28px",
+        7: "32px",
     }
 
     if (id < 0) id = 0
@@ -1320,8 +1330,10 @@ function setTab(selectedTab) {
     const tabButtons = document.getElementsByClassName("tabButton")
     for (tabButton of tabButtons) {
         tabButton.classList.remove("w3-blue-gray")
+        tabButton.removeAttribute("aria-current")
     }
     element.classList.add("w3-blue-gray")
+    element.setAttribute("aria-current", "page")
 }
 
 function setTabSettings(tab) {
@@ -1448,6 +1460,8 @@ function toggleChallenge(challengeName) {
 }
 
 window.addEventListener('keydown', function (e) {
+    // Native controls and dialogs own their keys; do not pause or reincarnate while interacting.
+    if (e.defaultPrevented || e.target.closest('button, input, textarea, select, a, summary, dialog, [role="button"], [contenteditable="true"]')) return
     if (!e.ctrlKey && !e.shiftKey && !e.altKey) {
         if (e.key == " " && !e.repeat) {
             togglePause()

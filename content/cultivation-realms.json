@@ -1,0 +1,1240 @@
+{
+  "version": 1,
+  "status": "active",
+  "startingRealm": {
+    "id": "mortal",
+    "name": "Mortal"
+  },
+  "realms": [
+    {
+      "id": "qi-gathering",
+      "era": "Mortal cultivation",
+      "name": "Qi Gathering",
+      "minorRealms": [
+        {
+          "id": "qi-gathering-1",
+          "name": "Qi Gathering I",
+          "label": "I"
+        },
+        {
+          "id": "qi-gathering-2",
+          "name": "Qi Gathering II",
+          "label": "II"
+        },
+        {
+          "id": "qi-gathering-3",
+          "name": "Qi Gathering III",
+          "label": "III"
+        }
+      ]
+    },
+    {
+      "id": "foundation-establishment",
+      "era": "Mortal cultivation",
+      "name": "Foundation Establishment",
+      "minorRealms": [
+        {
+          "id": "foundation-establishment-1",
+          "name": "Foundation Establishment I",
+          "label": "I"
+        },
+        {
+          "id": "foundation-establishment-2",
+          "name": "Foundation Establishment II",
+          "label": "II"
+        },
+        {
+          "id": "foundation-establishment-3",
+          "name": "Foundation Establishment III",
+          "label": "III"
+        }
+      ]
+    },
+    {
+      "id": "golden-core",
+      "era": "Mortal cultivation",
+      "name": "Golden Core",
+      "minorRealms": [
+        {
+          "id": "golden-core-1",
+          "name": "Golden Core I",
+          "label": "I"
+        },
+        {
+          "id": "golden-core-2",
+          "name": "Golden Core II",
+          "label": "II"
+        },
+        {
+          "id": "golden-core-3",
+          "name": "Golden Core III",
+          "label": "III"
+        }
+      ]
+    },
+    {
+      "id": "nascent-soul",
+      "era": "Mortal cultivation",
+      "name": "Nascent Soul",
+      "minorRealms": [
+        {
+          "id": "nascent-soul-1",
+          "name": "Nascent Soul First Stirring",
+          "label": "First Stirring"
+        },
+        {
+          "id": "nascent-soul-2",
+          "name": "Nascent Soul Emergence",
+          "label": "Emergence"
+        },
+        {
+          "id": "nascent-soul-3",
+          "name": "Nascent Soul Resonance",
+          "label": "Resonance"
+        },
+        {
+          "id": "nascent-soul-4",
+          "name": "Nascent Soul Full Manifestation",
+          "label": "Full Manifestation"
+        }
+      ]
+    },
+    {
+      "id": "soul-transformation",
+      "era": "Mortal cultivation",
+      "name": "Soul Transformation",
+      "minorRealms": [
+        {
+          "id": "soul-transformation-1",
+          "name": "Soul Transformation Initial",
+          "label": "Initial"
+        },
+        {
+          "id": "soul-transformation-2",
+          "name": "Soul Transformation Refined",
+          "label": "Refined"
+        },
+        {
+          "id": "soul-transformation-3",
+          "name": "Soul Transformation Complete",
+          "label": "Complete"
+        }
+      ]
+    },
+    {
+      "id": "void-refinement",
+      "era": "Mortal cultivation",
+      "name": "Void Refinement",
+      "minorRealms": [
+        {
+          "id": "void-refinement-1",
+          "name": "Void Refinement First Glimpse",
+          "label": "First Glimpse"
+        },
+        {
+          "id": "void-refinement-2",
+          "name": "Void Refinement Thin Veil",
+          "label": "Thin Veil"
+        },
+        {
+          "id": "void-refinement-3",
+          "name": "Void Refinement Open Gate",
+          "label": "Open Gate"
+        },
+        {
+          "id": "void-refinement-4",
+          "name": "Void Refinement Hollow Sea",
+          "label": "Hollow Sea"
+        },
+        {
+          "id": "void-refinement-5",
+          "name": "Void Refinement Silent Depths",
+          "label": "Silent Depths"
+        },
+        {
+          "id": "void-refinement-6",
+          "name": "Void Refinement Boundless Reach",
+          "label": "Boundless Reach"
+        },
+        {
+          "id": "void-refinement-7",
+          "name": "Void Refinement Clear Emptiness",
+          "label": "Clear Emptiness"
+        }
+      ]
+    },
+    {
+      "id": "body-soul-unity",
+      "era": "Mortal cultivation",
+      "name": "Body–Soul Unity",
+      "minorRealms": [
+        {
+          "id": "body-soul-unity-1",
+          "name": "Body–Soul Unity Thread",
+          "label": "Thread"
+        },
+        {
+          "id": "body-soul-unity-2",
+          "name": "Body–Soul Unity Accord",
+          "label": "Accord"
+        },
+        {
+          "id": "body-soul-unity-3",
+          "name": "Body–Soul Unity Union",
+          "label": "Union"
+        },
+        {
+          "id": "body-soul-unity-4",
+          "name": "Body–Soul Unity Indivisible",
+          "label": "Indivisible"
+        }
+      ]
+    },
+    {
+      "id": "heavenly-tribulation",
+      "era": "Mortal cultivation",
+      "name": "Heavenly Tribulation",
+      "minorRealms": [
+        {
+          "id": "heavenly-tribulation-1",
+          "name": "Heavenly Tribulation Gathering Clouds",
+          "label": "Gathering Clouds"
+        },
+        {
+          "id": "heavenly-tribulation-2",
+          "name": "Heavenly Tribulation First Thunder",
+          "label": "First Thunder"
+        },
+        {
+          "id": "heavenly-tribulation-3",
+          "name": "Heavenly Tribulation Lightning Baptism",
+          "label": "Lightning Baptism"
+        },
+        {
+          "id": "heavenly-tribulation-4",
+          "name": "Heavenly Tribulation Heart Trial",
+          "label": "Heart Trial"
+        },
+        {
+          "id": "heavenly-tribulation-5",
+          "name": "Heavenly Tribulation Shattered Chains",
+          "label": "Shattered Chains"
+        },
+        {
+          "id": "heavenly-tribulation-6",
+          "name": "Heavenly Tribulation Heaven Cleared",
+          "label": "Heaven Cleared"
+        }
+      ]
+    },
+    {
+      "id": "immortal-awakening",
+      "era": "Immortal ascension",
+      "name": "Immortal Awakening",
+      "minorRealms": [
+        {
+          "id": "immortal-awakening-1",
+          "name": "Immortal Awakening Dawn",
+          "label": "Dawn"
+        },
+        {
+          "id": "immortal-awakening-2",
+          "name": "Immortal Awakening First Light",
+          "label": "First Light"
+        },
+        {
+          "id": "immortal-awakening-3",
+          "name": "Immortal Awakening Rising Radiance",
+          "label": "Rising Radiance"
+        },
+        {
+          "id": "immortal-awakening-4",
+          "name": "Immortal Awakening High Sun",
+          "label": "High Sun"
+        },
+        {
+          "id": "immortal-awakening-5",
+          "name": "Immortal Awakening Unfading Light",
+          "label": "Unfading Light"
+        },
+        {
+          "id": "immortal-awakening-6",
+          "name": "Immortal Awakening Eternal Day",
+          "label": "Eternal Day"
+        }
+      ]
+    },
+    {
+      "id": "earth-immortal",
+      "era": "Immortal ascension",
+      "name": "Earth Immortal",
+      "minorRealms": [
+        {
+          "id": "earth-immortal-1",
+          "name": "Earth Immortal Lower",
+          "label": "Lower"
+        },
+        {
+          "id": "earth-immortal-2",
+          "name": "Earth Immortal Upper",
+          "label": "Upper"
+        },
+        {
+          "id": "earth-immortal-3",
+          "name": "Earth Immortal Peak",
+          "label": "Peak"
+        },
+        {
+          "id": "earth-immortal-4",
+          "name": "Earth Immortal Complete",
+          "label": "Complete"
+        }
+      ]
+    },
+    {
+      "id": "heaven-immortal",
+      "era": "Immortal ascension",
+      "name": "Heaven Immortal",
+      "minorRealms": [
+        {
+          "id": "heaven-immortal-1",
+          "name": "Heaven Immortal First Heaven",
+          "label": "First Heaven"
+        },
+        {
+          "id": "heaven-immortal-2",
+          "name": "Heaven Immortal Second Heaven",
+          "label": "Second Heaven"
+        },
+        {
+          "id": "heaven-immortal-3",
+          "name": "Heaven Immortal Third Heaven",
+          "label": "Third Heaven"
+        },
+        {
+          "id": "heaven-immortal-4",
+          "name": "Heaven Immortal Fourth Heaven",
+          "label": "Fourth Heaven"
+        },
+        {
+          "id": "heaven-immortal-5",
+          "name": "Heaven Immortal Fifth Heaven",
+          "label": "Fifth Heaven"
+        },
+        {
+          "id": "heaven-immortal-6",
+          "name": "Heaven Immortal Sixth Heaven",
+          "label": "Sixth Heaven"
+        }
+      ]
+    },
+    {
+      "id": "true-immortal",
+      "era": "Immortal ascension",
+      "name": "True Immortal",
+      "minorRealms": [
+        {
+          "id": "true-immortal-1",
+          "name": "True Immortal Initial",
+          "label": "Initial"
+        },
+        {
+          "id": "true-immortal-2",
+          "name": "True Immortal Adept",
+          "label": "Adept"
+        },
+        {
+          "id": "true-immortal-3",
+          "name": "True Immortal Advanced",
+          "label": "Advanced"
+        },
+        {
+          "id": "true-immortal-4",
+          "name": "True Immortal Exalted",
+          "label": "Exalted"
+        },
+        {
+          "id": "true-immortal-5",
+          "name": "True Immortal Perfected",
+          "label": "Perfected"
+        },
+        {
+          "id": "true-immortal-6",
+          "name": "True Immortal Complete",
+          "label": "Complete"
+        }
+      ]
+    },
+    {
+      "id": "jade-immortal",
+      "era": "Immortal ascension",
+      "name": "Jade Immortal",
+      "minorRealms": [
+        {
+          "id": "jade-immortal-1",
+          "name": "Jade Immortal Uncut Jade",
+          "label": "Uncut Jade"
+        },
+        {
+          "id": "jade-immortal-2",
+          "name": "Jade Immortal Clear Grain",
+          "label": "Clear Grain"
+        },
+        {
+          "id": "jade-immortal-3",
+          "name": "Jade Immortal Flawless Jade",
+          "label": "Flawless Jade"
+        },
+        {
+          "id": "jade-immortal-4",
+          "name": "Jade Immortal Imperishable Jade",
+          "label": "Imperishable Jade"
+        }
+      ]
+    },
+    {
+      "id": "immortal-lord",
+      "era": "Immortal ascension",
+      "name": "Immortal Lord",
+      "minorRealms": [
+        {
+          "id": "immortal-lord-1",
+          "name": "Immortal Lord I",
+          "label": "I"
+        },
+        {
+          "id": "immortal-lord-2",
+          "name": "Immortal Lord II",
+          "label": "II"
+        },
+        {
+          "id": "immortal-lord-3",
+          "name": "Immortal Lord III",
+          "label": "III"
+        },
+        {
+          "id": "immortal-lord-4",
+          "name": "Immortal Lord IV",
+          "label": "IV"
+        },
+        {
+          "id": "immortal-lord-5",
+          "name": "Immortal Lord V",
+          "label": "V"
+        },
+        {
+          "id": "immortal-lord-6",
+          "name": "Immortal Lord VI",
+          "label": "VI"
+        }
+      ]
+    },
+    {
+      "id": "immortal-sovereign",
+      "era": "Immortal ascension",
+      "name": "Immortal Sovereign",
+      "minorRealms": [
+        {
+          "id": "immortal-sovereign-1",
+          "name": "Immortal Sovereign First Mandate",
+          "label": "First Mandate"
+        },
+        {
+          "id": "immortal-sovereign-2",
+          "name": "Immortal Sovereign Rising Court",
+          "label": "Rising Court"
+        },
+        {
+          "id": "immortal-sovereign-3",
+          "name": "Immortal Sovereign Cloud Dominion",
+          "label": "Cloud Dominion"
+        },
+        {
+          "id": "immortal-sovereign-4",
+          "name": "Immortal Sovereign Heavenly Authority",
+          "label": "Heavenly Authority"
+        },
+        {
+          "id": "immortal-sovereign-5",
+          "name": "Immortal Sovereign Peerless Decree",
+          "label": "Peerless Decree"
+        },
+        {
+          "id": "immortal-sovereign-6",
+          "name": "Immortal Sovereign Unbroken Reign",
+          "label": "Unbroken Reign"
+        },
+        {
+          "id": "immortal-sovereign-7",
+          "name": "Immortal Sovereign Eternal Mandate",
+          "label": "Eternal Mandate"
+        }
+      ]
+    },
+    {
+      "id": "dao-seed",
+      "era": "Mastery of the Dao",
+      "name": "Dao Seed",
+      "minorRealms": [
+        {
+          "id": "dao-seed-1",
+          "name": "Dao Seed Dormant",
+          "label": "Dormant"
+        },
+        {
+          "id": "dao-seed-2",
+          "name": "Dao Seed Stirring",
+          "label": "Stirring"
+        },
+        {
+          "id": "dao-seed-3",
+          "name": "Dao Seed Rooted",
+          "label": "Rooted"
+        },
+        {
+          "id": "dao-seed-4",
+          "name": "Dao Seed Branching",
+          "label": "Branching"
+        },
+        {
+          "id": "dao-seed-5",
+          "name": "Dao Seed Blooming",
+          "label": "Blooming"
+        },
+        {
+          "id": "dao-seed-6",
+          "name": "Dao Seed Fruition",
+          "label": "Fruition"
+        }
+      ]
+    },
+    {
+      "id": "dao-inscription",
+      "era": "Mastery of the Dao",
+      "name": "Dao Inscription",
+      "minorRealms": [
+        {
+          "id": "dao-inscription-1",
+          "name": "Dao Inscription First Stroke",
+          "label": "First Stroke"
+        },
+        {
+          "id": "dao-inscription-2",
+          "name": "Dao Inscription Bound Sutra",
+          "label": "Bound Sutra"
+        },
+        {
+          "id": "dao-inscription-3",
+          "name": "Dao Inscription Perfect Inscription",
+          "label": "Perfect Inscription"
+        }
+      ]
+    },
+    {
+      "id": "dao-domain",
+      "era": "Mastery of the Dao",
+      "name": "Dao Domain",
+      "minorRealms": [
+        {
+          "id": "dao-domain-1",
+          "name": "Dao Domain Inner Circle",
+          "label": "Inner Circle"
+        },
+        {
+          "id": "dao-domain-2",
+          "name": "Dao Domain Mountain Dominion",
+          "label": "Mountain Dominion"
+        },
+        {
+          "id": "dao-domain-3",
+          "name": "Dao Domain Sovereign Domain",
+          "label": "Sovereign Domain"
+        }
+      ]
+    },
+    {
+      "id": "dao-saint",
+      "era": "Mastery of the Dao",
+      "name": "Dao Saint",
+      "minorRealms": [
+        {
+          "id": "dao-saint-1",
+          "name": "Dao Saint Novice",
+          "label": "Novice"
+        },
+        {
+          "id": "dao-saint-2",
+          "name": "Dao Saint Initiated",
+          "label": "Initiated"
+        },
+        {
+          "id": "dao-saint-3",
+          "name": "Dao Saint Adept",
+          "label": "Adept"
+        },
+        {
+          "id": "dao-saint-4",
+          "name": "Dao Saint Venerable",
+          "label": "Venerable"
+        },
+        {
+          "id": "dao-saint-5",
+          "name": "Dao Saint Exalted",
+          "label": "Exalted"
+        },
+        {
+          "id": "dao-saint-6",
+          "name": "Dao Saint Perfected",
+          "label": "Perfected"
+        }
+      ]
+    },
+    {
+      "id": "dao-ancestor",
+      "era": "Mastery of the Dao",
+      "name": "Dao Ancestor",
+      "minorRealms": [
+        {
+          "id": "dao-ancestor-1",
+          "name": "Dao Ancestor First Teaching",
+          "label": "First Teaching"
+        },
+        {
+          "id": "dao-ancestor-2",
+          "name": "Dao Ancestor Ancestral Wisdom",
+          "label": "Ancestral Wisdom"
+        },
+        {
+          "id": "dao-ancestor-3",
+          "name": "Dao Ancestor Eternal Source",
+          "label": "Eternal Source"
+        }
+      ]
+    },
+    {
+      "id": "world-seed",
+      "era": "Inner worlds",
+      "name": "World Seed",
+      "minorRealms": [
+        {
+          "id": "world-seed-1",
+          "name": "World Seed Spark",
+          "label": "Spark"
+        },
+        {
+          "id": "world-seed-2",
+          "name": "World Seed Cradle",
+          "label": "Cradle"
+        },
+        {
+          "id": "world-seed-3",
+          "name": "World Seed Worldbirth",
+          "label": "Worldbirth"
+        }
+      ]
+    },
+    {
+      "id": "inner-heaven",
+      "era": "Inner worlds",
+      "name": "Inner Heaven",
+      "minorRealms": [
+        {
+          "id": "inner-heaven-1",
+          "name": "Inner Heaven First Sky",
+          "label": "First Sky"
+        },
+        {
+          "id": "inner-heaven-2",
+          "name": "Inner Heaven Mountain Crown",
+          "label": "Mountain Crown"
+        },
+        {
+          "id": "inner-heaven-3",
+          "name": "Inner Heaven River Veins",
+          "label": "River Veins"
+        },
+        {
+          "id": "inner-heaven-4",
+          "name": "Inner Heaven Turning Seasons",
+          "label": "Turning Seasons"
+        },
+        {
+          "id": "inner-heaven-5",
+          "name": "Inner Heaven Complete Heaven",
+          "label": "Complete Heaven"
+        }
+      ]
+    },
+    {
+      "id": "world-sovereign",
+      "era": "Inner worlds",
+      "name": "World Sovereign",
+      "minorRealms": [
+        {
+          "id": "world-sovereign-1",
+          "name": "World Sovereign Lower",
+          "label": "Lower"
+        },
+        {
+          "id": "world-sovereign-2",
+          "name": "World Sovereign Upper",
+          "label": "Upper"
+        },
+        {
+          "id": "world-sovereign-3",
+          "name": "World Sovereign High",
+          "label": "High"
+        },
+        {
+          "id": "world-sovereign-4",
+          "name": "World Sovereign Perfected",
+          "label": "Perfected"
+        },
+        {
+          "id": "world-sovereign-5",
+          "name": "World Sovereign Complete",
+          "label": "Complete"
+        }
+      ]
+    },
+    {
+      "id": "star-forging",
+      "era": "Inner worlds",
+      "name": "Star Forging",
+      "minorRealms": [
+        {
+          "id": "star-forging-1",
+          "name": "Star Forging Gathering Dust",
+          "label": "Gathering Dust"
+        },
+        {
+          "id": "star-forging-2",
+          "name": "Star Forging Burning Heart",
+          "label": "Burning Heart"
+        },
+        {
+          "id": "star-forging-3",
+          "name": "Star Forging Undying Star",
+          "label": "Undying Star"
+        }
+      ]
+    },
+    {
+      "id": "constellation-weaving",
+      "era": "Inner worlds",
+      "name": "Constellation Weaving",
+      "minorRealms": [
+        {
+          "id": "constellation-weaving-1",
+          "name": "Constellation Weaving First Thread",
+          "label": "First Thread"
+        },
+        {
+          "id": "constellation-weaving-2",
+          "name": "Constellation Weaving Twin Lights",
+          "label": "Twin Lights"
+        },
+        {
+          "id": "constellation-weaving-3",
+          "name": "Constellation Weaving Starlit Pattern",
+          "label": "Starlit Pattern"
+        },
+        {
+          "id": "constellation-weaving-4",
+          "name": "Constellation Weaving Celestial Loom",
+          "label": "Celestial Loom"
+        },
+        {
+          "id": "constellation-weaving-5",
+          "name": "Constellation Weaving Heavenly Tapestry",
+          "label": "Heavenly Tapestry"
+        },
+        {
+          "id": "constellation-weaving-6",
+          "name": "Constellation Weaving Living Constellation",
+          "label": "Living Constellation"
+        },
+        {
+          "id": "constellation-weaving-7",
+          "name": "Constellation Weaving Seamless Firmament",
+          "label": "Seamless Firmament"
+        }
+      ]
+    },
+    {
+      "id": "star-domain-sovereign",
+      "era": "Celestial dominion",
+      "name": "Star Domain Sovereign",
+      "minorRealms": [
+        {
+          "id": "star-domain-sovereign-1",
+          "name": "Star Domain Sovereign I",
+          "label": "I"
+        },
+        {
+          "id": "star-domain-sovereign-2",
+          "name": "Star Domain Sovereign II",
+          "label": "II"
+        },
+        {
+          "id": "star-domain-sovereign-3",
+          "name": "Star Domain Sovereign III",
+          "label": "III"
+        },
+        {
+          "id": "star-domain-sovereign-4",
+          "name": "Star Domain Sovereign IV",
+          "label": "IV"
+        },
+        {
+          "id": "star-domain-sovereign-5",
+          "name": "Star Domain Sovereign V",
+          "label": "V"
+        },
+        {
+          "id": "star-domain-sovereign-6",
+          "name": "Star Domain Sovereign VI",
+          "label": "VI"
+        },
+        {
+          "id": "star-domain-sovereign-7",
+          "name": "Star Domain Sovereign VII",
+          "label": "VII"
+        }
+      ]
+    },
+    {
+      "id": "galactic-heart",
+      "era": "Celestial dominion",
+      "name": "Galactic Heart",
+      "minorRealms": [
+        {
+          "id": "galactic-heart-1",
+          "name": "Galactic Heart Still Centre",
+          "label": "Still Centre"
+        },
+        {
+          "id": "galactic-heart-2",
+          "name": "Galactic Heart Spiral Flow",
+          "label": "Spiral Flow"
+        },
+        {
+          "id": "galactic-heart-3",
+          "name": "Galactic Heart Stellar Tide",
+          "label": "Stellar Tide"
+        },
+        {
+          "id": "galactic-heart-4",
+          "name": "Galactic Heart Unbroken Rhythm",
+          "label": "Unbroken Rhythm"
+        },
+        {
+          "id": "galactic-heart-5",
+          "name": "Galactic Heart Myriad Stars as One",
+          "label": "Myriad Stars as One"
+        }
+      ]
+    },
+    {
+      "id": "heavenly-meridian",
+      "era": "Celestial dominion",
+      "name": "Heavenly Meridian",
+      "minorRealms": [
+        {
+          "id": "heavenly-meridian-1",
+          "name": "Heavenly Meridian Hidden Channel",
+          "label": "Hidden Channel"
+        },
+        {
+          "id": "heavenly-meridian-2",
+          "name": "Heavenly Meridian Opened Passage",
+          "label": "Opened Passage"
+        },
+        {
+          "id": "heavenly-meridian-3",
+          "name": "Heavenly Meridian Flowing Light",
+          "label": "Flowing Light"
+        },
+        {
+          "id": "heavenly-meridian-4",
+          "name": "Heavenly Meridian Celestial Current",
+          "label": "Celestial Current"
+        },
+        {
+          "id": "heavenly-meridian-5",
+          "name": "Heavenly Meridian Converging Rivers",
+          "label": "Converging Rivers"
+        },
+        {
+          "id": "heavenly-meridian-6",
+          "name": "Heavenly Meridian Unbroken Circuit",
+          "label": "Unbroken Circuit"
+        },
+        {
+          "id": "heavenly-meridian-7",
+          "name": "Heavenly Meridian All Heavens Connected",
+          "label": "All Heavens Connected"
+        }
+      ]
+    },
+    {
+      "id": "universal-dao",
+      "era": "Celestial dominion",
+      "name": "Universal Dao",
+      "minorRealms": [
+        {
+          "id": "universal-dao-1",
+          "name": "Universal Dao First Principle",
+          "label": "First Principle"
+        },
+        {
+          "id": "universal-dao-2",
+          "name": "Universal Dao Harmonious Order",
+          "label": "Harmonious Order"
+        },
+        {
+          "id": "universal-dao-3",
+          "name": "Universal Dao Perfect Accord",
+          "label": "Perfect Accord"
+        },
+        {
+          "id": "universal-dao-4",
+          "name": "Universal Dao All Under Heaven",
+          "label": "All Under Heaven"
+        }
+      ]
+    },
+    {
+      "id": "boundless-heaven",
+      "era": "Celestial dominion",
+      "name": "Boundless Heaven",
+      "minorRealms": [
+        {
+          "id": "boundless-heaven-1",
+          "name": "Boundless Heaven Far Horizon",
+          "label": "Far Horizon"
+        },
+        {
+          "id": "boundless-heaven-2",
+          "name": "Boundless Heaven Endless Expanse",
+          "label": "Endless Expanse"
+        },
+        {
+          "id": "boundless-heaven-3",
+          "name": "Boundless Heaven Unmeasured Depth",
+          "label": "Unmeasured Depth"
+        },
+        {
+          "id": "boundless-heaven-4",
+          "name": "Boundless Heaven Limitless Stillness",
+          "label": "Limitless Stillness"
+        },
+        {
+          "id": "boundless-heaven-5",
+          "name": "Boundless Heaven Without Boundary",
+          "label": "Without Boundary"
+        }
+      ]
+    },
+    {
+      "id": "worldsea-crossing",
+      "era": "Beyond one universe",
+      "name": "Worldsea Crossing",
+      "minorRealms": [
+        {
+          "id": "worldsea-crossing-1",
+          "name": "Worldsea Crossing First Shore",
+          "label": "First Shore"
+        },
+        {
+          "id": "worldsea-crossing-2",
+          "name": "Worldsea Crossing Shallow Waters",
+          "label": "Shallow Waters"
+        },
+        {
+          "id": "worldsea-crossing-3",
+          "name": "Worldsea Crossing Open Sea",
+          "label": "Open Sea"
+        },
+        {
+          "id": "worldsea-crossing-4",
+          "name": "Worldsea Crossing Deep Current",
+          "label": "Deep Current"
+        },
+        {
+          "id": "worldsea-crossing-5",
+          "name": "Worldsea Crossing Silent Abyss",
+          "label": "Silent Abyss"
+        },
+        {
+          "id": "worldsea-crossing-6",
+          "name": "Worldsea Crossing Further Shore",
+          "label": "Further Shore"
+        },
+        {
+          "id": "worldsea-crossing-7",
+          "name": "Worldsea Crossing All Shores as One",
+          "label": "All Shores as One"
+        }
+      ]
+    },
+    {
+      "id": "myriad-worlds",
+      "era": "Beyond one universe",
+      "name": "Myriad Worlds",
+      "minorRealms": [
+        {
+          "id": "myriad-worlds-1",
+          "name": "Myriad Worlds One Reflection",
+          "label": "One Reflection"
+        },
+        {
+          "id": "myriad-worlds-2",
+          "name": "Myriad Worlds Thousand Echoes",
+          "label": "Thousand Echoes"
+        },
+        {
+          "id": "myriad-worlds-3",
+          "name": "Myriad Worlds One and All",
+          "label": "One and All"
+        }
+      ]
+    },
+    {
+      "id": "karmic-sovereign",
+      "era": "Beyond one universe",
+      "name": "Karmic Sovereign",
+      "minorRealms": [
+        {
+          "id": "karmic-sovereign-1",
+          "name": "Karmic Sovereign Seeing Threads",
+          "label": "Seeing Threads"
+        },
+        {
+          "id": "karmic-sovereign-2",
+          "name": "Karmic Sovereign Tracing Causes",
+          "label": "Tracing Causes"
+        },
+        {
+          "id": "karmic-sovereign-3",
+          "name": "Karmic Sovereign Unbinding Knots",
+          "label": "Unbinding Knots"
+        },
+        {
+          "id": "karmic-sovereign-4",
+          "name": "Karmic Sovereign Weaving Outcomes",
+          "label": "Weaving Outcomes"
+        },
+        {
+          "id": "karmic-sovereign-5",
+          "name": "Karmic Sovereign Turning Fortune",
+          "label": "Turning Fortune"
+        },
+        {
+          "id": "karmic-sovereign-6",
+          "name": "Karmic Sovereign Severing Fate",
+          "label": "Severing Fate"
+        },
+        {
+          "id": "karmic-sovereign-7",
+          "name": "Karmic Sovereign Freedom from Karma",
+          "label": "Freedom from Karma"
+        }
+      ]
+    },
+    {
+      "id": "time-river-sovereign",
+      "era": "Beyond one universe",
+      "name": "Time River Sovereign",
+      "minorRealms": [
+        {
+          "id": "time-river-sovereign-1",
+          "name": "Time River Sovereign First Moment",
+          "label": "First Moment"
+        },
+        {
+          "id": "time-river-sovereign-2",
+          "name": "Time River Sovereign Flowing Stream",
+          "label": "Flowing Stream"
+        },
+        {
+          "id": "time-river-sovereign-3",
+          "name": "Time River Sovereign Remembered Past",
+          "label": "Remembered Past"
+        },
+        {
+          "id": "time-river-sovereign-4",
+          "name": "Time River Sovereign Converging Ages",
+          "label": "Converging Ages"
+        },
+        {
+          "id": "time-river-sovereign-5",
+          "name": "Time River Sovereign Still River",
+          "label": "Still River"
+        },
+        {
+          "id": "time-river-sovereign-6",
+          "name": "Time River Sovereign Timeless",
+          "label": "Timeless"
+        }
+      ]
+    },
+    {
+      "id": "cycle-keeper",
+      "era": "Beyond one universe",
+      "name": "Cycle Keeper",
+      "minorRealms": [
+        {
+          "id": "cycle-keeper-1",
+          "name": "Cycle Keeper First Turning",
+          "label": "First Turning"
+        },
+        {
+          "id": "cycle-keeper-2",
+          "name": "Cycle Keeper Withering and Bloom",
+          "label": "Withering and Bloom"
+        },
+        {
+          "id": "cycle-keeper-3",
+          "name": "Cycle Keeper Complete Cycle",
+          "label": "Complete Cycle"
+        }
+      ]
+    },
+    {
+      "id": "primordial-chaos",
+      "era": "Origin and transcendence",
+      "name": "Primordial Chaos",
+      "minorRealms": [
+        {
+          "id": "primordial-chaos-1",
+          "name": "Primordial Chaos Formless Mist",
+          "label": "Formless Mist"
+        },
+        {
+          "id": "primordial-chaos-2",
+          "name": "Primordial Chaos Hidden Pattern",
+          "label": "Hidden Pattern"
+        },
+        {
+          "id": "primordial-chaos-3",
+          "name": "Primordial Chaos Emerging Order",
+          "label": "Emerging Order"
+        },
+        {
+          "id": "primordial-chaos-4",
+          "name": "Primordial Chaos Before All Things",
+          "label": "Before All Things"
+        }
+      ]
+    },
+    {
+      "id": "origin-dao",
+      "era": "Origin and transcendence",
+      "name": "Origin Dao",
+      "minorRealms": [
+        {
+          "id": "origin-dao-1",
+          "name": "Origin Dao First Echo",
+          "label": "First Echo"
+        },
+        {
+          "id": "origin-dao-2",
+          "name": "Origin Dao Root of Heaven",
+          "label": "Root of Heaven"
+        },
+        {
+          "id": "origin-dao-3",
+          "name": "Origin Dao Original Truth",
+          "label": "Original Truth"
+        }
+      ]
+    },
+    {
+      "id": "creation-sovereign",
+      "era": "Origin and transcendence",
+      "name": "Creation Sovereign",
+      "minorRealms": [
+        {
+          "id": "creation-sovereign-1",
+          "name": "Creation Sovereign First Thought",
+          "label": "First Thought"
+        },
+        {
+          "id": "creation-sovereign-2",
+          "name": "Creation Sovereign Imagined Form",
+          "label": "Imagined Form"
+        },
+        {
+          "id": "creation-sovereign-3",
+          "name": "Creation Sovereign Living Breath",
+          "label": "Living Breath"
+        },
+        {
+          "id": "creation-sovereign-4",
+          "name": "Creation Sovereign Born Heaven",
+          "label": "Born Heaven"
+        },
+        {
+          "id": "creation-sovereign-5",
+          "name": "Creation Sovereign Endless Creation",
+          "label": "Endless Creation"
+        },
+        {
+          "id": "creation-sovereign-6",
+          "name": "Creation Sovereign Creation Without Effort",
+          "label": "Creation Without Effort"
+        }
+      ]
+    },
+    {
+      "id": "great-emptiness",
+      "era": "Origin and transcendence",
+      "name": "Great Emptiness",
+      "minorRealms": [
+        {
+          "id": "great-emptiness-1",
+          "name": "Great Emptiness Quiet Mind",
+          "label": "Quiet Mind"
+        },
+        {
+          "id": "great-emptiness-2",
+          "name": "Great Emptiness Vanishing Boundary",
+          "label": "Vanishing Boundary"
+        },
+        {
+          "id": "great-emptiness-3",
+          "name": "Great Emptiness Perfect Emptiness",
+          "label": "Perfect Emptiness"
+        }
+      ]
+    },
+    {
+      "id": "beyond-the-cycle",
+      "era": "Origin and transcendence",
+      "name": "Beyond the Cycle",
+      "minorRealms": [
+        {
+          "id": "beyond-the-cycle-1",
+          "name": "Beyond the Cycle Last Threshold",
+          "label": "Last Threshold"
+        },
+        {
+          "id": "beyond-the-cycle-2",
+          "name": "Beyond the Cycle Unbound Step",
+          "label": "Unbound Step"
+        },
+        {
+          "id": "beyond-the-cycle-3",
+          "name": "Beyond the Cycle Beyond Becoming",
+          "label": "Beyond Becoming"
+        },
+        {
+          "id": "beyond-the-cycle-4",
+          "name": "Beyond the Cycle Self-Existing Eternity",
+          "label": "Self-Existing Eternity"
+        }
+      ]
+    }
+  ]
+}

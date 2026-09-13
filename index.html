@@ -8,14 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="css/dark.css">
 	<link rel="stylesheet" type="text/css" href="css/colorblind.css">
 	<link rel="stylesheet" type="text/css" href="css/currencies.css">
-	<title>Progress Knight Quest</title>
-	<link rel="shortcut icon" href="img/logo.ico" />
+	<link rel="stylesheet" href="css/ink-and-jade.css">
+	<title>Lianara: Cycle of Ascension</title>
+	<link rel="shortcut icon" href="img/cultivation-seal.svg" type="image/svg+xml" />
 </head>
-<body id="body" class="dark" style="font-size: x-small">
+<body id="body" class="parchment" style="font-size: x-small">
 	<div class="w3-margin">
 		<div class="header">
-			<img src="img/logos.png" alt="logos" />
-			<h3>Progress Knight Quest</h3>
+			<span class="cultivation-seal" aria-hidden="true">道</span>
+			<h3>Lianara: Cycle of Ascension</h3>
 		</div>
 		<div id="offline_progress" hidden="hidden" class="panel w3-margin-left">
 			<h2>
@@ -27,20 +28,38 @@
 				</div>
 			</h2>
 		</div>
-		<div id="mainarea" hidden="hidden">
+		<div id="forkSaveStatus" role="alert" class="panel w3-padding" hidden></div>
+        <div id="mainarea" hidden="hidden">
+            <section id="cultivationPanel" class="panel w3-padding" aria-label="Qi cultivation">
+                <div class="cultivation-heading"><h2 id="cultivationRealm">Mortal</h2><span id="cultivationQi"></span></div>
+                <progress id="cultivationProgress" aria-label="Qi toward the next stage" max="1200" value="0"></progress>
+                <div id="cultivationRate"></div>
+                <div id="cultivationEffects"></div>
+                <div id="cultivationNextEffects"></div>
+                <div class="cultivation-actions">
+                    <button id="cultivationBreakthrough" class="w3-button button" onclick="breakthroughCultivation()">Break through</button>
+                    <label><input id="cultivationAutoMinor" type="checkbox" checked onchange="setCultivationAutoMinor(this.checked)"> Automatically advance minor stages</label>
+                </div>
+                <p id="cultivationStatus" aria-live="polite"></p>
+                <small id="cultivationRecord"></small>
+                <details><summary>Cultivation and reincarnation</summary>
+                    <p>Inner Harmony helps you gather Qi. Reincarnation resets your Qi and realm, while duty and technique records carry forward.</p>
+                    <p>Minor stages can advance automatically. Major breakthroughs await your choice.</p>
+                </details>
+            </section>
 			<div id="row" class="row">
 				<div id="infoQuickBar" class="panel w3-padding quick-bar" style="width:20em" hidden="hidden">
 				</div>
 				<div class="column" >
 					<div id="tabcolumn" class="panel w3-margin-left tabs-tab-column">
 						<div class="w3-button w3-bar-item tabButton baritem" id="infoTabButton" onClick="setTab('info')">Info</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="jobsTabButton" onClick="setTab('jobs')">Hero</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="jobsTabButton" onClick="setTab('jobs')">Duties</div>
 						<div class="w3-button w3-bar-item tabButton baritem hidden" id="skillsTabButton" onClick="setTab('skills')">Skills</div>
 						<div class="w3-button w3-bar-item tabButton baritem hidden" id="shopTabButton" onClick="setTab('shop')">Shop</div>
 						<div class="w3-button w3-bar-item tabButton baritem" id="evilperksTabButton" onClick="setTab('evilperks')">Evil perks</div>					
 						<div class="w3-button w3-bar-item tabButton baritem" id="challengesTabButton" onClick="setTab('challenges')">Challenges</div>
 						<div class="w3-button w3-bar-item tabButton baritem" id="milestonesTabButton" onClick="setTab('milestones')">Milestones</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="rebirthTabButton" onClick="setTab('rebirth')">Amulet</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="rebirthTabButton" onClick="setTab('rebirth')">Reincarnation</div>
 						<div class="w3-button w3-bar-item tabButton baritem" id="darkMatterTabButton" onClick="setTab('darkMatter')">Dark Matter</div>
 						<div class="w3-button w3-bar-item tabButton baritem" id="metaverseTabButton" onClick="setTab('metaverse')">Metaverse</div>
 						<div class="w3-button w3-bar-item tabButton baritem" id="settingsTabButton" onClick="setTab('settings')">Settings</div>
@@ -238,7 +257,7 @@
 										</div>
 									</div>
 									<div class="text-caption" style="padding-top: 0.2em"><span class="color-happiness">Happiness: </span><span id="happinessDisplay"></span></div>
-									<div style="color: gray" class="sidebar-element">Affects all XP gain</div>
+
 									<div id="evilInfo" class="hidden">
 										<div class="text-caption"><span class="color-evil">Evil: </span><span id="evilDisplay"></span></div>
 										<div style="color: gray" class="sidebar-element">Affects Dark Magic XP gain</div>
@@ -264,7 +283,7 @@
 										<div style="color: gray" class="sidebar-element">for Metaverse sacrifices</div>
 									</div>
 									<div id="rebirthButton1" class="hidden">
-										<button class="w3-button button" style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100%" onClick="rebirthOne()">Touch the eye</button>
+										<button class="w3-button button" style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100%" onClick="rebirthOne()">Reincarnate (Touch the eye)</button>
 									</div>
 									<div id="rebirthButton2" class="hidden">
 										<button class="w3-button button" style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100% " onClick="rebirthTwo()">Embrace evil: <span class="color-evil" id="evilGainButtonDisplay"></span></button>
@@ -443,42 +462,23 @@
 								<div id="rebirthTab1" class="tabRebirth">
 									<div id="rebirthPage" class="page panel page-column">
 										<ul>
-											<li id="rebirthNote0" class="hidden">
-												You stumble across a strange looking amulet on your <span id="age0"></span>th birthday. It does not look like
-												it has any worth on the market given that it's made from cheap-looking copper. However, you
-												feel a weird urge to keep the amulet, so you slip it into your pocket for safekeeping.
-											</li>
-											<li id="rebirthNote1" class="hidden">
-												On your <span id="age1"></span>th birthday, you feel the amulet shiver uncontrollably in your pocket. You take it
-												out and the constant shivering suddenly stops. More to your bizarre surprise, you notice
-												a strange etching on the centre of the amulet.
-											</li>
+											<li id="rebirthNote0" class="hidden">On your <span id="age0"></span>th birthday, you find an old soul jade on a mountain path. Its worn surface bears the seal of a forgotten lineage. You keep it close, sensing a faint resonance with your spirit.</li>
+											<li id="rebirthNote1" class="hidden">On your <span id="age1"></span>th birthday, the soul jade grows warm. A hidden inscription emerges: a soul may carry its understanding through the cycle of lives.</li>
 											<li id="rebirthNote2" class="hidden">
-												<div style="margin-bottom: 0.4em">
-													On your <span id="age1a"></span>th birthday, you once again encounter the strange, unexplained shivering from your
-													amulet. But this time, a living eyeball emerges from the centre. Although terribly frightened,
-													you realise you do not have many years to live left anyway so you consider touching the eye
-													to see what happens.
-												</div>
+												<div style="margin-bottom: 0.4em">On your <span id="age1a"></span>th birthday, the seal within your soul jade awakens. It offers passage into another life. Your possessions must remain behind, but the understanding earned through practice can become the foundation of your next beginning.</div>
 												<i style="color: grey">
 													By touching the eyeball, you will be reborn and have to restart life again, losing all your levels and coins.
 													However, you will gain <b>xp multipliers</b> for your heroes and skills equivalent to: <b>1 + the max level of the hero or skill / 10.</b>
-													This means you will learn everything again much more quickly than you did in your previous life. <span class="color-evil">
+													Your duties and techniques return more quickly in a new life. Qi cultivation receives no record multiplier; realm and Qi reset. <span class="color-evil">
 														Something tells you that the amulet might evolve after living for <b><span id="age2"></span></b>...
 													</span>
 												</i>
 												<br>
-												<button class="w3-button button" style="margin-bottom: 0.4em; margin-top: 0.4em " onClick="rebirthOne()">Touch the eye</button>
+												<button class="w3-button button" style="margin-bottom: 0.4em; margin-top: 0.4em " onClick="rebirthOne()">Reincarnate (Touch the eye)</button>
 												<br>
 											</li>
 											<li id="rebirthNote3" class="hidden">
-												<div style="margin-bottom: 0.4em;">
-													Your gut instinct was right. The moment you hit the grand age of <span id="age2a"></span>, you hear an ominous hum coming from the amulet.
-													A mouth emerges from its surface and begins to cackle, and proceeds to say: "So you've made it this far... Are you ready to embrace evil?"
-													<br><span class="color-evil">
-														The amulet might transform even further after living for <b><span id="age3"></span></b>.
-													</span>
-												</div>
+												<div style="margin-bottom: 0.4em;">After <span id="age2a"></span> years, an ancestral presence stirs within the jade. It offers to refine your soul through a deeper awakening. <br><span class="color-evil">Another inscription will reveal itself after <b><span id="age3"></span></b> years.</span></div>
 												<i class="color-evil">
 													If you decide to embrace evil, all of your levels, coins and even max levels will be reset.
 													You will be reborn as a fresh slate. However, you will unlock a new line of skills and gain
@@ -489,25 +489,13 @@
 												<br>
 											</li>
 											<li id="rebirthNote4" class="hidden">
-												<div style="margin-bottom: 0.4em;">
-													A <span id="age3a"></span> years have come and gone and yet, you still remain alive... somehow. You feel your amulet shivering again and to your surprise, you see small tendrils
-													full of eyeballs emergin from it. As you are about to drop the amulet, you hear frightening screech followed by whispers in your head... <b>"You have to embrace the Void..."</b>
-													<br>
-													<span class="color-evil">
-														The amulet will reach its final form after <b><span id="age4"></span></b>!
-													</span>
-												</div>
+												<div style="margin-bottom: 0.4em;">After <span id="age3a"></span> years, the jade reveals a path between the heavens. You begin to comprehend the silent laws of the void. <br><span class="color-evil">Its celestial seal will awaken after <b><span id="age4"></span></b> years.</span></div>
 												<i style="color: rgb(204, 0, 255)">
 													You have unlocked <b>"The Void"</b> class category along with <b>"Void Manipulation"</b> skills.
 												</i>
 											</li>
 											<li id="rebirthNote5" class="hidden">
-												<div style="margin-bottom: 0.4em;">
-													<span id="age4a"></span> have passed... most of them spent serving the Void, yet there is still a glimpse of humanity inside of you. All of the sudden your amulet starts to glow in the distance,
-													illuminating darkness around you with the brightness of a thousand suns. With the very last remnant of your free will, you run to your amulet and touch it... <b>
-														"You are now part of something bigger than yourself..."
-													</b>
-												</div>
+												<div style="margin-bottom: 0.4em;">After <span id="age4a"></span> years, the jade shines with the light of distant heavens. The Celestial Court recognizes your understanding and opens a path toward the Dao.</div>
 												<i style="color: rgb(255, 204, 102)">
 													You have unlocked <b>"Galactic Council"</b> class category along with <b>"Celestial Powers"</b> skills.
 													<i style="color: grey">
@@ -830,6 +818,7 @@
 								<div class="w3-button w3-bar-item tabButtonSettings baritem w3-blue-gray" id="settingsTabTabButton" onClick="setTabSettings('settingsTab')">Settings</div>
 								<div class="w3-button w3-bar-item tabButtonSettings baritem" id="statsTabTabButton" onClick="setTabSettings('statsTab')">Stats</div>
 								<div class="w3-button w3-bar-item tabButtonSettings baritem" id="changelogTabTabButton" onClick="setTabSettings('changelogTab')">Changelog</div>
+                                <div class="w3-button w3-bar-item tabButtonSettings baritem" id="creditsTabTabButton" onClick="setTabSettings('creditsTab')">Credits</div>
 							</div>
 							<div id="maincolumnSettings" class="panel w3-margin-left w3-margin-top">
 								<div id="settingsTab" class="tabSettings">
@@ -886,8 +875,8 @@
 													<tr>
 														<td> Color scheme</td>
 														<td style="padding: 0.4em">
-															<button class="w3-button button Theme" onClick="setTheme(0, true)">Light</button>
-															<button class="w3-button button Theme" onClick="setTheme(1, true)">Dark</button>
+															<button class="w3-button button Theme" onClick="setTheme(0, true)">Parchment</button>
+															<button class="w3-button button Theme" onClick="setTheme(1, true)">Dark Jade</button>
 															<button class="w3-button button Theme" onClick="setTheme(2, true)">Color Blind Friendly</button>
 														</td>
 													</tr>
@@ -920,11 +909,8 @@
 											</li>
 											<li>
 												<div class="text-caption" style="margin-top: 0.4em;">Links</div>
-												<div style="margin-bottom: 8px;">
-													Based on a <a href="https://symb1.github.io/progress_knight_2/" target="_blank">Progress Knight 2.0</a> mod
-													<br>Original game: <a href="https://ihtasham42.github.io/progress-knight/" target="_blank">Progress Knight</a>
-													<br><a href="https://discord.gg/fTRS4pHGka" target="_blank">Join the discord community! <img src="img/discord_icon.png" style="width:3em; height:3em;"></a>
-													<br><a href="https://github.com/indomit/progress_knight_2" target="_blank">Github page</a>
+												<div style="margin-bottom: 8px;" data-upstream-attribution>
+                                                    <a href="https://discord.gg/fTRS4pHGka" target="_blank">Join the discord community! <img src="img/discord_icon.png" style="width:3em; height:3em;"></a>
 												</div>
 											</li>
 										</ul>
@@ -989,7 +975,29 @@
 										</div>
 									</div>
 								</div>
-								<div id="changelogTab" class="tabSettings">
+								<div id="creditsTab" class="tabSettings" style="display:none">
+                                    <section id="creditsPage" class="page" aria-labelledby="creditsTitle" data-upstream-attribution>
+                                        <p class="ink-eyebrow">THE PATH BEFORE US</p>
+                                        <h2 id="creditsTitle">Credits</h2>
+                                        <p>Lianara: Cycle of Ascension builds upon the work of these creators and their contributors. Thank you for laying the foundations of this journey.</p>
+                                        <article>
+                                            <h3>Progress Knight</h3>
+                                            <p>Created by Ihtasham42. The original game that began the Progress Knight lineage.</p>
+                                            <a href="https://github.com/ihtasham42/progress-knight" target="_blank" rel="noopener noreferrer">Progress Knight on GitHub ↗</a>
+                                        </article>
+                                        <article>
+                                            <h3>Progress Knight 2.0</h3>
+                                            <p>Created by Symb1. Expanded the original game with new progression and content.</p>
+                                            <a href="https://github.com/Symb1/progress_knight_2" target="_blank" rel="noopener noreferrer">Progress Knight 2.0 on GitHub ↗</a>
+                                        </article>
+                                        <article>
+                                            <h3>Progress Knight Quest</h3>
+                                            <p>Created by indomit and contributors. The version used as the foundation for Lianara.</p>
+                                            <a href="https://github.com/indomit/progress_knight_2" target="_blank" rel="noopener noreferrer">Progress Knight Quest on GitHub ↗</a>
+                                        </article>
+                                    </section>
+                                </div>
+                                <div id="changelogTab" class="tabSettings">
 									<div id="changelogPage"  class="page" style="flex: 1; margin-left: 0.5em;">
 										<pre id="changelog"></pre>
 									</div>
@@ -1013,6 +1021,13 @@
 	<script type="text/javascript" src="js/tooltips.js"></script>
 	<script type="text/javascript" src="js/milestones.js"></script>
 	<script type="text/javascript" src="js/data.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/display-names.js"></script>
+    <script src="js/realm-catalogue.js"></script>
+    <script src="js/realm-engine.js"></script>
+    <script type="text/javascript" src="js/cultivation.js"></script>
+    <script type="text/javascript" src="js/fork-save.js"></script>
+    <script src="js/residence-art.js"></script>
+    <script src="js/ink-ui.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

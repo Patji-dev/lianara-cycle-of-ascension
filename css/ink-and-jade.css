@@ -1,0 +1,201 @@
+/* Shared palettes. Saved theme IDs remain 0 (Parchment), 1 (Dark Jade), 2 (accessible). */
+body{--bg:#e9e4d6;--nav:#dedaca;--panel:#f2eee2;--panel2:#e3e0d0;--text:#25392e;--muted:#596b5c;--line:#bdc2ad;--jade:#356345;--jade-wash:#d8e4d3;--gold:#786231;--danger:#9b4032;--paper:#d4cfb7;--serif:Georgia,'Palatino Linotype',serif;color-scheme:light}
+body.dark{--bg:#151b19;--nav:#111714;--panel:#1c2520;--panel2:#202b24;--text:#e4e6d9;--muted:#a8b5aa;--line:#39483e;--jade:#9cc4a5;--jade-wash:#233f2e;--gold:#d1be89;--danger:#e19b8b;--paper:#c9c5aa;color-scheme:dark}
+body.colorblind{--bg:#111b25;--nav:#0d1620;--panel:#192937;--panel2:#203849;--text:#f1f5fa;--muted:#bccbd8;--line:#526b80;--jade:#9edbff;--jade-wash:#244459;--gold:#ffce85;--danger:#ffb59c;--paper:#d5d3bd;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:1em}
+body#body{background:var(--bg);color:var(--text);font-family:'Segoe UI',sans-serif;line-height:1.55;margin:0}
+*{box-sizing:border-box}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.5}a{color:var(--jade)}
+body .panel{background:var(--panel)}h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--text)}
+body>.w3-margin{margin:0!important;max-width:1800px;margin-inline:auto!important}
+#mainarea{display:grid;grid-template-columns:210px minmax(0,1fr);gap:0 30px;padding-right:30px;min-height:100vh;align-content:start}
+[hidden],#mainarea[hidden]{display:none!important}
+#tabcolumn{grid-column:1;grid-row:1 / 4;display:flex;flex-direction:column;align-self:stretch;background:var(--nav);margin:0!important;padding:25px 16px;border-right:1px solid var(--line);min-width:0}
+.header{display:flex;align-items:center;gap:12px;padding:0 4px;margin-bottom:42px!important}
+.header h3{font-size:1.65em;line-height:1.2;margin:0}.header h3 small{display:block;font:0.42em 'Segoe UI',sans-serif;color:var(--muted);letter-spacing:.12em;margin-top:8px}
+.header .cultivation-seal{border:1px solid var(--jade);color:var(--jade);font-size:1.8em;padding:0 5px;transform:rotate(-3deg)}
+#tabcolumn .tabButton,.ink-cultivation-link{width:100%;height:auto;white-space:normal;text-align:left;font-size:.875em;padding:12px 10px;margin:2px 0;color:var(--muted);border-left:2px solid transparent;text-decoration:none;line-height:1.4}
+#tabcolumn .w3-blue-gray{background:var(--jade-wash)!important;color:var(--jade)!important;border-left-color:var(--jade)}
+#tabcolumn .tabButton:hover,.ink-cultivation-link:hover{background:var(--panel2)!important;color:var(--text)!important}
+#row{grid-column:2;display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:26px;min-width:0;align-items:start}
+#row>.column{grid-column:1;grid-row:1;min-width:0;overflow:visible}#infoQuickBar{grid-column:2;grid-row:1;width:auto!important;min-width:0;padding:0!important;background:transparent;top:18px;max-height:calc(100vh - 36px);overflow:auto}
+#maincolumn{margin:0 0 24px!important;padding:0!important;background:transparent;float:none}
+#hero,#jobs,#skills,#shop,#info{width:100%;min-width:0}
+#jobs,#skills,#shop{flex-wrap:wrap;gap:28px}
+#jobPage,#skillPage,#itemPage{margin:0!important;min-width:0;flex:1 1 100%!important;width:100%;overflow:visible}
+body[data-layout="0"] #jobs{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));align-items:start}
+body[data-layout="0"] #jobs[style*="none"]{display:none!important}
+#infoPage{margin:0!important;padding:22px;background:var(--panel);border:1px solid var(--line);font-size:.875em;overflow-wrap:anywhere}
+#infoPage .text-caption{font-size:1em;margin-top:8px}#infoPage .sidebar-element{font-size:.9em;margin-block:8px}
+#infoPage button{white-space:normal}#infoPage #coinDisplay{font-size:1.25em}
+.ink-eyebrow{font-size:.75em;letter-spacing:.13em;color:var(--jade);margin:0 0 9px;font-weight:600}
+/* Realm status */
+#cultivationPanel{grid-column:2;position:relative;isolation:isolate;overflow:hidden;margin:28px 0!important;padding:0!important;border:1px solid var(--line);min-width:0}
+.ink-landscape{position:absolute;right:0;top:0;width:65%;height:245px;object-fit:cover;opacity:.55;z-index:-1;pointer-events:none}
+.ink-realm-main{display:flex;align-items:center;gap:25px;padding:28px 30px;min-height:205px}
+.ink-qi-seal{position:relative;flex:0 0 140px;width:140px;height:140px;color:var(--jade)}
+.ink-qi-seal svg{width:100%;height:100%;fill:none;transform:rotate(-90deg)}
+.ink-seal-outline,.ink-seal-inner{stroke:var(--line);stroke-width:1}.ink-seal-inner{stroke-dasharray:1 6}
+.ink-seal-track{stroke:var(--line);stroke-width:3}#inkQiArc{stroke:var(--jade);stroke-width:3;stroke-linecap:round;transition:stroke-dasharray .4s linear}
+.ink-qi-seal>div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ink-qi-seal span{font:2.7em var(--serif)}.ink-qi-seal small{font-size:.75em;letter-spacing:.1em;color:var(--muted)}
+.ink-realm-copy{min-width:0}.ink-realm-copy h2{font-size:2.2em;line-height:1.2;margin:6px 0 15px;overflow-wrap:anywhere}
+#cultivationQi{display:block;font-size:1.1em;color:var(--text);font-variant-numeric:tabular-nums}
+#cultivationRate{font-size:.875em;color:var(--jade);margin-top:7px}
+.ink-realm-metrics{border-top:1px solid var(--line);display:flex;align-items:center;gap:30px;flex-wrap:wrap;padding:18px 30px;background:var(--panel)}
+.ink-realm-metrics>div>span{display:block;font-size:.75em;color:var(--muted);margin-bottom:4px}.ink-realm-metrics strong{font-size:1.1em;font-weight:500;font-variant-numeric:tabular-nums}#inkPauseSlot{margin-left:auto}
+#cultivationPanel .cultivation-actions{display:flex;align-items:center;flex-wrap:wrap;gap:15px 24px;padding:0 30px;margin:16px 0 10px}
+#cultivationPanel .cultivation-actions label{font-size:.875em;color:var(--muted);display:flex;align-items:center;gap:8px}
+#cultivationBreakthrough{background:var(--jade-wash)!important;color:var(--jade)!important;border-color:var(--jade)!important;white-space:normal}
+#cultivationNextEffects,#cultivationStatus,#cultivationRecord{font-size:.75em;color:var(--muted);display:block;margin:8px 30px;line-height:1.6}
+#cultivationNextEffects{margin-top:16px;color:var(--gold)}
+.ink-cultivation-guide{border-top:1px solid var(--line);padding:12px 30px;margin:14px 0 0!important;color:var(--muted);font-size:.875em}
+summary{cursor:pointer;color:var(--jade)}.ink-cultivation-guide p{max-width:85ch}
+.ink-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+/* Training keeps the original live values, with optional XP and record detail. */
+.ink-section-heading{margin:0 0 22px}.ink-section-heading h2{font-size:1.65em;margin:0 0 9px}.ink-section-heading>p:last-child{font-size:.875em;color:var(--muted);margin:0;max-width:65ch}
+#jobTable,#skillTable{display:block;width:100%}#jobTable tbody,#skillTable tbody{display:block}
+#jobTable .headerRow,#skillTable .headerRow{display:block;border:0;background:transparent!important;color:var(--jade)!important;margin-top:20px}
+#jobTable .headerRow th,#skillTable .headerRow th{display:none}#jobTable .headerRow .category,#skillTable .headerRow .category{display:block;width:auto!important;padding:12px 0;font-size:.875em;font-weight:500;letter-spacing:.06em}
+.ink-training-row{display:grid;grid-template-columns:minmax(0,1fr) auto 34px;column-gap:10px;border-top:1px solid var(--line);border-bottom:0!important;padding:15px 0;background:transparent}
+body .ink-training-row td{padding:0!important;min-width:0;height:auto}
+.ink-training-row>td:first-child{grid-column:1;grid-row:1;align-self:center}
+.ink-training-row>.level{grid-column:2;grid-row:1;align-self:center;color:var(--muted);font-size:.75em;white-space:nowrap}.ink-training-row>.level:before{content:'Lv. '}
+.ink-training-row>.value{grid-column:1 / 3;grid-row:2;font-size:.875em;color:var(--muted);margin-top:6px;overflow-wrap:anywhere}.ink-training-row .effect{margin:0}
+body .ink-training-row .progressBar{background:transparent!important;display:block;position:relative;width:100%;padding-bottom:10px}
+body .ink-training-row .progress-text{position:static;color:var(--text);font:1.1em var(--serif);display:block;overflow-wrap:anywhere}
+body .ink-training-row .progressFill{position:absolute;bottom:0;left:0;height:3px;background:var(--jade)!important;max-width:100%}
+body .ink-training-row .progressBar:before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--line)}
+body .ink-training-row .progressFill.current{background:var(--gold)!important}.ink-training-row .progressFill.current-hero{background:var(--danger)!important}
+.ink-training-toggle{grid-column:3;grid-row:1 / 3;align-self:center}.ink-training-toggle button{border:1px solid var(--line);width:32px;min-height:36px;background:transparent;color:var(--jade);font-size:1em}
+.ink-training-row>.xpGain,.ink-training-row>.xpLeft,.ink-training-row>.maxLevel{display:none;font-size:.75em;color:var(--muted);grid-column:1 / 4;margin-top:8px;overflow-wrap:anywhere}
+.ink-expanded>.xpGain,.ink-expanded>.xpLeft,.ink-expanded>.maxLevel{display:block}.ink-training-row>.xpGain:before{content:'XP / game day: ';color:var(--text)}.ink-training-row>.xpLeft:before{content:'XP to next level: ';color:var(--text)}.ink-training-row>.maxLevel:before{content:'Previous-life record: ';color:var(--text)}
+.ink-training-description{display:none;grid-column:1 / 4;font-size:.875em;margin-top:12px;padding-top:10px!important;border-top:1px dotted var(--line);color:var(--muted)}.ink-expanded>.ink-training-description{display:block}
+.ink-training-description .tooltipText{visibility:visible!important;opacity:1!important;position:static!important;background:none!important;border:0!important;padding:0!important;color:var(--muted)!important;width:auto!important;display:block;text-align:left}
+#jobTable>.requiredRow,#skillTable>.requiredRow{display:block!important;padding:15px!important;border:1px solid var(--line);background:var(--panel);margin:10px 0 24px;font-size:.875em;line-height:1.6}
+#jobTable>.requiredRow.hidden,#skillTable>.requiredRow.hidden{display:none!important}
+.requiredRow .effect{margin:6px 0 0}
+/* Residence and the complete original item catalogue. */
+#inkResidence{border:1px solid var(--line);background:var(--panel);padding:18px;margin-bottom:24px}
+#inkResidenceArt{display:block;width:100%;height:165px;object-fit:contain;background:var(--paper);margin:15px 0 18px}
+#inkResidenceArt.ink-residence-landscape{object-fit:cover;background:var(--panel2)}
+#inkResidence h2{font-size:1.45em;line-height:1.3;margin:0 0 10px}#inkResidenceEffect{color:var(--muted);font-size:.875em;margin:0 0 18px}
+.ink-residence-cost>span{display:block;color:var(--muted);font-size:.75em;margin-bottom:5px}.ink-residence-cost strong{font-size:1.1em;font-weight:400;color:var(--gold)}
+.ink-residence-link{width:100%;margin-top:20px;white-space:normal;text-align:left!important}
+#itemTable{width:100%}#itemTable .headerRow{background:var(--panel2)!important;color:var(--jade)!important}
+#itemTable th{font-size:.75em;padding:12px 6px!important;height:auto;white-space:normal}#itemTable td{font-size:.875em;padding:10px 6px!important;height:auto;border-color:var(--line)}
+#itemTable .item-button{height:auto;min-height:40px;padding:6px 10px;text-align:left;width:100%;white-space:normal}#itemTable .effect{margin:0}
+#itemTable .active{background:transparent!important;color:var(--muted);width:auto;height:auto;border:0}#itemTable .ink-equipped .active{color:var(--jade);font-weight:bold}#itemTable .ink-equipped .item-button{border-color:var(--jade)!important;background:var(--jade-wash)!important}
+/* Carry the palette into settings, reincarnation, talents, trials and later progression. */
+body .button,body .button-no-button,body .perk{background:var(--panel2);border:1px solid var(--line)!important;color:var(--text)!important;border-radius:0;line-height:1.45;padding:9px 13px;min-height:40px;font-size:.875em}
+body .button-no-button{background:transparent!important;min-height:0;padding:0}
+body .w3-button:hover,body .button:hover,body .perk:hover{background:var(--jade-wash)!important;color:var(--jade)!important}
+body .selected{background:var(--jade-wash)!important;color:var(--jade)!important;border-color:var(--jade)!important}
+body .w3-blue-gray,body .w3-green{background:var(--jade-wash)!important;color:var(--jade)!important}body .w3-red{background:var(--panel2)!important;color:var(--danger)!important}
+body .w3-bordered tr{border-color:var(--line)}body .w3-text-gray,body [style*="color: gray"],body [style*="color:gray"]{color:var(--muted)!important}
+body .color-happiness,body .color-income,body .color-essence,body .color-time-warping{color:var(--jade)!important}body .color-evil,body .legendary,body .color-hypercubes,body .color-dark-matter,body .color-dark-orbs{color:var(--gold)!important}
+body [style*="color: red"],body [style*="color:red"]{color:var(--danger)!important}
+#row>.column>.tab{min-width:0;overflow:visible;font-size:1em}#row>.column>.tab>.panel{margin:0!important;padding:20px!important;border:1px solid var(--line);min-width:0;width:100%}
+#row>.column>.tab .page{min-width:0;max-width:100%;margin:0!important}#row>.column>.tab .column{overflow:visible}
+#settings,#darkMatter,#metaverse{gap:16px}#settingsPage table{width:100%;font-size:.875em}#settingsPage td{padding:10px 8px!important}#settingsPage button{margin:3px}#settingsPage input{max-width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:8px}
+#settingsPage #importExportBox{width:100%}#changelog{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.875em}
+body .perk-grid{max-width:100%;overflow-x:auto}body .perk{max-width:100%;white-space:normal}body .evilperkItem{max-width:100%}
+body .tooltip .tooltipText{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:0;max-width:min(28em,80vw);z-index:20;font-size:.875em;left:0;top:100%;width:26em;opacity:1}
+body .tooltip:focus-within .tooltipText{visibility:visible;opacity:1}
+button:focus-visible,[role="button"]:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--jade)!important;outline-offset:3px}
+
+dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);padding:32px;width:480px;max-width:calc(100vw - 32px)}dialog::backdrop{background:#080e0cce}dialog h2{font-size:1.7em;line-height:1.3;margin:12px 0 20px}dialog p{font-size:.875em;color:var(--muted)}dialog #inkBreakthroughCost{color:var(--gold);border-block:1px solid var(--line);padding:15px 0;margin:20px 0}dialog #inkConfirmBreakthrough{width:100%;border-color:var(--jade)!important;color:var(--jade)!important;background:var(--jade-wash)}.ink-dialog-close{position:absolute;right:10px;top:6px;border:0;background:none;color:var(--muted);font-size:1.5em}
+@keyframes ink-breakthrough{0%{box-shadow:0 0 0 1px var(--jade)}55%{box-shadow:0 0 24px 2px var(--jade)}100%{box-shadow:none}}.ink-breakthrough{animation:ink-breakthrough 1s ease-out}
+@media(min-width:1550px){#mainarea{grid-template-columns:230px minmax(0,1fr);gap:0 40px;padding-right:40px}#row{grid-template-columns:minmax(0,1fr) 300px;gap:35px}}
+@media(max-width:1150px){#mainarea{grid-template-columns:175px minmax(0,1fr);gap:0 20px;padding-right:20px}#tabcolumn{padding:22px 10px}.header{gap:8px}.header h3{font-size:1.35em}.header .cultivation-seal{font-size:1.5em}#row{grid-template-columns:minmax(0,1fr) 235px;gap:18px}.ink-realm-main{padding:25px;gap:20px}.ink-realm-copy h2{font-size:1.8em}.ink-qi-seal{flex-basis:115px;width:115px;height:115px}.ink-realm-metrics{gap:20px}.ink-realm-metrics strong{font-size:1em}#infoPage{padding:17px}#inkResidence{padding:15px}}
+@media(max-width:900px){#mainarea{display:block;padding:0 22px}#tabcolumn{margin:0 -22px 22px!important;padding:18px 22px;display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;border-right:0;border-bottom:1px solid var(--line)}.header{flex:1 1 100%;margin-bottom:14px!important}.header h3{font-size:1.7em}#tabcolumn .tabButton,.ink-cultivation-link{width:auto;padding:9px 12px;margin:0;font-size:.875em;border-left:0;border-bottom:2px solid transparent}#tabcolumn .w3-blue-gray{border-bottom-color:var(--jade)}#cultivationPanel{margin:0 0 25px!important}#row{grid-template-columns:minmax(0,1fr) 240px}#infoQuickBar{position:static!important;max-height:none}.ink-realm-copy h2{font-size:2em}#inkPauseSlot{margin-left:0}}
+@media(max-width:700px){#mainarea{padding:0 16px}#tabcolumn{margin-inline:-16px!important;padding:16px}#row{display:flex;flex-direction:column;gap:24px}#row>.column,#infoQuickBar{width:100%!important}#infoQuickBar{display:grid;grid-template-columns:1fr;gap:20px}#inkResidence{margin:0}#inkResidenceArt{height:210px}#cultivationPanel .cultivation-actions{display:block;padding:0 20px}#cultivationBreakthrough{width:100%;margin-bottom:13px}.ink-realm-main{padding:22px 18px;gap:15px;min-height:180px}.ink-realm-copy h2{font-size:1.6em}.ink-realm-copy .ink-eyebrow{font-size:.75em}.ink-qi-seal{flex-basis:92px;width:92px;height:92px}.ink-qi-seal span{font-size:2em}#cultivationQi{font-size:.875em}#cultivationRate{font-size:.75em}.ink-landscape{width:100%;height:210px;opacity:.3}.ink-realm-metrics{padding:17px 20px;gap:16px 22px}.ink-realm-metrics>div:first-child{flex-basis:100%}.ink-realm-metrics strong{font-size:1em}#inkPauseSlot{margin-left:auto}#cultivationNextEffects,#cultivationStatus,#cultivationRecord{margin-inline:20px}.ink-cultivation-guide{padding:12px 20px}.ink-section-heading h2{font-size:1.6em}.ink-training-row{column-gap:8px}.ink-training-row .progress-text{font-size:1em}#itemTable td{padding:8px 3px!important}#itemTable th{padding:10px 3px!important}#itemTable .item-button{padding:7px;font-size:1em}#itemTable{table-layout:fixed}#itemTable th:first-child{width:39%}#itemTable th:nth-child(2){width:9%}#itemTable th:nth-child(3){width:27%}#itemTable td{overflow-wrap:anywhere}#settingsPage table,#settingsPage tbody,#settingsPage tr,#settingsPage td{display:block!important;width:100%!important}#settingsPage td{padding:6px 0!important}#settingsPage tr{margin-bottom:14px;border-bottom:1px solid var(--line)}#settingsPage button{white-space:normal}#row>.column>.tab>.panel{padding:16px!important}.ink-training-toggle button{min-height:42px}.ink-residence-link{min-height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+#cultivationPanel{font-size:inherit}#cultivationRealm{font-size:2.2em;line-height:1.2;margin:6px 0 15px}.header .cultivation-seal{border-radius:0;width:auto;height:auto;margin:0}#jobPage,#skillPage,#itemPage{max-width:none}@media(max-width:700px){#cultivationRealm{font-size:1.6em}}
+/* Explicit overrides for inherited W3 table and dark-theme specificity. */
+body#body .panel{background:var(--panel)}body#body #maincolumn,body#body #infoQuickBar{background:transparent}
+body#body #tabcolumn{background:var(--nav)}body#body .button,body#body .perk{border-color:var(--line)!important;color:var(--text)!important;background:var(--panel2)}
+body#body .selected,body#body .ink-equipped .item-button{border-color:var(--jade)!important;color:var(--jade)!important;background:var(--jade-wash)!important}
+body#body #cultivationBreakthrough,body#body #inkConfirmBreakthrough{color:var(--jade)!important;border-color:var(--jade)!important;background:var(--jade-wash)!important}
+.ink-training-row .ink-training-description{display:none}.ink-training-row.ink-expanded .ink-training-description{display:block}
+#jobTable>.requiredRow,#skillTable>.requiredRow{height:auto!important;min-height:0}
+#jobTable>.requiredRow.hiddenTask,#skillTable>.requiredRow.hiddenTask{display:none!important}
+#quickTaskDisplay .progressBar{background:var(--panel2)!important}#quickTaskDisplay .progressFill{background:var(--jade-wash)!important}#quickTaskDisplay .progress-text{color:var(--text);font-size:.875em}
+body.parchment .ink-landscape,body.parchment .ink-residence-landscape{filter:brightness(.55);opacity:.6}
+@media(max-width:700px){#row>.column{order:0}#infoQuickBar{order:1}}
+body#body button:disabled{opacity:.65}body#body .headerRow{background:var(--panel2);color:var(--jade)}
+body.parchment #coinDisplay>span,body.parchment #netDisplay>span,body.parchment #incomeDisplay>span,body.parchment #expenseDisplay>span,body.parchment #inkResidenceCost>span,body.parchment .income>span,body.parchment .expense>span{color:var(--gold)!important}
+/* Mountain-scroll parchment: warm paper, charcoal washes and restrained seal-red. */
+body.parchment{
+ --bg:#e5d7bc;--nav:#e6d8bc;--panel:#f1e5cd;--panel2:#e7d8bb;
+ --text:#36352c;--muted:#69624f;--line:#c1b394;--jade:#505944;
+ --jade-wash:#ddd8bb;--gold:#85603a;--danger:#984b38;--paper:#eadabe;
+ background-image:linear-gradient(#eadfcbdc,#eadfcbec),url('../img/parchment-mountains.png');
+ background-size:cover;background-position:center;background-attachment:fixed;
+}
+body.parchment #tabcolumn{background-image:linear-gradient(#e6d8bce8,#e6d8bcf5),url('../img/parchment-mountains.png');background-size:auto 100vh;background-position:left top}
+body.parchment #cultivationPanel{border-color:#bfb090;box-shadow:inset 0 0 0 4px #f7ecd633,0 4px 15px #584b3010}
+body.parchment #cultivationPanel::before{content:'';position:absolute;inset:0 0 auto;height:245px;z-index:-1;background:url('../img/parchment-mountains.png') right 46% / cover no-repeat;opacity:.9;mask-image:linear-gradient(to bottom,#000 80%,transparent);-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent)}
+body.parchment .ink-landscape{visibility:hidden}
+body.parchment .ink-realm-main{background:linear-gradient(90deg,#f1e5cdba 0%,#f1e5cd85 45%,transparent 78%)}
+body.parchment .ink-realm-metrics{background:#f1e5cdd9}
+body.parchment #inkResidenceArt.ink-painted-residence{object-fit:cover;object-position:right center;filter:none;opacity:1;background:var(--paper)}
+body.parchment .header .cultivation-seal{color:#98523e;border-color:#98523e}
+body.parchment .ink-section-heading{border-bottom:1px solid #b4a68866;padding-bottom:16px}
+body.parchment #inkResidence,body.parchment #infoPage{box-shadow:inset 0 0 25px #c7ac7520}
+/* Alpha masks shape the existing fill element; its actual percentage width is unchanged. */
+body .ink-training-row .progressBar{padding-bottom:15px}
+body .ink-training-row .progressFill,body .ink-training-row .progressBar::before{
+ height:9px;bottom:0;
+ -webkit-mask-image:url('../img/ink-brush-stroke.svg');mask-image:url('../img/ink-brush-stroke.svg');
+ -webkit-mask-size:100% 100%;mask-size:100% 100%;
+ -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+}
+body .ink-training-row .progressBar::before{opacity:.55}
+body .ink-training-row .progressFill{opacity:.9}
+body.parchment .ink-training-row .progressFill{background:#4d5140!important}
+body.parchment .ink-training-row .progressFill.current{background:#96613e!important}
+body .ink-training-row .progressFill.current-hero{background:var(--danger)!important}
+#quickTaskDisplay .progressBar{background:transparent!important;padding-bottom:13px;min-height:2em}
+#quickTaskDisplay .progressFill{position:absolute;bottom:0;height:8px;background:var(--jade)!important;-webkit-mask:url('../img/ink-brush-stroke.svg') center / 100% 100% no-repeat;mask:url('../img/ink-brush-stroke.svg') center / 100% 100% no-repeat}
+#quickTaskDisplay .progress-text{position:relative;top:auto;left:auto}
+#inkQiArc{stroke-width:5.5;filter:url('#inkBrushEdge')}
+.ink-seal-track{stroke-width:4;opacity:.45;filter:url('#inkBrushEdge')}
+.ink-seal-outline{stroke-dasharray:89 2 12 1 45 3;opacity:.7}
+.ink-seal-inner{opacity:.45}
+body.parchment .ink-qi-seal{color:#514d3a}
+@media(max-width:700px){body.parchment #cultivationPanel::before{height:235px;background-position:72% 42%;opacity:.5}body.parchment .ink-realm-main{background:#f1e5cd73}body.parchment{background-attachment:scroll}}
+/* Wide is a full-screen workspace; Standard retains its reading width. */
+body[data-layout="0"]>.w3-margin{max-width:none;width:100%}
+body[data-layout="0"] #mainarea{max-width:none;width:100%}
+body[data-layout="0"] #jobs{width:100%;grid-template-columns:repeat(3,minmax(0,1fr))}
+body[data-layout="0"] #jobPage,body[data-layout="0"] #skillPage,body[data-layout="0"] #itemPage{max-width:none}
+#inkResidenceArt.ink-painted-residence{object-fit:cover;object-position:center;filter:none;opacity:1}
+#itemTable .item-button:has(.ink-residence-thumbnail){display:flex;align-items:center;gap:10px}
+.ink-residence-thumbnail{width:90px;height:60px;object-fit:cover;flex-shrink:0;border:1px solid var(--line)}
+@media(max-width:1600px){body[data-layout="0"] #jobs{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-layout="0"] #itemPage{grid-column:1/-1}}
+@media(max-width:1000px){body[data-layout="0"] #jobs{grid-template-columns:minmax(0,1fr)}body[data-layout="0"] #itemPage{grid-column:auto}}
+@media(max-width:700px){#itemTable .item-button:has(.ink-residence-thumbnail){flex-direction:column;align-items:flex-start;gap:6px}.ink-residence-thumbnail{width:100%;max-width:110px;height:auto;aspect-ratio:3/2}}
+
+/* A mountain scroll with the breakthrough action set into its painting. */
+.ink-realm-main{min-height:245px}
+.ink-realm-copy #cultivationBreakthrough{margin-top:18px;max-width:100%;white-space:normal;border-radius:2px;border:1px solid var(--jade);box-shadow:0 3px 9px #0002}
+body.parchment #cultivationPanel::before{height:100%;mask-image:linear-gradient(to bottom,#000 75%,transparent);-webkit-mask-image:linear-gradient(to bottom,#000 75%,transparent)}
+#cultivationStatus{font-size:.85em;min-height:1.3em}
+#inkResidenceBlurb{font-family:Georgia,serif;font-style:italic;font-size:.9em;line-height:1.55;color:var(--muted)}
+#inkPauseSlot{margin-top:12px}
+#cultivationPanel details .cultivation-actions{padding:0;margin:12px 0}
+#cultivationPanel details #cultivationNextEffects,#cultivationPanel details #cultivationRecord{margin:10px 0}
+
+#creditsPage{width:100%;line-height:1.65}
+#creditsPage>p{max-width:65ch;color:var(--muted)}
+#creditsPage h2{margin:0 0 16px}
+#creditsPage article{padding:20px 0;border-top:1px solid var(--line)}
+#creditsPage h3{margin:0 0 8px;font-size:1.3em}
+#creditsPage article p{margin:0 0 10px;max-width:65ch}
+#creditsPage a{display:inline-block;overflow-wrap:anywhere;padding-block:5px}
+
+/* Reuse the ink paintings as jade-toned night scenes without changing image files. */
+body.dark{--painting-filter:grayscale(1) invert(.88) sepia(.45) hue-rotate(75deg) saturate(.7) brightness(1.15)}
+body.dark #inkResidenceArt.ink-painted-residence,body.dark .ink-residence-thumbnail{filter:var(--painting-filter)}
+body.dark #cultivationPanel::before{content:'';position:absolute;inset:0;z-index:-1;background:url('../img/parchment-mountains.png') right 46% / cover no-repeat;filter:var(--painting-filter);opacity:.65;mask-image:linear-gradient(to right,transparent,#000 65%),linear-gradient(to bottom,#000 65%,transparent);mask-composite:intersect;-webkit-mask-image:linear-gradient(to right,transparent,#000 65%),linear-gradient(to bottom,#000 65%,transparent);-webkit-mask-composite:source-in}
+body.dark .ink-landscape{visibility:hidden}

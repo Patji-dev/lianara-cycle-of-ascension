@@ -1,0 +1,21 @@
+{
+  "baseQiRate": 1,
+  "skillXpPercentPerStage": 5,
+  "lifespanFactorPerMajor": 1.5,
+  "initialCosts": [
+    1200,
+    2400,
+    4800,
+    12000,
+    24000,
+    48000,
+    120000,
+    240000,
+    480000
+  ],
+  "extensionBaseCost": 1200000,
+  "extensionGrowth": 2.2,
+  "overrides": {},
+  "reincarnationAge": 53,
+  "demonicResetAge": 200
+}

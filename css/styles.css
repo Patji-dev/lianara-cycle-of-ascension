@@ -550,3 +550,21 @@ button:focus {
 .page {
     max-width: 800px;
 }
+/* Cultivation stays separate from the inherited progression views. */
+#cultivationPanel { margin: 0 0 1em; font-size: 14px; }
+.cultivation-heading, .cultivation-actions { display: flex; align-items: center; gap: 1em; flex-wrap: wrap; }
+.cultivation-heading { justify-content: space-between; }
+#cultivationRealm { margin: 0; font-size: 20px; }
+#cultivationProgress { width: 100%; height: 18px; accent-color: #65b6a3; margin: .5em 0; }
+.cultivation-actions { margin-top: .6em; }
+#cultivationStatus { margin: .5em 0; }
+#cultivationPanel details { margin-top: .5em; }
+#forkSaveStatus { border: 2px solid #bd7735; margin-bottom: 1em; }
+@media (max-width: 640px) { #cultivationPanel { font-size: 13px; } .cultivation-actions button { width: 100%; } }
+
+.cultivation-seal { display: inline-flex; align-items: center; justify-content: center; width: 1.6em; height: 1.6em; border: 1px solid currentColor; border-radius: 50%; color: #65b6a3; font-size: 22px; margin-right: .35em; }
+.cultivation-credit { padding: 1em; opacity: .7; font-size: 12px; }
+
+.header { display: flex; align-items: center; gap: .4em; }
+.header h3 { margin: .5em 0; }
+.cultivation-seal { flex-shrink: 0; }

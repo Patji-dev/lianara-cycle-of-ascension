@@ -1,0 +1,4564 @@
+{
+  "commit": "2c6c3c6ba45de78280bcc6df58a0a7f923c6a252",
+  "jobs": {
+    "Beggar": {
+      "name": "Beggar",
+      "maxXp": 50,
+      "income": 5,
+      "heroxp": 36
+    },
+    "Farmer": {
+      "name": "Farmer",
+      "maxXp": 100,
+      "income": 9,
+      "heroxp": 37
+    },
+    "Fisherman": {
+      "name": "Fisherman",
+      "maxXp": 200,
+      "income": 15,
+      "heroxp": 38
+    },
+    "Miner": {
+      "name": "Miner",
+      "maxXp": 400,
+      "income": 40,
+      "heroxp": 39
+    },
+    "Blacksmith": {
+      "name": "Blacksmith",
+      "maxXp": 800,
+      "income": 80,
+      "heroxp": 40
+    },
+    "Merchant": {
+      "name": "Merchant",
+      "maxXp": 1600,
+      "income": 150,
+      "heroxp": 41
+    },
+    "Squire": {
+      "name": "Squire",
+      "maxXp": 42,
+      "income": 5,
+      "heroxp": 51
+    },
+    "Footman": {
+      "name": "Footman",
+      "maxXp": 1000,
+      "income": 50,
+      "heroxp": 52
+    },
+    "Veteran footman": {
+      "name": "Veteran footman",
+      "maxXp": 10000,
+      "income": 120,
+      "heroxp": 53
+    },
+    "Centenary": {
+      "name": "Centenary",
+      "maxXp": 100000,
+      "income": 300,
+      "heroxp": 54
+    },
+    "Knight": {
+      "name": "Knight",
+      "maxXp": 1000000,
+      "income": 1000,
+      "heroxp": 57
+    },
+    "Veteran Knight": {
+      "name": "Veteran Knight",
+      "maxXp": 7500000,
+      "income": 3000,
+      "heroxp": 61
+    },
+    "Holy Knight": {
+      "name": "Holy Knight",
+      "maxXp": 40000000,
+      "income": 5000,
+      "heroxp": 64
+    },
+    "Lieutenant General": {
+      "name": "Lieutenant General",
+      "maxXp": 150000000,
+      "income": 50000,
+      "heroxp": 77
+    },
+    "Student": {
+      "name": "Student",
+      "maxXp": 100000,
+      "income": 100,
+      "heroxp": 79
+    },
+    "Apprentice Mage": {
+      "name": "Apprentice Mage",
+      "maxXp": 1000000,
+      "income": 1000,
+      "heroxp": 82
+    },
+    "Adept Mage": {
+      "name": "Adept Mage",
+      "maxXp": 10000000,
+      "income": 9500,
+      "heroxp": 82
+    },
+    "Master Wizard": {
+      "name": "Master Wizard",
+      "maxXp": 100000000,
+      "income": 70000,
+      "heroxp": 95
+    },
+    "Archmage": {
+      "name": "Archmage",
+      "maxXp": 10000000000,
+      "income": 350000,
+      "heroxp": 95
+    },
+    "Chronomancer": {
+      "name": "Chronomancer",
+      "maxXp": 2000000000000,
+      "income": 1000000,
+      "heroxp": 95
+    },
+    "Chairman": {
+      "name": "Chairman",
+      "maxXp": 20000000000000,
+      "income": 10000000,
+      "heroxp": 106
+    },
+    "Imperator": {
+      "name": "Imperator",
+      "maxXp": 9000000000000000,
+      "income": 60000000,
+      "heroxp": 129
+    },
+    "Corrupted": {
+      "name": "Corrupted",
+      "maxXp": 100000000000000,
+      "income": 25000000,
+      "heroxp": 131
+    },
+    "Void Slave": {
+      "name": "Void Slave",
+      "maxXp": 650000000000000,
+      "income": 200000000,
+      "heroxp": 134
+    },
+    "Void Fiend": {
+      "name": "Void Fiend",
+      "maxXp": 18000000000000000,
+      "income": 600000000,
+      "heroxp": 237
+    },
+    "Abyss Anomaly": {
+      "name": "Abyss Anomaly",
+      "maxXp": 18000000000000000,
+      "income": 1200000000,
+      "heroxp": 237
+    },
+    "Void Wraith": {
+      "name": "Void Wraith",
+      "maxXp": 180000000000000000,
+      "income": 5000000000,
+      "heroxp": 238
+    },
+    "Void Reaver": {
+      "name": "Void Reaver",
+      "maxXp": 2600000000000000000,
+      "income": 25000000000,
+      "heroxp": 238
+    },
+    "Void Lord": {
+      "name": "Void Lord",
+      "maxXp": 28000000000000000000,
+      "income": 100000000000,
+      "heroxp": 238
+    },
+    "Abyss God": {
+      "name": "Abyss God",
+      "maxXp": 400000000000000000000,
+      "income": 1000000000000,
+      "heroxp": 250
+    },
+    "Eternal Wanderer": {
+      "name": "Eternal Wanderer",
+      "maxXp": 55000000000000000000,
+      "income": 1000000000000,
+      "heroxp": 250
+    },
+    "Nova": {
+      "name": "Nova",
+      "maxXp": 51000000000000000000,
+      "income": 3000000000000,
+      "heroxp": 250
+    },
+    "Sigma Proioxis": {
+      "name": "Sigma Proioxis",
+      "maxXp": 500000000000000000000,
+      "income": 21500000000000,
+      "heroxp": 260
+    },
+    "Acallaris": {
+      "name": "Acallaris",
+      "maxXp": 5e+22,
+      "income": 215000000000000,
+      "heroxp": 263
+    },
+    "One Above All": {
+      "name": "One Above All",
+      "maxXp": 5e+27,
+      "income": 25000000000000000,
+      "heroxp": 265
+    },
+    "Snow Crash": {
+      "name": "Snow Crash",
+      "maxXp": "Infinity",
+      "income": 2.5e+52,
+      "heroxp": 1015
+    },
+    "Player One": {
+      "name": "Player One",
+      "maxXp": "Infinity",
+      "income": 2.5e+54,
+      "heroxp": 1200
+    },
+    "Lost in the dark": {
+      "name": "Lost in the dark",
+      "maxXp": "Infinity",
+      "income": 2.5e+58,
+      "heroxp": 1358
+    },
+    "Omega": {
+      "name": "Omega",
+      "maxXp": "Infinity",
+      "income": 2.5e+62,
+      "heroxp": 3120
+    }
+  },
+  "skills": {
+    "Concentration": {
+      "name": "Concentration",
+      "maxXp": 100,
+      "heroxp": 36,
+      "effect": 0.01,
+      "description": "Skill XP"
+    },
+    "Productivity": {
+      "name": "Productivity",
+      "maxXp": 100,
+      "heroxp": 37,
+      "effect": 0.01,
+      "description": "Hero XP"
+    },
+    "Bargaining": {
+      "name": "Bargaining",
+      "maxXp": 100,
+      "heroxp": 38,
+      "effect": -0.01,
+      "description": "Reduced Expenses"
+    },
+    "Meditation": {
+      "name": "Meditation",
+      "maxXp": 100,
+      "heroxp": 39,
+      "effect": 0.01,
+      "description": "Happiness"
+    },
+    "Strength": {
+      "name": "Strength",
+      "maxXp": 100,
+      "heroxp": 40,
+      "effect": 0.01,
+      "description": "Military Pay"
+    },
+    "Battle Tactics": {
+      "name": "Battle Tactics",
+      "maxXp": 100,
+      "heroxp": 41,
+      "effect": 0.01,
+      "description": "Military XP"
+    },
+    "Muscle Memory": {
+      "name": "Muscle Memory",
+      "maxXp": 100,
+      "heroxp": 42,
+      "effect": 0.01,
+      "description": "Strength XP"
+    },
+    "Mana Control": {
+      "name": "Mana Control",
+      "maxXp": 100,
+      "heroxp": 46,
+      "effect": 0.01,
+      "description": "T.A.A. XP"
+    },
+    "Life Essence": {
+      "name": "Life Essence",
+      "maxXp": 100,
+      "heroxp": 82,
+      "effect": 0.01,
+      "description": "Longer Lifespan"
+    },
+    "Time Warping": {
+      "name": "Time Warping",
+      "maxXp": 100,
+      "heroxp": 82,
+      "effect": 0.01,
+      "description": "Gamespeed"
+    },
+    "Astral Body": {
+      "name": "Astral Body",
+      "maxXp": 100,
+      "heroxp": 100,
+      "effect": 0.0035,
+      "description": "Longer lifespan"
+    },
+    "Temporal Dimension": {
+      "name": "Temporal Dimension",
+      "maxXp": 100,
+      "heroxp": 115,
+      "effect": 0.006,
+      "description": "Gamespeed"
+    },
+    "All Seeing Eye": {
+      "name": "All Seeing Eye",
+      "maxXp": 100,
+      "heroxp": 120,
+      "effect": 0.0027,
+      "description": "T.A.A Pay"
+    },
+    "Brainwashing": {
+      "name": "Brainwashing",
+      "maxXp": 100,
+      "heroxp": 145,
+      "effect": -0.01,
+      "description": "Reduced Expenses"
+    },
+    "Dark Influence": {
+      "name": "Dark Influence",
+      "maxXp": 100,
+      "heroxp": 155,
+      "effect": 0.01,
+      "description": "All XP"
+    },
+    "Evil Control": {
+      "name": "Evil Control",
+      "maxXp": 100,
+      "heroxp": 156,
+      "effect": 0.01,
+      "description": "Evil Gain"
+    },
+    "Intimidation": {
+      "name": "Intimidation",
+      "maxXp": 100,
+      "heroxp": 157,
+      "effect": -0.01,
+      "description": "Reduced Expenses"
+    },
+    "Demon Training": {
+      "name": "Demon Training",
+      "maxXp": 100,
+      "heroxp": 174,
+      "effect": 0.01,
+      "description": "All XP"
+    },
+    "Blood Meditation": {
+      "name": "Blood Meditation",
+      "maxXp": 100,
+      "heroxp": 176,
+      "effect": 0.01,
+      "description": "Evil Gain"
+    },
+    "Demon's Wealth": {
+      "name": "Demon's Wealth",
+      "maxXp": 100,
+      "heroxp": 178,
+      "effect": 0.002,
+      "description": "Hero Pay"
+    },
+    "Dark Knowledge": {
+      "name": "Dark Knowledge",
+      "maxXp": 100,
+      "heroxp": 180,
+      "effect": 0.003,
+      "description": "Hero XP"
+    },
+    "Void Influence": {
+      "name": "Void Influence",
+      "maxXp": 100,
+      "heroxp": 206,
+      "effect": 0.0028,
+      "description": "All XP"
+    },
+    "Time Loop": {
+      "name": "Time Loop",
+      "maxXp": 100,
+      "heroxp": 207,
+      "effect": 0.001,
+      "description": "Gamespeed"
+    },
+    "Evil Incarnate": {
+      "name": "Evil Incarnate",
+      "maxXp": 100,
+      "heroxp": 208,
+      "effect": 0.01,
+      "description": "Skill XP"
+    },
+    "Absolute Wish": {
+      "name": "Absolute Wish",
+      "maxXp": 100,
+      "heroxp": 198,
+      "effect": 0.005,
+      "description": "Evil Gain"
+    },
+    "Void Amplification": {
+      "name": "Void Amplification",
+      "maxXp": 100,
+      "heroxp": 251,
+      "effect": 0.01,
+      "description": "The Void XP"
+    },
+    "Mind Release": {
+      "name": "Mind Release",
+      "maxXp": 100,
+      "heroxp": 251,
+      "effect": 0.0006,
+      "description": "Increased Happiness"
+    },
+    "Ceaseless Abyss": {
+      "name": "Ceaseless Abyss",
+      "maxXp": 100,
+      "heroxp": 251,
+      "effect": 0.000585,
+      "description": "Longer Lifespan"
+    },
+    "Void Symbiosis": {
+      "name": "Void Symbiosis",
+      "maxXp": 100,
+      "heroxp": 253,
+      "effect": 0.0015,
+      "description": "Skill XP"
+    },
+    "Void Embodiment": {
+      "name": "Void Embodiment",
+      "maxXp": 100,
+      "heroxp": 258,
+      "effect": 0.0025,
+      "description": "Evil Gain"
+    },
+    "Abyss Manipulation": {
+      "name": "Abyss Manipulation",
+      "maxXp": 100,
+      "heroxp": 266,
+      "effect": -0.01,
+      "description": "Reduced Expenses"
+    },
+    "Cosmic Longevity": {
+      "name": "Cosmic Longevity",
+      "maxXp": 100,
+      "heroxp": 266,
+      "effect": 0.0015,
+      "description": "Longer Lifespan"
+    },
+    "Cosmic Recollection": {
+      "name": "Cosmic Recollection",
+      "maxXp": 100,
+      "heroxp": 272,
+      "effect": 0.00065,
+      "description": "Max Lvl Multiplier"
+    },
+    "Essence Collector": {
+      "name": "Essence Collector",
+      "maxXp": 100,
+      "heroxp": 288,
+      "effect": 0.01,
+      "description": "Essence Gain"
+    },
+    "Galactic Command": {
+      "name": "Galactic Command",
+      "maxXp": 100,
+      "heroxp": 290,
+      "effect": -0.01,
+      "description": "Reduced Expenses"
+    },
+    "Yin Yang": {
+      "name": "Yin Yang",
+      "maxXp": 100,
+      "heroxp": 290,
+      "effect": 0.02,
+      "description": "Essence + Evil Gain"
+    },
+    "Parallel Universe": {
+      "name": "Parallel Universe",
+      "maxXp": 100,
+      "heroxp": 300,
+      "effect": 0.02,
+      "description": "All XP"
+    },
+    "Higher Dimensions": {
+      "name": "Higher Dimensions",
+      "maxXp": 100,
+      "heroxp": 300,
+      "effect": 0.001,
+      "description": "Longer Lifespan"
+    },
+    "Epiphany": {
+      "name": "Epiphany",
+      "maxXp": 100,
+      "heroxp": 280,
+      "effect": 0.012,
+      "description": "Galactic Council XP"
+    },
+    "Dark Prince": {
+      "name": "Dark Prince",
+      "maxXp": 100,
+      "heroxp": 350,
+      "effect": 0.01,
+      "description": "Skill XP"
+    },
+    "Dark Ruler": {
+      "name": "Dark Ruler",
+      "maxXp": 100,
+      "heroxp": 375,
+      "effect": 0.0000015,
+      "description": "Dark Matter Gain"
+    },
+    "Immortal Ruler": {
+      "name": "Immortal Ruler",
+      "maxXp": 100,
+      "heroxp": 425,
+      "effect": 0.01,
+      "description": "All XP"
+    },
+    "Dark Magician": {
+      "name": "Dark Magician",
+      "maxXp": 100,
+      "heroxp": 475,
+      "effect": 0.0000025,
+      "description": "Essence Gain"
+    },
+    "Universal Ruler": {
+      "name": "Universal Ruler",
+      "maxXp": 100,
+      "heroxp": 500,
+      "effect": 1,
+      "description": "Magic XP"
+    },
+    "Blinded By Darkness": {
+      "name": "Blinded By Darkness",
+      "maxXp": 100,
+      "heroxp": 550,
+      "effect": 1,
+      "description": "All XP"
+    }
+  },
+  "items": {
+    "Homeless": {
+      "name": "Homeless",
+      "expense": 0,
+      "effect": 1,
+      "heromult": 2,
+      "heroeffect": 2000000
+    },
+    "Tent": {
+      "name": "Tent",
+      "expense": 15,
+      "effect": 1.4,
+      "heromult": 2,
+      "heroeffect": 20000000
+    },
+    "Wooden Hut": {
+      "name": "Wooden Hut",
+      "expense": 100,
+      "effect": 2,
+      "heromult": 3,
+      "heroeffect": 200000000
+    },
+    "Cottage": {
+      "name": "Cottage",
+      "expense": 750,
+      "effect": 3.5,
+      "heromult": 3,
+      "heroeffect": 2000000000
+    },
+    "House": {
+      "name": "House",
+      "expense": 3000,
+      "effect": 6,
+      "heromult": 4,
+      "heroeffect": 20000000000
+    },
+    "Large House": {
+      "name": "Large House",
+      "expense": 25000,
+      "effect": 12,
+      "heromult": 4,
+      "heroeffect": 200000000000
+    },
+    "Small Palace": {
+      "name": "Small Palace",
+      "expense": 300000,
+      "effect": 25,
+      "heromult": 5,
+      "heroeffect": 2000000000000
+    },
+    "Grand Palace": {
+      "name": "Grand Palace",
+      "expense": 5000000,
+      "effect": 60,
+      "heromult": 5,
+      "heroeffect": 20000000000000
+    },
+    "Town Ruler": {
+      "name": "Town Ruler",
+      "expense": 35000000,
+      "effect": 120,
+      "heromult": 6,
+      "heroeffect": 2000000000000000
+    },
+    "City Ruler": {
+      "name": "City Ruler",
+      "expense": 1100000000,
+      "effect": 500,
+      "heromult": 7,
+      "heroeffect": 200000000000000000
+    },
+    "Nation Ruler": {
+      "name": "Nation Ruler",
+      "expense": 13000000000,
+      "effect": 1200,
+      "heromult": 8,
+      "heroeffect": 20000000000000000000
+    },
+    "Pocket Dimension": {
+      "name": "Pocket Dimension",
+      "expense": 49000000000,
+      "effect": 5000,
+      "heromult": 9,
+      "heroeffect": 2e+22
+    },
+    "Void Realm": {
+      "name": "Void Realm",
+      "expense": 121000000000,
+      "effect": 15000,
+      "heromult": 10,
+      "heroeffect": 2e+25
+    },
+    "Void Universe": {
+      "name": "Void Universe",
+      "expense": 2000000000000,
+      "effect": 30000,
+      "heromult": 11,
+      "heroeffect": 2e+28
+    },
+    "Astral Realm": {
+      "name": "Astral Realm",
+      "expense": 160000000000000,
+      "effect": 150000,
+      "heromult": 12,
+      "heroeffect": 2e+31
+    },
+    "Galactic Throne": {
+      "name": "Galactic Throne",
+      "expense": 5000000000000000,
+      "effect": 300000,
+      "heromult": 13,
+      "heroeffect": 2e+35
+    },
+    "Spaceship": {
+      "name": "Spaceship",
+      "expense": 1000000000000000000,
+      "effect": 1500000,
+      "heromult": 15,
+      "heroeffect": 5e+42
+    },
+    "Planet": {
+      "name": "Planet",
+      "expense": 1e+22,
+      "effect": 5000000,
+      "heromult": 16,
+      "heroeffect": 5e+46
+    },
+    "Ringworld": {
+      "name": "Ringworld",
+      "expense": 1e+24,
+      "effect": 50000000,
+      "heromult": 17,
+      "heroeffect": 5e+49
+    },
+    "Stellar Neighborhood": {
+      "name": "Stellar Neighborhood",
+      "expense": 1e+27,
+      "effect": 60000000,
+      "heromult": 17,
+      "heroeffect": 6e+49
+    },
+    "Galaxy": {
+      "name": "Galaxy",
+      "expense": 1e+30,
+      "effect": 75000000,
+      "heromult": 18,
+      "heroeffect": 7.5e+49
+    },
+    "Supercluster": {
+      "name": "Supercluster",
+      "expense": 1e+33,
+      "effect": 100000000,
+      "heromult": 20,
+      "heroeffect": 1e+50
+    },
+    "Galaxy Filament": {
+      "name": "Galaxy Filament",
+      "expense": 1e+36,
+      "effect": 1000000000,
+      "heromult": 25,
+      "heroeffect": 1e+52
+    },
+    "Observable Universe": {
+      "name": "Observable Universe",
+      "expense": 1e+39,
+      "effect": 10000000000,
+      "heromult": 30,
+      "heroeffect": 1e+54
+    },
+    "Multiverse": {
+      "name": "Multiverse",
+      "expense": 1e+42,
+      "effect": 100000000000,
+      "heromult": 35,
+      "heroeffect": 1e+60
+    },
+    "Quantum World": {
+      "name": "Quantum World",
+      "expense": 1e+49,
+      "effect": 1000000000000,
+      "heromult": 40,
+      "heroeffect": 1e+64
+    },
+    "Boötes Void": {
+      "name": "Boötes Void",
+      "expense": 3e+74,
+      "effect": 1000000000000,
+      "heromult": 40,
+      "heroeffect": 1e+80
+    },
+    "Book": {
+      "name": "Book",
+      "expense": 10,
+      "effect": 1.5,
+      "description": "Skill XP",
+      "heromult": 2,
+      "heroeffect": 10
+    },
+    "Dumbbells": {
+      "name": "Dumbbells",
+      "expense": 50,
+      "effect": 1.5,
+      "description": "Strength XP",
+      "heromult": 2,
+      "heroeffect": 10
+    },
+    "Personal Squire": {
+      "name": "Personal Squire",
+      "expense": 200,
+      "effect": 2,
+      "description": "Hero XP",
+      "heromult": 3,
+      "heroeffect": 10
+    },
+    "Steel Longsword": {
+      "name": "Steel Longsword",
+      "expense": 1000,
+      "effect": 2,
+      "description": "Military XP",
+      "heromult": 3,
+      "heroeffect": 10
+    },
+    "Butler": {
+      "name": "Butler",
+      "expense": 7500,
+      "effect": 1.5,
+      "description": "Happiness",
+      "heromult": 4,
+      "heroeffect": 10
+    },
+    "Sapphire Charm": {
+      "name": "Sapphire Charm",
+      "expense": 50000,
+      "effect": 3,
+      "description": "Magic XP",
+      "heromult": 4,
+      "heroeffect": 10
+    },
+    "Study Desk": {
+      "name": "Study Desk",
+      "expense": 1000000,
+      "effect": 2,
+      "description": "Skill XP",
+      "heromult": 5,
+      "heroeffect": 10
+    },
+    "Library": {
+      "name": "Library",
+      "expense": 10000000,
+      "effect": 2,
+      "description": "Skill XP",
+      "heromult": 5,
+      "heroeffect": 10
+    },
+    "Observatory": {
+      "name": "Observatory",
+      "expense": 140000000,
+      "effect": 5,
+      "description": "Magic XP",
+      "heromult": 6,
+      "heroeffect": 10
+    },
+    "Mind's Eye": {
+      "name": "Mind's Eye",
+      "expense": 3250000000,
+      "effect": 10,
+      "description": "Fundamentals XP",
+      "heromult": 8,
+      "heroeffect": 10
+    },
+    "Void Necklace": {
+      "name": "Void Necklace",
+      "expense": 28000000000,
+      "effect": 3,
+      "description": "Void Manipulation XP",
+      "heromult": 10,
+      "heroeffect": 10
+    },
+    "Void Armor": {
+      "name": "Void Armor",
+      "expense": 197000000000,
+      "effect": 3,
+      "description": "The Void XP",
+      "heromult": 10,
+      "heroeffect": 10
+    },
+    "Void Blade": {
+      "name": "Void Blade",
+      "expense": 500000000000,
+      "effect": 3,
+      "description": "Skill XP",
+      "heromult": 11,
+      "heroeffect": 10
+    },
+    "Void Orb": {
+      "name": "Void Orb",
+      "expense": 1200000000000,
+      "effect": 3,
+      "description": "Void Manipulation XP",
+      "heromult": 11,
+      "heroeffect": 10
+    },
+    "Void Dust": {
+      "name": "Void Dust",
+      "expense": 25000000000000,
+      "effect": 3,
+      "description": "The Void XP",
+      "heromult": 12,
+      "heroeffect": 10
+    },
+    "Celestial Robe": {
+      "name": "Celestial Robe",
+      "expense": 300000000000000,
+      "effect": 5,
+      "description": "Galactic Council XP",
+      "heromult": 12,
+      "heroeffect": 10
+    },
+    "Universe Fragment": {
+      "name": "Universe Fragment",
+      "expense": 18500000000000000,
+      "effect": 3,
+      "description": "Skill XP",
+      "heromult": 13,
+      "heroeffect": 1000000
+    },
+    "Multiverse Fragment": {
+      "name": "Multiverse Fragment",
+      "expense": 200000000000000000,
+      "effect": 5,
+      "description": "Happiness",
+      "heromult": 15,
+      "heroeffect": 1000000
+    },
+    "Stairway to heaven": {
+      "name": "Stairway to heaven",
+      "expense": 1e+38,
+      "effect": 10,
+      "description": "Happiness",
+      "heromult": 30,
+      "heroeffect": 1000000
+    },
+    "Highway to hell": {
+      "name": "Highway to hell",
+      "expense": 1e+42,
+      "effect": 10,
+      "description": "Evil Gain",
+      "heromult": 30,
+      "heroeffect": 1000000
+    },
+    "Tesseract": {
+      "name": "Tesseract",
+      "expense": 1e+48,
+      "effect": 1,
+      "description": "Hypercube Gain",
+      "heromult": 30,
+      "heroeffect": 10
+    },
+    "Desintegration": {
+      "name": "Desintegration",
+      "expense": 1e+55,
+      "effect": 1,
+      "description": "Dark Matter Gain",
+      "heromult": 30,
+      "heroeffect": 100
+    },
+    "Custom Galaxy": {
+      "name": "Custom Galaxy",
+      "expense": 1e+64,
+      "effect": 1,
+      "description": "Skill XP",
+      "heromult": 30,
+      "heroeffect": 1e+100
+    },
+    "Hypersphere": {
+      "name": "Hypersphere",
+      "expense": 1e+91,
+      "effect": 1,
+      "description": "Hypercube Gain",
+      "heromult": 30,
+      "heroeffect": 1e+50
+    }
+  },
+  "jobCategories": {
+    "Common work": [
+      "Beggar",
+      "Farmer",
+      "Fisherman",
+      "Miner",
+      "Blacksmith",
+      "Merchant"
+    ],
+    "Military": [
+      "Squire",
+      "Footman",
+      "Veteran footman",
+      "Centenary",
+      "Knight",
+      "Veteran Knight",
+      "Holy Knight",
+      "Lieutenant General"
+    ],
+    "The Arcane Association": [
+      "Student",
+      "Apprentice Mage",
+      "Adept Mage",
+      "Master Wizard",
+      "Archmage",
+      "Chronomancer",
+      "Chairman",
+      "Imperator"
+    ],
+    "The Void": [
+      "Corrupted",
+      "Void Slave",
+      "Void Fiend",
+      "Abyss Anomaly",
+      "Void Wraith",
+      "Void Reaver",
+      "Void Lord",
+      "Abyss God"
+    ],
+    "Galactic Council": [
+      "Eternal Wanderer",
+      "Nova",
+      "Sigma Proioxis",
+      "Acallaris",
+      "One Above All"
+    ],
+    "Metaverse Guards": [
+      "Snow Crash",
+      "Player One",
+      "Lost in the dark",
+      "Omega"
+    ]
+  },
+  "skillCategories": {
+    "Fundamentals": [
+      "Concentration",
+      "Productivity",
+      "Bargaining",
+      "Meditation"
+    ],
+    "Combat": [
+      "Strength",
+      "Battle Tactics",
+      "Muscle Memory"
+    ],
+    "Magic": [
+      "Mana Control",
+      "Life Essence",
+      "Time Warping",
+      "Astral Body",
+      "Temporal Dimension",
+      "All Seeing Eye",
+      "Brainwashing"
+    ],
+    "Dark Magic": [
+      "Dark Influence",
+      "Evil Control",
+      "Intimidation",
+      "Demon Training",
+      "Blood Meditation",
+      "Demon's Wealth",
+      "Dark Knowledge",
+      "Void Influence",
+      "Time Loop",
+      "Evil Incarnate"
+    ],
+    "Void Manipulation": [
+      "Absolute Wish",
+      "Void Amplification",
+      "Mind Release",
+      "Ceaseless Abyss",
+      "Void Symbiosis",
+      "Void Embodiment",
+      "Abyss Manipulation"
+    ],
+    "Celestial Powers": [
+      "Cosmic Longevity",
+      "Cosmic Recollection",
+      "Essence Collector",
+      "Galactic Command"
+    ],
+    "Almightiness": [
+      "Yin Yang",
+      "Parallel Universe",
+      "Higher Dimensions",
+      "Epiphany"
+    ],
+    "Darkness": [
+      "Dark Prince",
+      "Dark Ruler",
+      "Immortal Ruler",
+      "Dark Magician",
+      "Universal Ruler",
+      "Blinded By Darkness"
+    ]
+  },
+  "itemCategories": {
+    "Properties": [
+      "Homeless",
+      "Tent",
+      "Wooden Hut",
+      "Cottage",
+      "House",
+      "Large House",
+      "Small Palace",
+      "Grand Palace",
+      "Town Ruler",
+      "City Ruler",
+      "Nation Ruler",
+      "Pocket Dimension",
+      "Void Realm",
+      "Void Universe",
+      "Astral Realm",
+      "Galactic Throne",
+      "Spaceship",
+      "Planet",
+      "Ringworld",
+      "Stellar Neighborhood",
+      "Galaxy",
+      "Supercluster",
+      "Galaxy Filament",
+      "Observable Universe",
+      "Multiverse",
+      "Quantum World",
+      "Boötes Void"
+    ],
+    "Misc": [
+      "Book",
+      "Dumbbells",
+      "Personal Squire",
+      "Steel Longsword",
+      "Butler",
+      "Sapphire Charm",
+      "Study Desk",
+      "Library",
+      "Observatory",
+      "Mind's Eye",
+      "Void Necklace",
+      "Void Armor",
+      "Void Blade",
+      "Void Orb",
+      "Void Dust",
+      "Celestial Robe",
+      "Universe Fragment",
+      "Multiverse Fragment",
+      "Stairway to heaven",
+      "Highway to hell",
+      "Tesseract",
+      "Desintegration",
+      "Custom Galaxy",
+      "Hypersphere"
+    ]
+  },
+  "requirements": {
+    "The Arcane Association": {
+      "querySelectors": [
+        ".TheArcaneAssociation"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 200
+        },
+        {
+          "task": "Meditation",
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Galactic Council": {
+      "querySelectors": [
+        ".GalacticCouncil"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "The Void": {
+      "querySelectors": [
+        ".TheVoid"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Void Manipulation": {
+      "querySelectors": [
+        ".VoidManipulation"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Celestial Powers": {
+      "querySelectors": [
+        ".CelestialPowers"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Dark Magic": {
+      "querySelectors": [
+        ".DarkMagic"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Almightiness": {
+      "querySelectors": [
+        ".Almightiness"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Darkness": {
+      "querySelectors": [
+        ".Darkness"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Heroic Milestones": {
+      "querySelectors": [
+        ".HeroicMilestones"
+      ],
+      "requirements": [
+        {
+          "requirement": 400000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Milestones": {
+      "querySelectors": [
+        ".DarkMilestones"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Metaverse Milestones": {
+      "querySelectors": [
+        ".MetaverseMilestones"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+60
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Metaverse Guards": {
+      "querySelectors": [
+        ".MetaverseGuards"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+90
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Rebirth tab": {
+      "querySelectors": [
+        "#rebirthTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 25
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 0": {
+      "querySelectors": [
+        "#rebirthNote0"
+      ],
+      "requirements": [
+        {
+          "requirement": 25
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 1": {
+      "querySelectors": [
+        "#rebirthNote1"
+      ],
+      "requirements": [
+        {
+          "requirement": 45
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 2": {
+      "querySelectors": [
+        "#rebirthNote2"
+      ],
+      "requirements": [
+        {
+          "requirement": 65
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 3": {
+      "querySelectors": [
+        "#rebirthNote3"
+      ],
+      "requirements": [
+        {
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 4": {
+      "querySelectors": [
+        "#rebirthNote4"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 5": {
+      "querySelectors": [
+        "#rebirthNote5"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth note 6": {
+      "querySelectors": [
+        "#rebirthNote6"
+      ],
+      "requirements": [
+        {
+          "task": "Cosmic Recollection",
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Rebirth note 7": {
+      "querySelectors": [
+        "#rebirthNote7"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Rebirth note 8": {
+      "querySelectors": [
+        "#rebirthNote8"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+60
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Rebirth button 1": {
+      "querySelectors": [
+        "#rebirthButton1"
+      ],
+      "requirements": [
+        {
+          "requirement": 65
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth button 2": {
+      "querySelectors": [
+        "#rebirthButton2"
+      ],
+      "requirements": [
+        {
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth button 3": {
+      "querySelectors": [
+        "#rebirthButton3"
+      ],
+      "requirements": [
+        {
+          "task": "Cosmic Recollection",
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Rebirth button 4": {
+      "querySelectors": [
+        "#rebirthButton4"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Rebirth button 5": {
+      "querySelectors": [
+        "#rebirthButton5"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+60
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Rebirth stats evil": {
+      "querySelectors": [
+        "#statsEvilGain"
+      ],
+      "requirements": [
+        {
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Rebirth stats essence": {
+      "querySelectors": [
+        "#statsEssenceGain"
+      ],
+      "requirements": [
+        {
+          "task": "Cosmic Recollection",
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Quick task display": {
+      "querySelectors": [
+        "#quickTaskDisplay"
+      ],
+      "requirements": [
+        {
+          "requirement": 20
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Evil info": {
+      "querySelectors": [
+        "#evilInfo"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Essence info": {
+      "querySelectors": [
+        "#essenceInfo"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Matter info": {
+      "querySelectors": [
+        "#darkMatterInfo"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Dark Orbs info": {
+      "querySelectors": [
+        "#darkOrbsInfo"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "darkOrb"
+    },
+    "Hypercubes info": {
+      "querySelectors": [
+        "#hypercubesInfo"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Beggar": {
+      "querySelectors": [
+        "#rowBeggar"
+      ],
+      "requirements": [],
+      "completed": true,
+      "type": "task"
+    },
+    "Farmer": {
+      "querySelectors": [
+        "#rowFarmer"
+      ],
+      "requirements": [
+        {
+          "task": "Beggar",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Fisherman": {
+      "querySelectors": [
+        "#rowFisherman"
+      ],
+      "requirements": [
+        {
+          "task": "Farmer",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Miner": {
+      "querySelectors": [
+        "#rowMiner"
+      ],
+      "requirements": [
+        {
+          "task": "Strength",
+          "requirement": 10
+        },
+        {
+          "task": "Fisherman",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Blacksmith": {
+      "querySelectors": [
+        "#rowBlacksmith"
+      ],
+      "requirements": [
+        {
+          "task": "Strength",
+          "requirement": 30
+        },
+        {
+          "task": "Miner",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Merchant": {
+      "querySelectors": [
+        "#rowMerchant"
+      ],
+      "requirements": [
+        {
+          "task": "Bargaining",
+          "requirement": 50
+        },
+        {
+          "task": "Blacksmith",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Squire": {
+      "querySelectors": [
+        "#rowSquire"
+      ],
+      "requirements": [
+        {
+          "task": "Strength",
+          "requirement": 5
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Footman": {
+      "querySelectors": [
+        "#rowFootman"
+      ],
+      "requirements": [
+        {
+          "task": "Strength",
+          "requirement": 20
+        },
+        {
+          "task": "Squire",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Veteran footman": {
+      "querySelectors": [
+        "#rowVeteranfootman"
+      ],
+      "requirements": [
+        {
+          "task": "Battle Tactics",
+          "requirement": 40
+        },
+        {
+          "task": "Footman",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Centenary": {
+      "querySelectors": [
+        "#rowCentenary"
+      ],
+      "requirements": [
+        {
+          "task": "Strength",
+          "requirement": 100
+        },
+        {
+          "task": "Veteran footman",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Knight": {
+      "querySelectors": [
+        "#rowKnight"
+      ],
+      "requirements": [
+        {
+          "task": "Battle Tactics",
+          "requirement": 150
+        },
+        {
+          "task": "Centenary",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Veteran Knight": {
+      "querySelectors": [
+        "#rowVeteranKnight"
+      ],
+      "requirements": [
+        {
+          "task": "Strength",
+          "requirement": 300
+        },
+        {
+          "task": "Knight",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Holy Knight": {
+      "querySelectors": [
+        "#rowHolyKnight"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 500
+        },
+        {
+          "task": "Veteran Knight",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Lieutenant General": {
+      "querySelectors": [
+        "#rowLieutenantGeneral"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 1000
+        },
+        {
+          "task": "Battle Tactics",
+          "requirement": 1000
+        },
+        {
+          "task": "Holy Knight",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Student": {
+      "querySelectors": [
+        "#rowStudent"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 200
+        },
+        {
+          "task": "Meditation",
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Apprentice Mage": {
+      "querySelectors": [
+        "#rowApprenticeMage"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 400
+        },
+        {
+          "task": "Student",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Adept Mage": {
+      "querySelectors": [
+        "#rowAdeptMage"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 700
+        },
+        {
+          "task": "Apprentice Mage",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Master Wizard": {
+      "querySelectors": [
+        "#rowMasterWizard"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 1000
+        },
+        {
+          "task": "Adept Mage",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Archmage": {
+      "querySelectors": [
+        "#rowArchmage"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 1200
+        },
+        {
+          "task": "Master Wizard",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Chronomancer": {
+      "querySelectors": [
+        "#rowChronomancer"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 1500
+        },
+        {
+          "task": "Meditation",
+          "requirement": 1500
+        },
+        {
+          "task": "Archmage",
+          "requirement": 25
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Chairman": {
+      "querySelectors": [
+        "#rowChairman"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 2000
+        },
+        {
+          "task": "Productivity",
+          "requirement": 2000
+        },
+        {
+          "task": "Chronomancer",
+          "requirement": 50
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Imperator": {
+      "querySelectors": [
+        "#rowImperator"
+      ],
+      "requirements": [
+        {
+          "task": "All Seeing Eye",
+          "requirement": 3000,
+          "herequirement": 650
+        },
+        {
+          "task": "Concentration",
+          "requirement": 3000
+        },
+        {
+          "task": "Chairman",
+          "requirement": 666
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Corrupted": {
+      "querySelectors": [
+        "#rowCorrupted"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Void Slave": {
+      "querySelectors": [
+        "#rowVoidSlave"
+      ],
+      "requirements": [
+        {
+          "task": "Corrupted",
+          "requirement": 30
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Fiend": {
+      "querySelectors": [
+        "#rowVoidFiend"
+      ],
+      "requirements": [
+        {
+          "task": "Brainwashing",
+          "requirement": 3000
+        },
+        {
+          "task": "Void Slave",
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Abyss Anomaly": {
+      "querySelectors": [
+        "#rowAbyssAnomaly"
+      ],
+      "requirements": [
+        {
+          "task": "Mind Release",
+          "requirement": 3000,
+          "herequirement": 100
+        },
+        {
+          "task": "Void Fiend",
+          "requirement": 200,
+          "herequirement": 100
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Wraith": {
+      "querySelectors": [
+        "#rowVoidWraith"
+      ],
+      "requirements": [
+        {
+          "task": "Temporal Dimension",
+          "requirement": 3400
+        },
+        {
+          "task": "Abyss Anomaly",
+          "requirement": 300,
+          "herequirement": 180
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Reaver": {
+      "querySelectors": [
+        "#rowVoidReaver"
+      ],
+      "requirements": [
+        {
+          "task": "Void Amplification",
+          "requirement": 3400,
+          "herequirement": 180
+        },
+        {
+          "task": "Void Wraith",
+          "requirement": 250,
+          "herequirement": 125
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Lord": {
+      "querySelectors": [
+        "#rowVoidLord"
+      ],
+      "requirements": [
+        {
+          "task": "Void Symbiosis",
+          "requirement": 3800,
+          "herequirement": 200
+        },
+        {
+          "task": "Void Reaver",
+          "requirement": 150
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Abyss God": {
+      "querySelectors": [
+        "#rowAbyssGod"
+      ],
+      "requirements": [
+        {
+          "task": "Void Embodiment",
+          "requirement": 4700,
+          "herequirement": 300
+        },
+        {
+          "task": "Void Lord",
+          "requirement": 750,
+          "herequirement": 125
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Eternal Wanderer": {
+      "querySelectors": [
+        "#rowEternalWanderer"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "Nova": {
+      "querySelectors": [
+        "#rowNova"
+      ],
+      "requirements": [
+        {
+          "task": "Eternal Wanderer",
+          "requirement": 15
+        },
+        {
+          "task": "Cosmic Longevity",
+          "requirement": 4000,
+          "herequirement": 180
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Sigma Proioxis": {
+      "querySelectors": [
+        "#rowSigmaProioxis"
+      ],
+      "requirements": [
+        {
+          "task": "Nova",
+          "requirement": 200
+        },
+        {
+          "task": "Cosmic Recollection",
+          "requirement": 4500,
+          "herequirement": 350
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Acallaris": {
+      "querySelectors": [
+        "#rowAcallaris"
+      ],
+      "requirements": [
+        {
+          "task": "Galactic Command",
+          "requirement": 5000,
+          "herequirement": 250
+        },
+        {
+          "task": "Sigma Proioxis",
+          "requirement": 1000,
+          "herequirement": 480
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "One Above All": {
+      "querySelectors": [
+        "#rowOneAboveAll"
+      ],
+      "requirements": [
+        {
+          "task": "Meditation",
+          "requirement": 6300
+        },
+        {
+          "task": "Acallaris",
+          "requirement": 1400,
+          "herequirement": 500
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Snow Crash": {
+      "querySelectors": [
+        "#rowSnowCrash"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+90,
+          "herequirement": 1e+120
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Player One": {
+      "querySelectors": [
+        "#rowPlayerOne"
+      ],
+      "requirements": [
+        {
+          "task": "Snow Crash",
+          "requirement": 1000,
+          "herequirement": 160000
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Lost in the dark": {
+      "querySelectors": [
+        "#rowLostinthedark"
+      ],
+      "requirements": [
+        {
+          "task": "Player One",
+          "requirement": 2500,
+          "herequirement": 158000
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Omega": {
+      "querySelectors": [
+        "#rowOmega"
+      ],
+      "requirements": [
+        {
+          "task": "Lost in the dark",
+          "requirement": 25000,
+          "herequirement": 185000
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Concentration": {
+      "querySelectors": [
+        "#rowConcentration"
+      ],
+      "requirements": [],
+      "completed": true,
+      "type": "task"
+    },
+    "Productivity": {
+      "querySelectors": [
+        "#rowProductivity"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 5
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Bargaining": {
+      "querySelectors": [
+        "#rowBargaining"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 20
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Meditation": {
+      "querySelectors": [
+        "#rowMeditation"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 30
+        },
+        {
+          "task": "Productivity",
+          "requirement": 20
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Strength": {
+      "querySelectors": [
+        "#rowStrength"
+      ],
+      "requirements": [],
+      "completed": true,
+      "type": "task"
+    },
+    "Battle Tactics": {
+      "querySelectors": [
+        "#rowBattleTactics"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 20
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Muscle Memory": {
+      "querySelectors": [
+        "#rowMuscleMemory"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 30
+        },
+        {
+          "task": "Strength",
+          "requirement": 30
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Mana Control": {
+      "querySelectors": [
+        "#rowManaControl"
+      ],
+      "requirements": [
+        {
+          "task": "Concentration",
+          "requirement": 200
+        },
+        {
+          "task": "Meditation",
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Life Essence": {
+      "querySelectors": [
+        "#rowLifeEssence"
+      ],
+      "requirements": [
+        {
+          "task": "Apprentice Mage",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Time Warping": {
+      "querySelectors": [
+        "#rowTimeWarping"
+      ],
+      "requirements": [
+        {
+          "task": "Adept Mage",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Astral Body": {
+      "querySelectors": [
+        "#rowAstralBody"
+      ],
+      "requirements": [
+        {
+          "task": "Archmage",
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Temporal Dimension": {
+      "querySelectors": [
+        "#rowTemporalDimension"
+      ],
+      "requirements": [
+        {
+          "task": "Chronomancer",
+          "requirement": 25
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "All Seeing Eye": {
+      "querySelectors": [
+        "#rowAllSeeingEye"
+      ],
+      "requirements": [
+        {
+          "task": "Mana Control",
+          "requirement": 2350
+        },
+        {
+          "task": "Chairman",
+          "requirement": 100
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Brainwashing": {
+      "querySelectors": [
+        "#rowBrainwashing"
+      ],
+      "requirements": [
+        {
+          "task": "Imperator",
+          "requirement": 100
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Dark Influence": {
+      "querySelectors": [
+        "#rowDarkInfluence"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Evil Control": {
+      "querySelectors": [
+        "#rowEvilControl"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Intimidation": {
+      "querySelectors": [
+        "#rowIntimidation"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Demon Training": {
+      "querySelectors": [
+        "#rowDemonTraining"
+      ],
+      "requirements": [
+        {
+          "requirement": 20
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Blood Meditation": {
+      "querySelectors": [
+        "#rowBloodMeditation"
+      ],
+      "requirements": [
+        {
+          "requirement": 50
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Demon's Wealth": {
+      "querySelectors": [
+        "#rowDemonsWealth"
+      ],
+      "requirements": [
+        {
+          "requirement": 500
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Dark Knowledge": {
+      "querySelectors": [
+        "#rowDarkKnowledge"
+      ],
+      "requirements": [
+        {
+          "requirement": 5000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Void Influence": {
+      "querySelectors": [
+        "#rowVoidInfluence"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Time Loop": {
+      "querySelectors": [
+        "#rowTimeLoop"
+      ],
+      "requirements": [
+        {
+          "requirement": 2500000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Evil Incarnate": {
+      "querySelectors": [
+        "#rowEvilIncarnate"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000000000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Absolute Wish": {
+      "querySelectors": [
+        "#rowAbsoluteWish"
+      ],
+      "requirements": [
+        {
+          "task": "Void Slave",
+          "requirement": 25
+        },
+        {
+          "task": "Chairman",
+          "requirement": 300
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Amplification": {
+      "querySelectors": [
+        "#rowVoidAmplification"
+      ],
+      "requirements": [
+        {
+          "task": "Void Slave",
+          "requirement": 100
+        },
+        {
+          "task": "Absolute Wish",
+          "requirement": 3000,
+          "herequirement": 1700
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Mind Release": {
+      "querySelectors": [
+        "#rowMindRelease"
+      ],
+      "requirements": [
+        {
+          "task": "Void Amplification",
+          "requirement": 3000,
+          "herequirement": 100
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Ceaseless Abyss": {
+      "querySelectors": [
+        "#rowCeaselessAbyss"
+      ],
+      "requirements": [
+        {
+          "task": "Void Influence",
+          "requirement": 4000,
+          "herequirement": 1950
+        },
+        {
+          "task": "Abyss Anomaly",
+          "requirement": 50
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Symbiosis": {
+      "querySelectors": [
+        "#rowVoidSymbiosis"
+      ],
+      "requirements": [
+        {
+          "task": "Ceaseless Abyss",
+          "requirement": 3500,
+          "herequirement": 220
+        },
+        {
+          "task": "Void Reaver",
+          "requirement": 50
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Void Embodiment": {
+      "querySelectors": [
+        "#rowVoidEmbodiment"
+      ],
+      "requirements": [
+        {
+          "task": "Dark Influence",
+          "requirement": 4600,
+          "herequirement": 3700
+        },
+        {
+          "task": "Void Lord",
+          "requirement": 50
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Abyss Manipulation": {
+      "querySelectors": [
+        "#rowAbyssManipulation"
+      ],
+      "requirements": [
+        {
+          "task": "Abyss God",
+          "requirement": 350,
+          "herequirement": 200
+        },
+        {
+          "task": "Dark Influence",
+          "requirement": 6000,
+          "herequirement": 4100
+        },
+        {
+          "task": "Void Influence",
+          "requirement": 6000,
+          "herequirement": 2600
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Cosmic Longevity": {
+      "querySelectors": [
+        "#rowCosmicLongevity"
+      ],
+      "requirements": [
+        {
+          "task": "Eternal Wanderer",
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Cosmic Recollection": {
+      "querySelectors": [
+        "#rowCosmicRecollection"
+      ],
+      "requirements": [
+        {
+          "task": "Nova",
+          "requirement": 50
+        },
+        {
+          "task": "Meditation",
+          "requirement": 4200
+        },
+        {
+          "task": "Mind Release",
+          "requirement": 900
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Essence Collector": {
+      "querySelectors": [
+        "#rowEssenceCollector"
+      ],
+      "requirements": [
+        {
+          "task": "Sigma Proioxis",
+          "requirement": 500,
+          "herequirement": 360
+        },
+        {
+          "task": "Absolute Wish",
+          "requirement": 4900,
+          "herequirement": 2900
+        },
+        {
+          "task": "Dark Knowledge",
+          "requirement": 6300,
+          "herequirement": 3400
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Galactic Command": {
+      "querySelectors": [
+        "#rowGalacticCommand"
+      ],
+      "requirements": [
+        {
+          "task": "Essence Collector",
+          "requirement": 5000,
+          "herequirement": 210
+        },
+        {
+          "task": "Bargaining",
+          "requirement": 5000
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "Yin Yang": {
+      "querySelectors": [
+        "#rowYinYang"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Parallel Universe": {
+      "querySelectors": [
+        "#rowParallelUniverse"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Higher Dimensions": {
+      "querySelectors": [
+        "#rowHigherDimensions"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Epiphany": {
+      "querySelectors": [
+        "#rowEpiphany"
+      ],
+      "requirements": [
+        {
+          "requirement": 30000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Prince": {
+      "querySelectors": [
+        "#rowDarkPrince"
+      ],
+      "requirements": [
+        {
+          "requirement": 3
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Dark Ruler": {
+      "querySelectors": [
+        "#rowDarkRuler"
+      ],
+      "requirements": [
+        {
+          "requirement": 10
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Immortal Ruler": {
+      "querySelectors": [
+        "#rowImmortalRuler"
+      ],
+      "requirements": [
+        {
+          "requirement": 25
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Dark Magician": {
+      "querySelectors": [
+        "#rowDarkMagician"
+      ],
+      "requirements": [
+        {
+          "requirement": 100
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Universal Ruler": {
+      "querySelectors": [
+        "#rowUniversalRuler"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Blinded By Darkness": {
+      "querySelectors": [
+        "#rowBlindedByDarkness"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Homeless": {
+      "querySelectors": [
+        "#rowHomeless"
+      ],
+      "requirements": [
+        {
+          "requirement": 0
+        }
+      ],
+      "completed": true,
+      "type": "coins"
+    },
+    "Tent": {
+      "querySelectors": [
+        "#rowTent"
+      ],
+      "requirements": [
+        {
+          "requirement": 0
+        }
+      ],
+      "completed": true,
+      "type": "coins"
+    },
+    "Wooden Hut": {
+      "querySelectors": [
+        "#rowWoodenHut"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Cottage": {
+      "querySelectors": [
+        "#rowCottage"
+      ],
+      "requirements": [
+        {
+          "requirement": 75000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "House": {
+      "querySelectors": [
+        "#rowHouse"
+      ],
+      "requirements": [
+        {
+          "requirement": 300000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Large House": {
+      "querySelectors": [
+        "#rowLargeHouse"
+      ],
+      "requirements": [
+        {
+          "requirement": 2500000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Small Palace": {
+      "querySelectors": [
+        "#rowSmallPalace"
+      ],
+      "requirements": [
+        {
+          "requirement": 30000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Grand Palace": {
+      "querySelectors": [
+        "#rowGrandPalace"
+      ],
+      "requirements": [
+        {
+          "requirement": 500000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Town Ruler": {
+      "querySelectors": [
+        "#rowTownRuler"
+      ],
+      "requirements": [
+        {
+          "requirement": 3500000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "City Ruler": {
+      "querySelectors": [
+        "#rowCityRuler"
+      ],
+      "requirements": [
+        {
+          "requirement": 110000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Nation Ruler": {
+      "querySelectors": [
+        "#rowNationRuler"
+      ],
+      "requirements": [
+        {
+          "requirement": 1300000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Pocket Dimension": {
+      "querySelectors": [
+        "#rowPocketDimension"
+      ],
+      "requirements": [
+        {
+          "requirement": 4900000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Realm": {
+      "querySelectors": [
+        "#rowVoidRealm"
+      ],
+      "requirements": [
+        {
+          "requirement": 12100000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Universe": {
+      "querySelectors": [
+        "#rowVoidUniverse"
+      ],
+      "requirements": [
+        {
+          "requirement": 200000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Astral Realm": {
+      "querySelectors": [
+        "#rowAstralRealm"
+      ],
+      "requirements": [
+        {
+          "requirement": 16000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Galactic Throne": {
+      "querySelectors": [
+        "#rowGalacticThrone"
+      ],
+      "requirements": [
+        {
+          "requirement": 500000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Spaceship": {
+      "querySelectors": [
+        "#rowSpaceship"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Planet": {
+      "querySelectors": [
+        "#rowPlanet"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+24
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Ringworld": {
+      "querySelectors": [
+        "#rowRingworld"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+26
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Stellar Neighborhood": {
+      "querySelectors": [
+        "#rowStellarNeighborhood"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+65
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Galaxy": {
+      "querySelectors": [
+        "#rowGalaxy"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+72
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Supercluster": {
+      "querySelectors": [
+        "#rowSupercluster"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+80
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Galaxy Filament": {
+      "querySelectors": [
+        "#rowGalaxyFilament"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+90
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Observable Universe": {
+      "querySelectors": [
+        "#rowObservableUniverse"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+102
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Multiverse": {
+      "querySelectors": [
+        "#rowMultiverse"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+116
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Quantum World": {
+      "querySelectors": [
+        "#rowQuantumWorld"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+124
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Boötes Void": {
+      "querySelectors": [
+        "#rowBoötesVoid"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+152
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Book": {
+      "querySelectors": [
+        "#rowBook"
+      ],
+      "requirements": [
+        {
+          "requirement": 0
+        }
+      ],
+      "completed": true,
+      "type": "coins"
+    },
+    "Dumbbells": {
+      "querySelectors": [
+        "#rowDumbbells"
+      ],
+      "requirements": [
+        {
+          "requirement": 5000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Personal Squire": {
+      "querySelectors": [
+        "#rowPersonalSquire"
+      ],
+      "requirements": [
+        {
+          "requirement": 20000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Steel Longsword": {
+      "querySelectors": [
+        "#rowSteelLongsword"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Butler": {
+      "querySelectors": [
+        "#rowButler"
+      ],
+      "requirements": [
+        {
+          "requirement": 750000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Sapphire Charm": {
+      "querySelectors": [
+        "#rowSapphireCharm"
+      ],
+      "requirements": [
+        {
+          "requirement": 5000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Study Desk": {
+      "querySelectors": [
+        "#rowStudyDesk"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Library": {
+      "querySelectors": [
+        "#rowLibrary"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Observatory": {
+      "querySelectors": [
+        "#rowObservatory"
+      ],
+      "requirements": [
+        {
+          "requirement": 14000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Mind's Eye": {
+      "querySelectors": [
+        "#rowMindsEye"
+      ],
+      "requirements": [
+        {
+          "requirement": 325000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Necklace": {
+      "querySelectors": [
+        "#rowVoidNecklace"
+      ],
+      "requirements": [
+        {
+          "requirement": 2800000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Armor": {
+      "querySelectors": [
+        "#rowVoidArmor"
+      ],
+      "requirements": [
+        {
+          "requirement": 19700000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Blade": {
+      "querySelectors": [
+        "#rowVoidBlade"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Orb": {
+      "querySelectors": [
+        "#rowVoidOrb"
+      ],
+      "requirements": [
+        {
+          "requirement": 120000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Void Dust": {
+      "querySelectors": [
+        "#rowVoidDust"
+      ],
+      "requirements": [
+        {
+          "requirement": 2500000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Celestial Robe": {
+      "querySelectors": [
+        "#rowCelestialRobe"
+      ],
+      "requirements": [
+        {
+          "requirement": 30000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Universe Fragment": {
+      "querySelectors": [
+        "#rowUniverseFragment"
+      ],
+      "requirements": [
+        {
+          "requirement": 1850000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Multiverse Fragment": {
+      "querySelectors": [
+        "#rowMultiverseFragment"
+      ],
+      "requirements": [
+        {
+          "requirement": 20000000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Stairway to heaven": {
+      "querySelectors": [
+        "#rowStairwaytoheaven"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+40
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Highway to hell": {
+      "querySelectors": [
+        "#rowHighwaytohell"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+44
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Tesseract": {
+      "querySelectors": [
+        "#rowTesseract"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+112
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Desintegration": {
+      "querySelectors": [
+        "#rowDesintegration"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+122
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Custom Galaxy": {
+      "querySelectors": [
+        "#rowCustomGalaxy"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+134
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Hypersphere": {
+      "querySelectors": [
+        "#rowHypersphere"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+160
+        }
+      ],
+      "completed": false,
+      "type": "coins"
+    },
+    "Milestones": {
+      "querySelectors": [
+        "#milestonesTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Matter": {
+      "querySelectors": [
+        "#darkMatterTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "darkMatter"
+    },
+    "Dark Matter Skills": {
+      "querySelectors": [
+        "#skillTreeTabTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Matter Skills2": {
+      "querySelectors": [
+        "#skillTreePage"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Evil perks": {
+      "querySelectors": [
+        "#evilperksTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Challenges": {
+      "querySelectors": [
+        "#challengesTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Challenge_an_unhappy_life": {
+      "querySelectors": [
+        "#anUnhappyLifeChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Challenge_rich_and_the_poor": {
+      "querySelectors": [
+        "#theRichAndThePoorChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "Challenge_time_does_not_fly": {
+      "querySelectors": [
+        "#timeDoesNotFlyChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Challenge_dance_with_the_devil": {
+      "querySelectors": [
+        "#danceWithTheDevilChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Challenge_legends_never_die": {
+      "querySelectors": [
+        "#legendsNeverDieChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 25000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Challenge_the_darkest_time": {
+      "querySelectors": [
+        "#theDarkestTimeChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+47
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Metaverse": {
+      "querySelectors": [
+        "#metaverseTabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "metaverse"
+    },
+    "Increase Hypercube Gain": {
+      "querySelectors": [
+        "#IncreaseHypercubeGainAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Reduce Boost Cooldown": {
+      "querySelectors": [
+        "#ReduceBoostCooldownAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 500
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Increase Boost Duration": {
+      "querySelectors": [
+        "#IncreaseBoostDurationAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 2500
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Gain evil at new transcension": {
+      "querySelectors": [
+        "#EvilAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Essence gain multiplier": {
+      "querySelectors": [
+        "#EssenceAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 500000000
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Challenges are not reset": {
+      "querySelectors": [
+        "#ChallengeAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000000000000
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Dark Matter gain multiplier": {
+      "querySelectors": [
+        "#DarkMaterAltar"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "hypercube"
+    },
+    "Metaverse Perks": {
+      "querySelectors": [
+        "#metaversePage2"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "perkpoint"
+    },
+    "Metaverse Perks Button": {
+      "querySelectors": [
+        "#metaverseTab2TabButton"
+      ],
+      "requirements": [
+        {
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "perkpoint"
+    },
+    "keyChallenge": {
+      "querySelectors": [
+        "#keyChallenge"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000
+        }
+      ],
+      "completed": false,
+      "type": "evil"
+    },
+    "key1": {
+      "querySelectors": [
+        "#key1"
+      ],
+      "requirements": [
+        {
+          "requirement": 65
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "key2": {
+      "querySelectors": [
+        "#key2"
+      ],
+      "requirements": [
+        {
+          "requirement": 200
+        }
+      ],
+      "completed": false,
+      "type": "age"
+    },
+    "key3": {
+      "querySelectors": [
+        "#key3"
+      ],
+      "requirements": [
+        {
+          "task": "Cosmic Recollection",
+          "requirement": 1
+        }
+      ],
+      "completed": false,
+      "type": "task"
+    },
+    "key4": {
+      "querySelectors": [
+        "#key4"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "key5": {
+      "querySelectors": [
+        "#key5"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+90
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Evil perk essence": {
+      "querySelectors": [
+        "#evilperk5"
+      ],
+      "requirements": [
+        {
+          "requirement": 150000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Congratulations": {
+      "querySelectors": [
+        "#Congratulations"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+300
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Magic Eye": {
+      "querySelectors": [
+        "#rowMagicEye"
+      ],
+      "requirements": [
+        {
+          "requirement": 5000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Almighty Eye": {
+      "querySelectors": [
+        "#rowAlmightyEye"
+      ],
+      "requirements": [
+        {
+          "requirement": 15000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Deal with the Devil": {
+      "querySelectors": [
+        "#rowDealwiththeDevil"
+      ],
+      "requirements": [
+        {
+          "requirement": 30000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Transcendent Master": {
+      "querySelectors": [
+        "#rowTranscendentMaster"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Eternal Time": {
+      "querySelectors": [
+        "#rowEternalTime"
+      ],
+      "requirements": [
+        {
+          "requirement": 75000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Hell Portal": {
+      "querySelectors": [
+        "#rowHellPortal"
+      ],
+      "requirements": [
+        {
+          "requirement": 120000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Inferno": {
+      "querySelectors": [
+        "#rowInferno"
+      ],
+      "requirements": [
+        {
+          "requirement": 170000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "God's Blessings": {
+      "querySelectors": [
+        "#rowGodsBlessings"
+      ],
+      "requirements": [
+        {
+          "requirement": 250000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Faint Hope": {
+      "querySelectors": [
+        "#rowFaintHope"
+      ],
+      "requirements": [
+        {
+          "requirement": 400000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "New Beginning": {
+      "querySelectors": [
+        "#rowNewBeginning"
+      ],
+      "requirements": [
+        {
+          "requirement": 5000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Rise of Great Heroes": {
+      "querySelectors": [
+        "#rowRiseofGreatHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Lazy Heroes": {
+      "querySelectors": [
+        "#rowLazyHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 20000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dirty Heroes": {
+      "querySelectors": [
+        "#rowDirtyHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 30000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Angry Heroes": {
+      "querySelectors": [
+        "#rowAngryHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Tired Heroes": {
+      "querySelectors": [
+        "#rowTiredHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Scared Heroes": {
+      "querySelectors": [
+        "#rowScaredHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 150000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Good Heroes": {
+      "querySelectors": [
+        "#rowGoodHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 200000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Funny Heroes": {
+      "querySelectors": [
+        "#rowFunnyHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 300000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Beautiful Heroes": {
+      "querySelectors": [
+        "#rowBeautifulHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 400000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Awesome Heroes": {
+      "querySelectors": [
+        "#rowAwesomeHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 500000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Furious Heroes": {
+      "querySelectors": [
+        "#rowFuriousHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 750000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Superb Heroes": {
+      "querySelectors": [
+        "#rowSuperbHeroes"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "A new beginning": {
+      "querySelectors": [
+        "#rowAnewbeginning"
+      ],
+      "requirements": [
+        {
+          "requirement": 50000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Mind Control": {
+      "querySelectors": [
+        "#rowMindControl"
+      ],
+      "requirements": [
+        {
+          "requirement": 10000000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Galactic Emperor": {
+      "querySelectors": [
+        "#rowGalacticEmperor"
+      ],
+      "requirements": [
+        {
+          "requirement": 1000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Matter Harvester": {
+      "querySelectors": [
+        "#rowDarkMatterHarvester"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "A Dark Era": {
+      "querySelectors": [
+        "#rowADarkEra"
+      ],
+      "requirements": [
+        {
+          "requirement": 100000000000000000000
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Orbiter": {
+      "querySelectors": [
+        "#rowDarkOrbiter"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+22
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Matter Mining": {
+      "querySelectors": [
+        "#rowDarkMatterMining"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+25
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "The new gold": {
+      "querySelectors": [
+        "#rowThenewgold"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+30
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "The Devil inside you": {
+      "querySelectors": [
+        "#rowTheDevilinsideyou"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+35
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Strange Magic": {
+      "querySelectors": [
+        "#rowStrangeMagic"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+38
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Speed speed speed": {
+      "querySelectors": [
+        "#rowSpeedspeedspeed"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+40
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Life is valueable": {
+      "querySelectors": [
+        "#rowLifeisvalueable"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+47
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Dark Matter Millionaire": {
+      "querySelectors": [
+        "#rowDarkMatterMillionaire"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+55
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "The new Dark Matter": {
+      "querySelectors": [
+        "#rowThenewDarkMatter"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+60
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Strong Hope": {
+      "querySelectors": [
+        "#rowStrongHope"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+70
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Ruler of the Metaverse": {
+      "querySelectors": [
+        "#rowRuleroftheMetaverse"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+90
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "A New Hope": {
+      "querySelectors": [
+        "#rowANewHope"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+95
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "Time is a flat circle": {
+      "querySelectors": [
+        "#rowTimeisaflatcircle"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+100
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "The End is near": {
+      "querySelectors": [
+        "#rowTheEndisnear"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+200
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    },
+    "The End": {
+      "querySelectors": [
+        "#rowTheEnd"
+      ],
+      "requirements": [
+        {
+          "requirement": 1e+300
+        }
+      ],
+      "completed": false,
+      "type": "essence"
+    }
+  },
+  "milestones": {
+    "Magic Eye": {
+      "name": "Magic Eye",
+      "expense": 5000,
+      "tier": 1,
+      "description": "Automatically gain max levels at age 65"
+    },
+    "Almighty Eye": {
+      "name": "Almighty Eye",
+      "expense": 15000,
+      "tier": 2,
+      "description": "Automatically gain max levels"
+    },
+    "Deal with the Devil": {
+      "name": "Deal with the Devil",
+      "expense": 30000,
+      "tier": 3,
+      "description": "Passively gain a small amount of Evil"
+    },
+    "Transcendent Master": {
+      "name": "Transcendent Master",
+      "expense": 50000,
+      "tier": 4,
+      "description": "Essence gain"
+    },
+    "Eternal Time": {
+      "name": "Eternal Time",
+      "expense": 75000,
+      "tier": 5,
+      "description": "x2 Time Warping"
+    },
+    "Hell Portal": {
+      "name": "Hell Portal",
+      "expense": 120000,
+      "tier": 6,
+      "description": "Passively gain a huge amount of Evil"
+    },
+    "Inferno": {
+      "name": "Inferno",
+      "expense": 170000,
+      "tier": 7,
+      "description": "x5 Evil gain"
+    },
+    "God's Blessings": {
+      "name": "God's Blessings",
+      "expense": 250000,
+      "tier": 8,
+      "description": "x10M Happiness, keep Evil Perks on reset"
+    },
+    "Faint Hope": {
+      "name": "Faint Hope",
+      "expense": 400000,
+      "tier": 9,
+      "description": "Essence gain (increases over time, influenced by time warping)"
+    },
+    "New Beginning": {
+      "name": "New Beginning",
+      "expense": 5000000,
+      "tier": 10,
+      "description": "Great heroes, skills and items are unlocked"
+    },
+    "Rise of Great Heroes": {
+      "name": "Rise of Great Heroes",
+      "expense": 10000000,
+      "tier": 11,
+      "description": "Essence gain + x10000 Great Hero & Skill XP"
+    },
+    "Lazy Heroes": {
+      "name": "Lazy Heroes",
+      "expense": 20000000,
+      "tier": 12,
+      "description": "Great Hero & Skill XP",
+      "effect": 1000000000000
+    },
+    "Dirty Heroes": {
+      "name": "Dirty Heroes",
+      "expense": 30000000,
+      "tier": 13,
+      "description": "Great Hero & Skill XP",
+      "effect": 1000000000000000
+    },
+    "Angry Heroes": {
+      "name": "Angry Heroes",
+      "expense": 50000000,
+      "tier": 14,
+      "description": "Great Hero & Skill XP, 10x faster Faint Hope",
+      "effect": 1000000000000000
+    },
+    "Tired Heroes": {
+      "name": "Tired Heroes",
+      "expense": 100000000,
+      "tier": 15,
+      "description": "Great Hero & Skill XP",
+      "effect": 1000000000000000
+    },
+    "Scared Heroes": {
+      "name": "Scared Heroes",
+      "expense": 150000000,
+      "tier": 16,
+      "description": "Great Hero & Skill XP, new Evil Perk",
+      "effect": 1000000000000000
+    },
+    "Good Heroes": {
+      "name": "Good Heroes",
+      "expense": 200000000,
+      "tier": 17,
+      "description": "Great Hero & Skill XP",
+      "effect": 1000000000000000
+    },
+    "Funny Heroes": {
+      "name": "Funny Heroes",
+      "expense": 300000000,
+      "tier": 18,
+      "description": "Great Hero & Skill XP",
+      "effect": 1e+25
+    },
+    "Beautiful Heroes": {
+      "name": "Beautiful Heroes",
+      "expense": 400000000,
+      "tier": 19,
+      "description": "Great Hero & Skill XP",
+      "effect": 1e+50
+    },
+    "Awesome Heroes": {
+      "name": "Awesome Heroes",
+      "expense": 500000000,
+      "tier": 20,
+      "description": "Great Hero & Skill XP",
+      "effect": 10000000000
+    },
+    "Furious Heroes": {
+      "name": "Furious Heroes",
+      "expense": 750000000,
+      "tier": 21,
+      "description": "Great Hero & Skill XP",
+      "effect": 1000000000000000000
+    },
+    "Superb Heroes": {
+      "name": "Superb Heroes",
+      "expense": 10000000000,
+      "tier": 22,
+      "description": "Great Hero & Skill XP",
+      "effect": 1000
+    },
+    "A new beginning": {
+      "name": "A new beginning",
+      "expense": 50000000000,
+      "tier": 23,
+      "description": "Unlocks Dark Matter"
+    },
+    "Mind Control": {
+      "name": "Mind Control",
+      "expense": 10000000000000,
+      "tier": 24,
+      "description": "Makes Hell Portal even stronger"
+    },
+    "Galactic Emperor": {
+      "name": "Galactic Emperor",
+      "expense": 1000000000000000,
+      "tier": 25,
+      "description": "Passively gain a small amount of Essence"
+    },
+    "Dark Matter Harvester": {
+      "name": "Dark Matter Harvester",
+      "expense": 100000000000000000,
+      "tier": 26,
+      "description": "Multiply Dark Matter gain by 10x"
+    },
+    "A Dark Era": {
+      "name": "A Dark Era",
+      "expense": 100000000000000000000,
+      "tier": 27,
+      "description": "Unlocks Dark Matter Abilities"
+    },
+    "Dark Orbiter": {
+      "name": "Dark Orbiter",
+      "expense": 1e+22,
+      "tier": 28,
+      "description": "Multiply Dark Orb gain by 1e10x, keep four Evil Perks always"
+    },
+    "Dark Matter Mining": {
+      "name": "Dark Matter Mining",
+      "expense": 1e+25,
+      "tier": 29,
+      "description": "Multiply Dark Matter gain by 3x"
+    },
+    "The new gold": {
+      "name": "The new gold",
+      "expense": 1e+30,
+      "tier": 30,
+      "description": "Multiply Essence gain by 1000x"
+    },
+    "The Devil inside you": {
+      "name": "The Devil inside you",
+      "expense": 1e+35,
+      "tier": 31,
+      "description": "Multiply Evil gain by 1e15x"
+    },
+    "Strange Magic": {
+      "name": "Strange Magic",
+      "expense": 1e+38,
+      "tier": 32,
+      "description": "Multiply Darkness xp gain by 1e50x"
+    },
+    "Speed speed speed": {
+      "name": "Speed speed speed",
+      "expense": 1e+40,
+      "tier": 33,
+      "description": "Multiply Time Warping and Lifespan by 1000x. Heavily boosts Faint Hope"
+    },
+    "Life is valueable": {
+      "name": "Life is valueable",
+      "expense": 1e+47,
+      "tier": 34,
+      "description": "Multiply your lifespan by 1e5x. New challenge unlocked. Dark Matter boosts essence gain."
+    },
+    "Dark Matter Millionaire": {
+      "name": "Dark Matter Millionaire",
+      "expense": 1e+55,
+      "tier": 35,
+      "description": "Multiply Dark Matter gain by 500x"
+    },
+    "The new Dark Matter": {
+      "name": "The new Dark Matter",
+      "expense": 1e+60,
+      "tier": 36,
+      "description": "Unlocks Metaverse"
+    },
+    "Strong Hope": {
+      "name": "Strong Hope",
+      "expense": 1e+70,
+      "tier": 37,
+      "description": "Faint Hope does not reset on transcend or collapse"
+    },
+    "Ruler of the Metaverse": {
+      "name": "Ruler of the Metaverse",
+      "expense": 1e+90,
+      "tier": 38,
+      "description": "Unlocks Metaverse Perks, Metaverse Guards Job Category"
+    },
+    "A New Hope": {
+      "name": "A New Hope",
+      "expense": 1e+95,
+      "tier": 39,
+      "description": "Faint Hope always at maximum"
+    },
+    "Time is a flat circle": {
+      "name": "Time is a flat circle",
+      "expense": 1e+100,
+      "tier": 40,
+      "description": "Multiply Time Warping by 1000x, Multiply all xp gain by 1e50x"
+    },
+    "The End is near": {
+      "name": "The End is near",
+      "expense": 1e+200,
+      "tier": 50,
+      "description": "Unspent Multiverse Perk Points buffs Dark Matter"
+    },
+    "The End": {
+      "name": "The End",
+      "expense": 1e+300,
+      "tier": 99,
+      "description": "Congratulations! You have beaten the game!"
+    }
+  },
+  "updateSpeed": 20,
+  "baseLifespan": 25550,
+  "baseGameSpeed": 4,
+  "heroIncomeMult": 2500000000000000000
+}

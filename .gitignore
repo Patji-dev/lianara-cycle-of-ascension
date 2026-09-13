@@ -1,1 +1,8 @@
 ﻿/.vs
+
+/node_modules/
+/test-results/
+
+/_site/
+/.env
+/.env.*

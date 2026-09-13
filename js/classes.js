@@ -65,6 +65,7 @@ class Task {
 
     getXpGain() {
         return (this.isHero ? getHeroXpGainMultipliers(this) : 1) * applyMultipliers(10, this.xpMultipliers)
+            * (this instanceof Skill ? getCultivationSkillXpMultiplier() : 1)
     }
 
     getXpGainBigInt() {
@@ -74,7 +75,7 @@ class Task {
             xpGain *= BigInt(Math.ceil(multiplier()))
         })
 
-        return xpGain
+        return this instanceof Skill ? xpGain * BigInt(100 + getCultivationSkillXpPercent()) / 100n : xpGain
     }
 
     getXpGainFormatted() {
@@ -109,7 +110,9 @@ class Task {
                     this.unlocked = true
                     excess -= this.getMaxBigIntXp()
                 }
-                this.xpBigInt = this.getMaxBigIntXp() + excess
+                // The inherited loop cap discards excess; do not leave invalid negative XP.
+                const remainingXp = this.getMaxBigIntXp() + excess
+                this.xpBigInt = remainingXp < 0n ? 0n : remainingXp
             }
         } else {
             this.xp += applySpeed(this.getXpGain())
@@ -134,7 +137,7 @@ class Task {
                     this.unlocked = true
                     excess -= this.getMaxXp()
                 }
-                this.xp = this.getMaxXp() + excess
+                this.xp = Math.max(0, this.getMaxXp() + excess)
             }
         }
     }
@@ -216,7 +219,7 @@ class Item {
             if (itemCategories["Misc"].includes(this.name))
             {
                 if (gameData.currentMisc.includes(this)) {
-                    effect *= this.baseData.heroeffect                    
+                    effect *= this.baseData.heroeffect
                     this.unlocked = true
                 }
             }

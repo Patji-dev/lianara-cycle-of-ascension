@@ -12,12 +12,12 @@ function getEvilPerksGeneration()
 }
 
 function getEyeRequirement(){
-	let newreq = 65 - gameData.evil_perks.reduce_eye_requirement * 5
+	let newreq = (CULTIVATION_TUNING.reincarnationAge ?? 65) - gameData.evil_perks.reduce_eye_requirement * 5
 	return newreq < 15 ? 15 : newreq
 }
 
 function getEvilRequirement(){
-	let newreq = 200 - gameData.evil_perks.reduce_evil_requirement * 12.5
+	let newreq = (CULTIVATION_TUNING.demonicResetAge ?? 200) - gameData.evil_perks.reduce_evil_requirement * 12.5
 	newreq = newreq < 25 ? 25 : newreq
 	newreq = getEyeRequirement() > newreq ? getEyeRequirement() : newreq
 	return newreq
@@ -120,57 +120,11 @@ function hasEvilPerk(i)
 }
 
 function getAge0Requirement(){
-	const eyeReq = getEyeRequirement()
-	switch	(eyeReq){
-	case 65:
-		return 25
-	case 60:
-		return 25
-	case 55:
-		return 25
-	case 50:
-		return 25
-	case 45:
-		return 25
-	case 40:
-		return 25
-	case 35:
-		return 20
-	case 30:
-		return 20
-	case 25:
-		return 18
-	case 20:
-		return 16
-	case 15:
-		return 13
-	}
+    const age = getEyeRequirement();
+    return age >= 40 ? 25 : age >= 30 ? 20 : age >= 25 ? 18 : age >= 20 ? 16 : 13;
 }
 
 function getAge1Requirement(){
-	const eyeReq = getEyeRequirement()
-	switch	(eyeReq){
-	case 65:
-		return 45
-	case 60:
-		return 45
-	case 55:
-		return 45
-	case 50:
-		return 45
-	case 45:
-		return 40
-	case 40:
-		return 35
-	case 35:
-		return 30
-	case 30:
-		return 25
-	case 25:
-		return 20
-	case 20:
-		return 18
-	case 15:
-		return 14
-	}
+    const age = getEyeRequirement();
+    return age >= 50 ? 45 : age >= 25 ? age - 5 : age >= 20 ? 18 : 14;
 }

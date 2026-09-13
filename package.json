@@ -1,0 +1,17 @@
+{
+  "name": "lianara-cycle-of-ascension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lianara: Cycle of Ascension — a cultivation idle browser game",
+  "scripts": {
+    "start": "node tools/serve.cjs",
+    "test": "node tools/build-realms.cjs --check && node tests/realms.cjs && node tests/browser.cjs",
+    "realms:build": "node tools/build-realms.cjs",
+    "balance": "node tools/balance.cjs",
+    "balance:sweep": "node tools/balance.cjs sweep",
+    "build": "node tools/build-realms.cjs --check && node tools/build-pages.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
