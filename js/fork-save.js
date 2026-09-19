@@ -80,7 +80,11 @@ function decodeForkSave(text) {
         throw new Error("Use a Lianara save. Progress Knight saves are not imported automatically.");
     if (envelope.version !== 1) throw new Error("Unsupported save version; original data has been preserved.");
     const state = envelope.state;
-    // Older v1 saves predate this technique. Migrate only the known missing entries.
+    // Older v1 saves predate these techniques. Migrate only known missing entries.
+    if (state?.taskData && !Object.hasOwn(state.taskData, "Abyssal Qi Condensation"))
+        state.taskData["Abyssal Qi Condensation"] = forkClone(forkSaveTemplate.taskData["Abyssal Qi Condensation"]);
+    if (state?.requirements && !Object.hasOwn(state.requirements, "Abyssal Qi Condensation"))
+        state.requirements["Abyssal Qi Condensation"] = false;
     if (state?.taskData && !Object.hasOwn(state.taskData, "Heart Demon Suppression"))
         state.taskData["Heart Demon Suppression"] = forkClone(forkSaveTemplate.taskData["Heart Demon Suppression"]);
     if (state?.requirements && !Object.hasOwn(state.requirements, "Heart Demon Suppression"))

@@ -211,6 +211,7 @@ const skillBaseData = {
     "Brainwashing": { name: "Brainwashing", maxXp: 100, heroxp: 145, effect: -0.01, description: "Reduced Expenses" },
 
     "Dark Influence": { name: "Dark Influence", maxXp: 100, heroxp: 155, effect: 0.01, description: "All XP" },
+    "Abyssal Qi Condensation": { name: "Abyssal Qi Condensation", maxXp: 100, heroxp: 206, effect: 0.01, description: "Cultivation Speed" },
     "Heart Demon Suppression": { name: "Heart Demon Suppression", maxXp: 100, heroxp: 160, effect: 0.01, description: "Breakthrough Stability" },
     "Evil Control": { name: "Evil Control", maxXp: 100, heroxp: 156, effect: 0.01, description: "Evil Gain" },
     "Intimidation": { name: "Intimidation", maxXp: 100, heroxp: 157, effect: -0.01, description: "Reduced Expenses" },
@@ -433,6 +434,7 @@ const requirementsBaseData = {
     "Demon's Wealth": new EvilRequirement([getQuerySelector("Demon's Wealth")], [{ requirement: 500 }]),
     "Dark Knowledge": new EvilRequirement([getQuerySelector("Dark Knowledge")], [{ requirement: 5000 }]),
     "Void Influence": new EvilRequirement([getQuerySelector("Void Influence")], [{ requirement: 50000 }]),
+    "Abyssal Qi Condensation": new EvilRequirement([getQuerySelector("Abyssal Qi Condensation")], [{ requirement: 100000 }]),
     "Time Loop": new EvilRequirement([getQuerySelector("Time Loop")], [{ requirement: 2500000 }]),
     "Evil Incarnate": new EvilRequirement([getQuerySelector("Evil Incarnate")], [{ requirement: 1000000000 }]),
 
@@ -584,7 +586,7 @@ const skillCategories = {
     "Fundamentals": ["Concentration", "Productivity", "Bargaining", "Meditation"],
     "Combat": ["Strength", "Battle Tactics", "Muscle Memory"],
     "Magic": ["Mana Control", "Life Essence", "Time Warping", "Astral Body", "Temporal Dimension", "All Seeing Eye", "Brainwashing"],
-    "Dark Magic": ["Dark Influence", "Evil Control", "Intimidation", "Demon Training", "Blood Meditation", "Heart Demon Suppression", "Demon's Wealth", "Dark Knowledge", "Void Influence", "Time Loop", "Evil Incarnate"],
+    "Dark Magic": ["Dark Influence", "Evil Control", "Intimidation", "Demon Training", "Blood Meditation", "Heart Demon Suppression", "Demon's Wealth", "Dark Knowledge", "Void Influence", "Abyssal Qi Condensation", "Time Loop", "Evil Incarnate"],
     "Void Manipulation": ["Absolute Wish", "Void Amplification", "Mind Release", "Ceaseless Abyss", "Void Symbiosis", "Void Embodiment", "Abyss Manipulation"],
     "Celestial Powers": ["Cosmic Longevity", "Cosmic Recollection", "Essence Collector", "Galactic Command"],
     "Almightiness": ["Yin Yang", "Parallel Universe", "Higher Dimensions", "Epiphany"],

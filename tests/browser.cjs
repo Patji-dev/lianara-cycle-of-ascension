@@ -63,13 +63,15 @@ async function main() {
         else assert.equal(fs.readFileSync(inventoryPath,'utf8'),inventory+'\n');
         const forkInventory=await fork.evaluate(()=>JSON.stringify({commit:'2c6c3c6ba45de78280bcc6df58a0a7f923c6a252',jobs:jobBaseData,skills:skillBaseData,items:itemBaseData,jobCategories,skillCategories,itemCategories,requirements:requirementsBaseData,milestones:milestoneBaseData,updateSpeed,baseLifespan,baseGameSpeed,heroIncomeMult},(key,value)=>['elements','elementsCache'].includes(key)?undefined:typeof value==='number'&&!Number.isFinite(value)?String(value):value,2));
         const inventoryWithoutArt=JSON.parse(forkInventory);
+        delete inventoryWithoutArt.skills['Abyssal Qi Condensation'];
+        delete inventoryWithoutArt.requirements['Abyssal Qi Condensation'];
         delete inventoryWithoutArt.skills['Heart Demon Suppression'];
         delete inventoryWithoutArt.requirements['Heart Demon Suppression'];
-        inventoryWithoutArt.skillCategories['Dark Magic']=inventoryWithoutArt.skillCategories['Dark Magic'].filter(n=>n!=='Heart Demon Suppression');
+        inventoryWithoutArt.skillCategories['Dark Magic']=inventoryWithoutArt.skillCategories['Dark Magic'].filter(n=>!['Heart Demon Suppression','Abyssal Qi Condensation'].includes(n));
         assert.deepEqual(inventoryWithoutArt,JSON.parse(inventory),'Original balance unchanged apart from the new art');
         const counts=await fork.evaluate(()=>[itemCategories.Properties.length,itemCategories.Misc.length]);
         assert.deepEqual(counts,[27,24]);
-        const snap=()=>JSON.stringify({coins:gameData.coins,days:gameData.days,job:gameData.currentJob.name,property:gameData.currentProperty.name,misc:gameData.currentMisc.map(x=>x.name),tasks:Object.fromEntries(Object.entries(gameData.taskData).filter(([k])=>k!=="Heart Demon Suppression").map(([k,t])=>[k,{level:t.level,maxLevel:t.maxLevel,xp:t.xp,xpBigInt:String(t.xpBigInt),isHero:t.isHero,unlocked:t.unlocked}])),evil:gameData.evil,essence:gameData.essence,dark_matter:gameData.dark_matter,happiness:getHappiness(),income:getIncome(),lifespan:getLifespan(),requirements:Object.fromEntries(Object.entries(gameData.requirements).filter(([k])=>k!=="Heart Demon Suppression").map(([k,v])=>[k,v.completed]))},(_,v)=>typeof v==='number'&&!Number.isFinite(v)?String(v):v);
+        const snap=()=>JSON.stringify({coins:gameData.coins,days:gameData.days,job:gameData.currentJob.name,property:gameData.currentProperty.name,misc:gameData.currentMisc.map(x=>x.name),tasks:Object.fromEntries(Object.entries(gameData.taskData).filter(([k])=>!["Heart Demon Suppression","Abyssal Qi Condensation"].includes(k)).map(([k,t])=>[k,{level:t.level,maxLevel:t.maxLevel,xp:t.xp,xpBigInt:String(t.xpBigInt),isHero:t.isHero,unlocked:t.unlocked}])),evil:gameData.evil,essence:gameData.essence,dark_matter:gameData.dark_matter,happiness:getHappiness(),income:getIncome(),lifespan:getLifespan(),requirements:Object.fromEntries(Object.entries(gameData.requirements).filter(([k])=>!["Heart Demon Suppression","Abyssal Qi Condensation"].includes(k)).map(([k,v])=>[k,v.completed]))},(_,v)=>typeof v==='number'&&!Number.isFinite(v)?String(v):v);
         assert.equal(await fork.evaluate(snap),await original.evaluate(snap),'Fresh state');
         for(const page of [original,fork]) await page.evaluate(()=>{for(let i=0;i<12000;i++)update(false);});
         assert.equal(await fork.evaluate(snap),await original.evaluate(snap),'10-minute progression');
@@ -227,7 +229,7 @@ async function main() {
         console.log('PASS all realm bonuses, fractional BigInt skill XP, job gates/caches/save reload, original requirements and reset');
 
         // All inherited fields, including currencies, perk trees and reset records.
-        const fullState=()=>JSON.stringify(gameData,(key,value)=>['Heart Demon Suppression','cultivation','save_date_time','elementsCache','elements'].includes(key)?undefined:value);
+        const fullState=()=>JSON.stringify(gameData,(key,value)=>['Abyssal Qi Condensation','Heart Demon Suppression','cultivation','save_date_time','elementsCache','elements'].includes(key)?undefined:value);
         for (const scenario of ['heroic','challenge']) {
             const pages=[await pageFor('baseline'),await pageFor('fork',undefined,true)];
             for(const page of pages) await page.evaluate(scenario=>{
@@ -280,6 +282,26 @@ async function main() {
         console.log('PASS pacing thresholds, narrative hints, perk reductions and no reset-count gate');
 
         const demonic=await pageFor('fork');
+        const qiArt=await demonic.evaluate(()=>{
+            const art=gameData.taskData['Abyssal Qi Condensation'];
+            gameData.evil=99999;updateRequirements();
+            const locked=!gameData.requirements[art.name].isCompleted();
+            art.level=100;const inactive=getDemonicCultivationMultiplier();art.level=0;
+            gameData.evil=100000;updateRequirements();
+            const unlocked=gameData.requirements[art.name].isCompleted();
+            const harmony=getHappiness(),base=getQiRate();
+            art.level=100;const ratio=getQiRate()/base,unchanged=getHappiness()===harmony;
+            const loaded=decodeForkSave(encodeForkSave());
+            const saved=loaded.taskData[art.name].level;
+            const legacy=forkParse(encodeForkSave());delete legacy.state.taskData[art.name];delete legacy.state.requirements[art.name];
+            const migrated=decodeForkSave(forkStringify(legacy)).taskData[art.name].level;
+            art.level=0;art.xp=0;art.xpBigInt=0n;gameData.paused=false;
+            update(false);const trained=art.xpBigInt>0n||art.xp>0||art.level>0;
+            art.level=100;rebirthReset();const reset=art.level;
+            return {locked,inactive,unlocked,ratio,unchanged,saved,migrated,trained,reset};
+        });
+        assert.deepEqual(qiArt,{locked:true,inactive:1,unlocked:true,ratio:2,unchanged:true,saved:100,migrated:0,trained:true,reset:0});
+        console.log('PASS demonic cultivation unlock, independent Qi multiplier, training, save migration and reset');
         const risk=await demonic.evaluate(()=>{
             const art=gameData.taskData['Heart Demon Suppression'];
             gameData.evil=0;const zero=getMajorBreakthroughFailureChance();

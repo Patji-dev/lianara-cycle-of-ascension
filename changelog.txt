@@ -1,3 +1,6 @@
+Unreleased
+* Added Abyssal Qi Condensation at 100k Demonic Energy to boost cultivation speed independently of Inner Harmony
+
 version 3.0.0 / 13.09.2026
 * Renamed the game to Lianara: Cycle of Ascension with a cultivation and martial arts theme
 * Added Qi cultivation with 40 major realms and 190 minor stages

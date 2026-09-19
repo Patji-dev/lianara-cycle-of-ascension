@@ -238,8 +238,8 @@ function setCustomEffects() {
         if (gameData.requirements["Rise of Great Heroes"].isCompleted()) {
             var countHeroes = 0
             for (const taskName in gameData.taskData) {
-                // Preserve the original prestige multiplier; this art affects breakthroughs only.
-                if (taskName !== "Heart Demon Suppression" && gameData.taskData[taskName].isHero)
+                // Cultivation arts do not contribute to the original prestige multiplier.
+                if (!["Heart Demon Suppression", "Abyssal Qi Condensation"].includes(taskName) && gameData.taskData[taskName].isHero)
                     countHeroes++
             }
             mult = 1 + 6 * countHeroes / 74

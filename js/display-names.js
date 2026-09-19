@@ -62,6 +62,7 @@ const CULTIVATION_DISPLAY_NAMES = Object.freeze({
     "Temporal Dimension": "Secluded Time Realm",
     "All Seeing Eye": "Heavenly Sight",
     "Brainwashing": "Soul Persuasion",
+    "Abyssal Qi Condensation": "Abyssal Qi Condensation",
     "Heart Demon Suppression": "Heart Demon Suppression",
     "Dark Influence": "Demonic Resonance",
     "Evil Control": "Demonic Refinement",
@@ -231,6 +232,7 @@ function cultivationText(value) {
 }
 
 const CULTIVATION_TOOLTIP_OVERRIDES = {
+    "Abyssal Qi Condensation": "Draw Qi through demonic meridians. Each normal level adds 1% to a separate cultivation-speed multiplier, without changing Inner Harmony. Unlocks at 100k Demonic Energy.",
     "Heart Demon Suppression": "Subdue your inner demons. Breakthrough Stability divides the failure risk caused by Demonic Energy. Unlocks at 100 Demonic Energy.",
     "Homeless": "Rest beneath the open sky. Your journey begins with no dwelling upkeep.",
     "Tent": "A simple shelter beside the mountain road offers a little peace for daily practice.",

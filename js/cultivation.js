@@ -50,8 +50,13 @@ function resetCultivation() {
     }
 }
 
+function getDemonicCultivationMultiplier() {
+    const art = gameData.taskData["Abyssal Qi Condensation"];
+    return gameData.evil >= 100000 && art ? art.getEffect() : 1;
+}
+
 function getQiRate() {
-    return CULTIVATION_BASE_RATE * getHappiness();
+    return CULTIVATION_BASE_RATE * getHappiness() * getDemonicCultivationMultiplier();
 }
 
 function advanceCultivation(state, qiGain) {
@@ -156,7 +161,8 @@ function renderCultivation() {
     progress.max = stage.cost || 1;
     progress.value = next ? state.qi : 1;
     document.getElementById("cultivationRate").textContent = format(getQiRate())
-        + " Qi / game day · Happiness ×" + format(getHappiness());
+        + " Qi / game day · Happiness ×" + format(getHappiness())
+        + " · Demonic cultivation ×" + format(getDemonicCultivationMultiplier());
     document.getElementById("cultivationEffects").textContent = "Lifespan ×" + format(getCultivationLifespanMultiplier(), 3)
         + " · Skill XP +" + getCultivationSkillXpPercent() + "%";
     const nextStage = state.stage + 1;
